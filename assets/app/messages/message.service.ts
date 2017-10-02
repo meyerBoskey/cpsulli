@@ -18,7 +18,7 @@ export class MessageService {
         const token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
-        return this.http.post('https://git.heroku.com/cpsulli.git/message' + token, body, {headers})
+        return this.http.post('https://cpsulli.herokuapp.com/message' + token, body, {headers})
             .map((response: Response) => {
                 const result = response.json();
                 const message = new Message(
@@ -37,7 +37,7 @@ export class MessageService {
     }
 
     getMessages() {
-        return this.http.get('https://git.heroku.com/cpsulli.git/message')
+        return this.http.get('https://cpsulli.herokuapp.com/message')
             .map((response: Response) => {
                 const messages = response.json().obj;
                 let transformedMessages: Message[] = [];
@@ -69,7 +69,7 @@ export class MessageService {
         const token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
-        return this.http.patch('https://git.heroku.com/cpsulli.git/message/' + message.messageId + token, body, {headers})
+        return this.http.patch('https://cpsulli.herokuapp.com/message/' + message.messageId + token, body, {headers})
             .map((response: Response) => response.json())
             .catch((error: Response) => {
                 this.errorService.handelError(error.json());
@@ -82,7 +82,7 @@ export class MessageService {
         const token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
-        return this.http.delete('https://git.heroku.com/cpsulli.git/message/' + message.messageId + token)
+        return this.http.delete('https://cpsulli.herokuapp.com/message/' + message.messageId + token)
             .map((response: Response) => response.json())
             .catch((error: Response) => {
                 this.errorService.handelError(error.json());
