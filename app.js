@@ -11,7 +11,7 @@ var messageRoutes = require('./routes/messages');
 var userRoutes = require('./routes/user');
 
 var app = express();
-mongoose.connect('cpsulli:Julio110191?@ds157584.mlab.com:57584/cpsulli', {useMongoClient:true});
+mongoose.connect('mongodb://testUser:testPassword@ds157584.mlab.com:57584/cpsulli', {useMongoClient:true});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
