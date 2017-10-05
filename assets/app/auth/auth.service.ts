@@ -17,7 +17,7 @@ export class AuthService {
         return this.http.post('https://cpsulli.herokuapp.com/user', body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) => {
-                this.errorService.handelError(error.json());
+                this.errorService.handleError(error.json());
                 return Observable.throw(error.json())
             });
     }
@@ -27,7 +27,7 @@ export class AuthService {
         return this.http.post('https://cpsulli.herokuapp.com/user/signin', body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) => {
-                this.errorService.handelError(error.json());
+                this.errorService.handleError(error.json());
                 return Observable.throw(error.json())
             });
     }

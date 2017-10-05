@@ -31,7 +31,7 @@ export class MessageService {
                 return message;
             })
             .catch((error: Response) => {
-                this.errorService.handelError(error.json());
+                this.errorService.handleError(error.json());
                 return Observable.throw(error.json())
             });
     }
@@ -54,7 +54,7 @@ export class MessageService {
                 return transformedMessages;
             })
             .catch((error: Response) => {
-                this.errorService.handelError(error.json());
+                this.errorService.handleError(error.json());
                 return Observable.throw(error.json())
             });
     }
@@ -72,7 +72,7 @@ export class MessageService {
         return this.http.patch('https://cpsulli.herokuapp.com/message/' + message.messageId + token, body, {headers})
             .map((response: Response) => response.json())
             .catch((error: Response) => {
-                this.errorService.handelError(error.json());
+                this.errorService.handleError(error.json());
                 return Observable.throw(error.json())
             });
     }
@@ -85,7 +85,7 @@ export class MessageService {
         return this.http.delete('https://cpsulli.herokuapp.com/message/' + message.messageId + token)
             .map((response: Response) => response.json())
             .catch((error: Response) => {
-                this.errorService.handelError(error.json());
+                this.errorService.handleError(error.json());
                 return Observable.throw(error.json())
             });
     }
