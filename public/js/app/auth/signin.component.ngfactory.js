@@ -69,12 +69,10 @@ export function View_SigninComponent_0(_l) {
             i0.ɵeld(0, null, null, 14, 'div', [['class', 'form-group']], null, null, null, null, null)),
         (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'password']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Password'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(),
             i0.ɵeld(0, null, null, 5, 'input', [['class', 'form-control'],
-                ['formControlName', 'password'], ['id', 'password'], ['type', 'text']], [[2,
-                    'ng-untouched', null], [2, 'ng-touched', null], [2, 'ng-pristine',
-                    null], [2, 'ng-dirty', null], [2, 'ng-valid', null],
-                [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null,
-                    'input'], [null, 'blur'], [null, 'compositionstart'], [null,
-                    'compositionend']], function (_v, en, $event) {
+                ['formControlName', 'password'], ['id', 'password'], ['type', 'password']], [[2, 'ng-untouched', null], [2, 'ng-touched', null], [2,
+                    'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
+                    null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'input'], [null, 'blur'], [null, 'compositionstart'],
+                [null, 'compositionend']], function (_v, en, $event) {
                 var ad = true;
                 if (('input' === en)) {
                     var pd_0 = (i0.ɵnov(_v, 27)._handleInput($event.target.value) !== false);

@@ -22,7 +22,7 @@ var MessageComponent = /** @class */ (function () {
             .subscribe(function (result) { return console.log(result); });
     };
     MessageComponent.prototype.belongsToUser = function () {
-        return localStorage.getItem('userId') == this.message.userId;
+        return localStorage.getItem('userID') == this.message.userId;
     };
     __decorate([
         Input(),

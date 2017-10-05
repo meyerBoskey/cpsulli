@@ -35,6 +35,6 @@ export class MessageComponent {
             .subscribe(result => console.log(result));
     }
     belongsToUser() {
-        return localStorage.getItem('userId') == this.message.userId;
+        return localStorage.getItem('userID') == this.message.userId;
     }
 }
