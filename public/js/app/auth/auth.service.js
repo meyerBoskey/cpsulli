@@ -24,7 +24,7 @@ var AuthService = /** @class */ (function () {
         return this.http.post('https://cpsulli.herokuapp.com/user', body, { headers: headers })
             .map(function (response) { return response.json(); })
             .catch(function (error) {
-            _this.errorService.handelError(error.json());
+            _this.errorService.handleError(error.json());
             return Observable.throw(error.json());
         });
     };
@@ -35,7 +35,7 @@ var AuthService = /** @class */ (function () {
         return this.http.post('https://cpsulli.herokuapp.com/user/signin', body, { headers: headers })
             .map(function (response) { return response.json(); })
             .catch(function (error) {
-            _this.errorService.handelError(error.json());
+            _this.errorService.handleError(error.json());
             return Observable.throw(error.json());
         });
     };

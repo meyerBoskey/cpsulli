@@ -23,7 +23,7 @@ export class ErrorComponent implements OnInit {
     constructor(private errorService: ErrorService) {}
 
     onErrorHandled() {
-        this.display = 'none;'
+        this.display = 'none';
     }
 
     ngOnInit() {

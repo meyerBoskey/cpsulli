@@ -15,7 +15,7 @@ var ErrorComponent = /** @class */ (function () {
         this.display = 'none';
     }
     ErrorComponent.prototype.onErrorHandled = function () {
-        this.display = 'none;';
+        this.display = 'none';
     };
     ErrorComponent.prototype.ngOnInit = function () {
         var _this = this;

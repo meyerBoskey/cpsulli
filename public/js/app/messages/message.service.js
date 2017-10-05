@@ -35,7 +35,7 @@ var MessageService = /** @class */ (function () {
             return message;
         })
             .catch(function (error) {
-            _this.errorService.handelError(error.json());
+            _this.errorService.handleError(error.json());
             return Observable.throw(error.json());
         });
     };
@@ -54,7 +54,7 @@ var MessageService = /** @class */ (function () {
             return transformedMessages;
         })
             .catch(function (error) {
-            _this.errorService.handelError(error.json());
+            _this.errorService.handleError(error.json());
             return Observable.throw(error.json());
         });
     };
@@ -71,7 +71,7 @@ var MessageService = /** @class */ (function () {
         return this.http.patch('https://cpsulli.herokuapp.com/message/' + message.messageId + token, body, { headers: headers })
             .map(function (response) { return response.json(); })
             .catch(function (error) {
-            _this.errorService.handelError(error.json());
+            _this.errorService.handleError(error.json());
             return Observable.throw(error.json());
         });
     };
@@ -84,7 +84,7 @@ var MessageService = /** @class */ (function () {
         return this.http.delete('https://cpsulli.herokuapp.com/message/' + message.messageId + token)
             .map(function (response) { return response.json(); })
             .catch(function (error) {
-            _this.errorService.handelError(error.json());
+            _this.errorService.handleError(error.json());
             return Observable.throw(error.json());
         });
     };
