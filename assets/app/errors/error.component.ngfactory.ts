@@ -7,26 +7,74 @@
 
 
 import * as i0 from '@angular/core';
-import * as i1 from '@angular/common';
-import * as i2 from './error.component';
-import * as i3 from './error.service';
+import * as i1 from '@angular/router';
+import * as i2 from '@angular/common';
+import * as i3 from './error.component';
+import * as i4 from './error.service';
+import * as i5 from '../auth/auth.service';
 const styles_ErrorComponent:any[] = ['.backdrop[_ngcontent-%COMP%] {\n            background-color: rgba(0,0,0,0.6);\n            position: fixed;\n            top: 0;\n            left: 0;\n            width: 100%;\n            height: 100vh;\n        }'];
 export const RenderType_ErrorComponent:i0.RendererType2 = i0.ɵcrt({encapsulation:0,
     styles:styles_ErrorComponent,data:{}});
+function View_ErrorComponent_1(_l:any):i0.ɵViewDefinition {
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),3,'button',[['class',
+      'btn btn-default'],['type','button']],(null as any),[[(null as any),'click']],
+      (_v,en,$event) => {
+        var ad:boolean = true;
+        var _co:any = _v.component;
+        if (('click' === en)) {
+          const pd_0:any = ((<any>i0.ɵnov(_v,1).onClick()) !== false);
+          ad = (pd_0 && ad);
+        }
+        if (('click' === en)) {
+          const pd_1:any = ((<any>_co.onErrorHandled()) !== false);
+          ad = (pd_1 && ad);
+        }
+        return ad;
+      },(null as any),(null as any))),i0.ɵdid(16384,(null as any),0,i1.RouterLink,
+      [i1.Router,i1.ActivatedRoute,[8,(null as any)],i0.Renderer2,i0.ElementRef],{routerLink:[0,
+          'routerLink']},(null as any)),i0.ɵpad(1),(_l()(),i0.ɵted((null as any),['signin page']))],
+      (_ck,_v) => {
+        const currVal_0:any = _ck(_v,2,0,'auth/signin');
+        _ck(_v,1,0,currVal_0);
+      },(null as any));
+}
+function View_ErrorComponent_2(_l:any):i0.ɵViewDefinition {
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),3,'button',[['class',
+      'btn btn-default'],['type','button']],(null as any),[[(null as any),'click']],
+      (_v,en,$event) => {
+        var ad:boolean = true;
+        var _co:any = _v.component;
+        if (('click' === en)) {
+          const pd_0:any = ((<any>i0.ɵnov(_v,1).onClick()) !== false);
+          ad = (pd_0 && ad);
+        }
+        if (('click' === en)) {
+          const pd_1:any = ((<any>_co.onErrorHandled()) !== false);
+          ad = (pd_1 && ad);
+        }
+        return ad;
+      },(null as any),(null as any))),i0.ɵdid(16384,(null as any),0,i1.RouterLink,
+      [i1.Router,i1.ActivatedRoute,[8,(null as any)],i0.Renderer2,i0.ElementRef],{routerLink:[0,
+          'routerLink']},(null as any)),i0.ɵpad(1),(_l()(),i0.ɵted((null as any),['signup page']))],
+      (_ck,_v) => {
+        const currVal_0:any = _ck(_v,2,0,'auth/signup');
+        _ck(_v,1,0,currVal_0);
+      },(null as any));
+}
 export function View_ErrorComponent_0(_l:any):i0.ɵViewDefinition {
   return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),2,'div',[['class',
       'backdrop']],(null as any),(null as any),(null as any),(null as any),(null as any))),
-      i0.ɵdid(278528,(null as any),0,i1.NgStyle,[i0.KeyValueDiffers,i0.ElementRef,
+      i0.ɵdid(278528,(null as any),0,i2.NgStyle,[i0.KeyValueDiffers,i0.ElementRef,
           i0.Renderer],{ngStyle:[0,'ngStyle']},(null as any)),i0.ɵpod({'display':0}),
       (_l()(),i0.ɵted((null as any),['\n'])),(_l()(),i0.ɵeld(0,(null as any),(null as any),
-          33,'div',[['class','modal'],['role','dialog'],['tabindex','-1']],(null as any),
+          39,'div',[['class','modal'],['role','dialog'],['tabindex','-1']],(null as any),
           (null as any),(null as any),(null as any),(null as any))),i0.ɵdid(278528,
-          (null as any),0,i1.NgStyle,[i0.KeyValueDiffers,i0.ElementRef,i0.Renderer],
+          (null as any),0,i2.NgStyle,[i0.KeyValueDiffers,i0.ElementRef,i0.Renderer],
           {ngStyle:[0,'ngStyle']},(null as any)),i0.ɵpod({'display':0}),(_l()(),i0.ɵted((null as any),
-          ['\n    '])),(_l()(),i0.ɵeld(0,(null as any),(null as any),27,'div',[['class',
+          ['\n    '])),(_l()(),i0.ɵeld(0,(null as any),(null as any),33,'div',[['class',
           'modal-dialog'],['role','document']],(null as any),(null as any),(null as any),
           (null as any),(null as any))),(_l()(),i0.ɵted((null as any),['\n        '])),
-      (_l()(),i0.ɵeld(0,(null as any),(null as any),23,'div',[['class','modal-content']],
+      (_l()(),i0.ɵeld(0,(null as any),(null as any),29,'div',[['class','modal-content']],
           (null as any),(null as any),(null as any),(null as any),(null as any))),
       (_l()(),i0.ɵted((null as any),['\n            '])),(_l()(),i0.ɵeld(0,(null as any),
           (null as any),8,'div',[['class','modal-header']],(null as any),(null as any),
@@ -35,7 +83,7 @@ export function View_ErrorComponent_0(_l:any):i0.ɵViewDefinition {
           'button',[['aria-label','Close'],['class','close'],['type','button']],(null as any),
           [[(null as any),'click']],(_v,en,$event) => {
             var ad:boolean = true;
-            var _co:i2.ErrorComponent = _v.component;
+            var _co:i3.ErrorComponent = _v.component;
             if (('click' === en)) {
               const pd_0:any = ((<any>_co.onErrorHandled()) !== false);
               ad = (pd_0 && ad);
@@ -54,31 +102,41 @@ export function View_ErrorComponent_0(_l:any):i0.ɵViewDefinition {
           i0.ɵeld(0,(null as any),(null as any),1,'p',([] as any[]),(null as any),
               (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted((null as any),
           ['',''])),(_l()(),i0.ɵted((null as any),['\n            '])),(_l()(),i0.ɵted((null as any),
-          ['\n            '])),(_l()(),i0.ɵeld(0,(null as any),(null as any),4,'div',
+          ['\n            '])),(_l()(),i0.ɵeld(0,(null as any),(null as any),10,'div',
           [['class','modal-footer']],(null as any),(null as any),(null as any),(null as any),
           (null as any))),(_l()(),i0.ɵted((null as any),['\n                '])),(_l()(),
           i0.ɵeld(0,(null as any),(null as any),1,'button',[['class','btn btn-default'],
               ['type','button']],(null as any),[[(null as any),'click']],(_v,en,$event) => {
             var ad:boolean = true;
-            var _co:i2.ErrorComponent = _v.component;
+            var _co:i3.ErrorComponent = _v.component;
             if (('click' === en)) {
               const pd_0:any = ((<any>_co.onErrorHandled()) !== false);
               ad = (pd_0 && ad);
             }
             return ad;
           },(null as any),(null as any))),(_l()(),i0.ɵted((null as any),['Close'])),
-      (_l()(),i0.ɵted((null as any),['\n            '])),(_l()(),i0.ɵted((null as any),
-          ['\n        '])),(_l()(),i0.ɵted((null as any),['\n        '])),(_l()(),
-          i0.ɵted((null as any),['\n    '])),(_l()(),i0.ɵted((null as any),['\n    '])),
-      (_l()(),i0.ɵted((null as any),['\n'])),(_l()(),i0.ɵted((null as any),['\n'])),
-      (_l()(),i0.ɵted((null as any),['\n']))],(_ck,_v) => {
-    var _co:i2.ErrorComponent = _v.component;
+      (_l()(),i0.ɵted((null as any),['\n                '])),(_l()(),i0.ɵand(16777216,
+          (null as any),(null as any),1,(null as any),View_ErrorComponent_1)),i0.ɵdid(16384,
+          (null as any),0,i2.NgIf,[i0.ViewContainerRef,i0.TemplateRef],{ngIf:[0,'ngIf']},
+          (null as any)),(_l()(),i0.ɵted((null as any),['\n                '])),(_l()(),
+          i0.ɵand(16777216,(null as any),(null as any),1,(null as any),View_ErrorComponent_2)),
+      i0.ɵdid(16384,(null as any),0,i2.NgIf,[i0.ViewContainerRef,i0.TemplateRef],{ngIf:[0,
+          'ngIf']},(null as any)),(_l()(),i0.ɵted((null as any),['\n            '])),
+      (_l()(),i0.ɵted((null as any),['\n        '])),(_l()(),i0.ɵted((null as any),
+          ['\n        '])),(_l()(),i0.ɵted((null as any),['\n    '])),(_l()(),i0.ɵted((null as any),
+          ['\n    '])),(_l()(),i0.ɵted((null as any),['\n'])),(_l()(),i0.ɵted((null as any),
+          ['\n'])),(_l()(),i0.ɵted((null as any),['\n']))],(_ck,_v) => {
+    var _co:i3.ErrorComponent = _v.component;
     const currVal_0:any = _ck(_v,2,0,_co.display);
     _ck(_v,1,0,currVal_0);
     const currVal_1:any = _ck(_v,6,0,_co.display);
     _ck(_v,5,0,currVal_1);
+    const currVal_4:boolean = !_co.isLoggedIn();
+    _ck(_v,34,0,currVal_4);
+    const currVal_5:boolean = !_co.isLoggedIn();
+    _ck(_v,37,0,currVal_5);
   },(_ck,_v) => {
-    var _co:i2.ErrorComponent = _v.component;
+    var _co:i3.ErrorComponent = _v.component;
     const currVal_2:any = ((_co.error == null)? (null as any): _co.error.title);
     _ck(_v,19,0,currVal_2);
     const currVal_3:any = ((_co.error == null)? (null as any): _co.error.message);
@@ -88,11 +146,11 @@ export function View_ErrorComponent_0(_l:any):i0.ɵViewDefinition {
 export function View_ErrorComponent_Host_0(_l:any):i0.ɵViewDefinition {
   return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),1,'app-error',([] as any[]),
       (null as any),(null as any),(null as any),View_ErrorComponent_0,RenderType_ErrorComponent)),
-      i0.ɵdid(114688,(null as any),0,i2.ErrorComponent,[i3.ErrorService],(null as any),
-          (null as any))],(_ck,_v) => {
+      i0.ɵdid(114688,(null as any),0,i3.ErrorComponent,[i4.ErrorService,i5.AuthService],
+          (null as any),(null as any))],(_ck,_v) => {
     _ck(_v,1,0);
   },(null as any));
 }
-export const ErrorComponentNgFactory:i0.ComponentFactory<i2.ErrorComponent> = i0.ɵccf('app-error',
-    i2.ErrorComponent,View_ErrorComponent_Host_0,{},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9hbmd1bGFyL21lYW4tYXBwL21lYW4tYXBwL2Fzc2V0cy9hcHAvZXJyb3JzL2Vycm9yLmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9DOi9Vc2Vycy9jcHN1bC9kZXNrdG9wL2FuZ3VsYXIvbWVhbi1hcHAvbWVhbi1hcHAvYXNzZXRzL2FwcC9lcnJvcnMvZXJyb3IuY29tcG9uZW50LnRzIiwibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9hbmd1bGFyL21lYW4tYXBwL21lYW4tYXBwL2Fzc2V0cy9hcHAvZXJyb3JzL2Vycm9yLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9hbmd1bGFyL21lYW4tYXBwL21lYW4tYXBwL2Fzc2V0cy9hcHAvZXJyb3JzL2Vycm9yLmNvbXBvbmVudC50cy5FcnJvckNvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIjxkaXYgY2xhc3M9XCJiYWNrZHJvcFwiIFtuZ1N0eWxlXT1cInsnZGlzcGxheSc6IGRpc3BsYXl9XCI+PC9kaXY+XHJcbjxkaXYgY2xhc3M9XCJtb2RhbFwiIHRhYmluZGV4PVwiLTFcIiByb2xlPVwiZGlhbG9nXCIgW25nU3R5bGVdPVwieydkaXNwbGF5JzogZGlzcGxheX1cIj5cclxuICAgIDxkaXYgY2xhc3M9XCJtb2RhbC1kaWFsb2dcIiByb2xlPVwiZG9jdW1lbnRcIj5cclxuICAgICAgICA8ZGl2IGNsYXNzPVwibW9kYWwtY29udGVudFwiPlxyXG4gICAgICAgICAgICA8ZGl2IGNsYXNzPVwibW9kYWwtaGVhZGVyXCI+XHJcbiAgICAgICAgICAgICAgICA8YnV0dG9uIHR5cGU9XCJidXR0b25cIiBjbGFzcz1cImNsb3NlXCIgYXJpYS1sYWJlbD1cIkNsb3NlXCIgKGNsaWNrKT1cIm9uRXJyb3JIYW5kbGVkKClcIj48c3BhbiBhcmlhLWhpZGRlbj1cInRydWVcIj4mdGltZXM7PC9zcGFuPjwvYnV0dG9uPlxyXG4gICAgICAgICAgICAgICAgPGg0IGNsYXNzPVwibW9kYWwtdGl0bGVcIj57e2Vycm9yPy50aXRsZX19PC9oND5cclxuICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgIDxkaXYgY2xhc3M9XCJtb2RhbC1ib2R5XCI+XHJcbiAgICAgICAgICAgICAgICA8cD57e2Vycm9yPy5tZXNzYWdlfX08L3A+XHJcbiAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICA8ZGl2IGNsYXNzPVwibW9kYWwtZm9vdGVyXCI+XHJcbiAgICAgICAgICAgICAgICA8YnV0dG9uIHR5cGU9XCJidXR0b25cIiBjbGFzcz1cImJ0biBidG4tZGVmYXVsdFwiIChjbGljayk9XCJvbkVycm9ySGFuZGxlZCgpXCI+Q2xvc2U8L2J1dHRvbj5cclxuICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgPCEtLSAvLm1vZGFsLWNvbnRlbnQgLS0+XHJcbiAgICA8L2Rpdj5cclxuICAgIDwhLS0gLy5tb2RhbC1kaWFsb2cgLS0+XHJcbjwvZGl2PlxyXG48IS0tIC8ubW9kYWwgLS0+XHJcbiIsIjxhcHAtZXJyb3I+PC9hcHAtZXJyb3I+Il0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7OztvQkNBQTtNQUFBO2FBQUE7cUJBQUEsZ0RBQXNCO01BQXVDLHVDQUM3RDtVQUFBO1VBQUEsaUVBQUE7VUFBQTtVQUFBLDhDQUErQyxnQkFBaUM7VUFBQSxhQUM1RTtVQUFBO1VBQUEsOEJBQTBDO01BQ3RDO1VBQUE7TUFBMkIsbURBQ3ZCO1VBQUE7VUFBQSw0Q0FBMEI7VUFBQSx5QkFDdEI7VUFBQTtVQUFBO1lBQUE7WUFBQTtZQUF1RDtjQUFBO2NBQUE7WUFBQTtZQUF2RDtVQUFBLGdDQUFrRjtVQUFBO1VBQUEsOEJBQXlCLHNDQUF1QjtpQkFBQSx3Q0FDbEk7VUFBQTtVQUFBLDRDQUF3QjtVQUFBLFVBQXFCLG1EQUMzQztVQUFBLHFCQUNOO1VBQUE7VUFBQSxnQkFBd0IsdURBQ3BCO2lCQUFBO2NBQUEsMERBQUc7VUFBQSxVQUFzQixtREFDdkI7VUFBQSxxQkFDTjtVQUFBO1VBQUEsZ0JBQTBCLHVEQUN0QjtpQkFBQTtjQUFBO1lBQUE7WUFBQTtZQUE4QztjQUFBO2NBQUE7WUFBQTtZQUE5QztVQUFBLGdDQUF5RTtNQUFjLG1EQUNyRjtVQUFBLGlCQUNKLCtDQUNrQjtpQkFBQSw0QkFDdEI7TUFDaUIsdUNBQ3JCO01BQ1U7O0lBbkJNO0lBQXRCLFdBQXNCLFNBQXRCO0lBQytDO0lBQS9DLFdBQStDLFNBQS9DOzs7SUFLd0M7SUFBQTtJQUdyQjtJQUFBOzs7O29CQ1RuQjtNQUFBO2FBQUE7VUFBQTtJQUFBOzs7OyJ9
+export const ErrorComponentNgFactory:i0.ComponentFactory<i3.ErrorComponent> = i0.ɵccf('app-error',
+    i3.ErrorComponent,View_ErrorComponent_Host_0,{},{},([] as any[]));
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2Vycm9ycy9lcnJvci5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2Vycm9ycy9lcnJvci5jb21wb25lbnQudHMiLCJuZzovLy9DOi9Vc2Vycy9jcHN1bC9kZXNrdG9wL21lYW4tYXBwL21lYW4tYXBwL2Fzc2V0cy9hcHAvZXJyb3JzL2Vycm9yLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2Vycm9ycy9lcnJvci5jb21wb25lbnQudHMuRXJyb3JDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8ZGl2IGNsYXNzPVwiYmFja2Ryb3BcIiBbbmdTdHlsZV09XCJ7J2Rpc3BsYXknOiBkaXNwbGF5fVwiPjwvZGl2PlxyXG48ZGl2IGNsYXNzPVwibW9kYWxcIiB0YWJpbmRleD1cIi0xXCIgcm9sZT1cImRpYWxvZ1wiIFtuZ1N0eWxlXT1cInsnZGlzcGxheSc6IGRpc3BsYXl9XCI+XHJcbiAgICA8ZGl2IGNsYXNzPVwibW9kYWwtZGlhbG9nXCIgcm9sZT1cImRvY3VtZW50XCI+XHJcbiAgICAgICAgPGRpdiBjbGFzcz1cIm1vZGFsLWNvbnRlbnRcIj5cclxuICAgICAgICAgICAgPGRpdiBjbGFzcz1cIm1vZGFsLWhlYWRlclwiPlxyXG4gICAgICAgICAgICAgICAgPGJ1dHRvbiB0eXBlPVwiYnV0dG9uXCIgY2xhc3M9XCJjbG9zZVwiIGFyaWEtbGFiZWw9XCJDbG9zZVwiIChjbGljayk9XCJvbkVycm9ySGFuZGxlZCgpXCI+PHNwYW4gYXJpYS1oaWRkZW49XCJ0cnVlXCI+JnRpbWVzOzwvc3Bhbj48L2J1dHRvbj5cclxuICAgICAgICAgICAgICAgIDxoNCBjbGFzcz1cIm1vZGFsLXRpdGxlXCI+e3tlcnJvcj8udGl0bGV9fTwvaDQ+XHJcbiAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICA8ZGl2IGNsYXNzPVwibW9kYWwtYm9keVwiPlxyXG4gICAgICAgICAgICAgICAgPHA+e3tlcnJvcj8ubWVzc2FnZX19PC9wPlxyXG4gICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgPGRpdiBjbGFzcz1cIm1vZGFsLWZvb3RlclwiPlxyXG4gICAgICAgICAgICAgICAgPGJ1dHRvbiB0eXBlPVwiYnV0dG9uXCIgY2xhc3M9XCJidG4gYnRuLWRlZmF1bHRcIiAoY2xpY2spPVwib25FcnJvckhhbmRsZWQoKVwiPkNsb3NlPC9idXR0b24+XHJcbiAgICAgICAgICAgICAgICA8YnV0dG9uIHR5cGU9XCJidXR0b25cIiBjbGFzcz1cImJ0biBidG4tZGVmYXVsdFwiIChjbGljayk9XCJvbkVycm9ySGFuZGxlZCgpXCIgW3JvdXRlckxpbmtdPVwiWydhdXRoL3NpZ25pbiddXCIgKm5nSWY9XCIhaXNMb2dnZWRJbigpXCI+c2lnbmluIHBhZ2U8L2J1dHRvbj5cclxuICAgICAgICAgICAgICAgIDxidXR0b24gdHlwZT1cImJ1dHRvblwiIGNsYXNzPVwiYnRuIGJ0bi1kZWZhdWx0XCIgKGNsaWNrKT1cIm9uRXJyb3JIYW5kbGVkKClcIiBbcm91dGVyTGlua109XCJbJ2F1dGgvc2lnbnVwJ11cIiAqbmdJZj1cIiFpc0xvZ2dlZEluKClcIj5zaWdudXAgcGFnZTwvYnV0dG9uPlxyXG4gICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgICA8IS0tIC8ubW9kYWwtY29udGVudCAtLT5cclxuICAgIDwvZGl2PlxyXG4gICAgPCEtLSAvLm1vZGFsLWRpYWxvZyAtLT5cclxuPC9kaXY+XHJcbjwhLS0gLy5tb2RhbCAtLT5cclxuIiwiPGFwcC1lcnJvcj48L2FwcC1lcnJvcj4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7b0JDYWdCO01BQUE7TUFBQTtRQUFBO1FBQUE7UUFBQTtVQUFBO1VBQUE7UUFBQTtRQUE4QztVQUFBO1VBQUE7UUFBQTtRQUE5QztNQUFBLHVDQUFBO01BQUE7VUFBQSxxQ0FBeUUsSUFBcUQ7O1FBQXJEO1FBQXpFLFdBQXlFLFNBQXpFOzs7O29CQUNBO01BQUE7TUFBQTtRQUFBO1FBQUE7UUFBQTtVQUFBO1VBQUE7UUFBQTtRQUE4QztVQUFBO1VBQUE7UUFBQTtRQUE5QztNQUFBLHVDQUFBO01BQUE7VUFBQSxxQ0FBeUUsSUFBcUQ7O1FBQXJEO1FBQXpFLFdBQXlFLFNBQXpFOzs7O29CQWRoQjtNQUFBO2FBQUE7cUJBQUEsZ0RBQXNCO01BQXVDLHVDQUM3RDtVQUFBO1VBQUEsaUVBQUE7VUFBQTtVQUFBLDhDQUErQyxnQkFBaUM7VUFBQSxhQUM1RTtVQUFBO1VBQUEsOEJBQTBDO01BQ3RDO1VBQUE7TUFBMkIsbURBQ3ZCO1VBQUE7VUFBQSw0Q0FBMEI7VUFBQSx5QkFDdEI7VUFBQTtVQUFBO1lBQUE7WUFBQTtZQUF1RDtjQUFBO2NBQUE7WUFBQTtZQUF2RDtVQUFBLGdDQUFrRjtVQUFBO1VBQUEsOEJBQXlCLHNDQUF1QjtpQkFBQSx3Q0FDbEk7VUFBQTtVQUFBLDRDQUF3QjtVQUFBLFVBQXFCLG1EQUMzQztVQUFBLHFCQUNOO1VBQUE7VUFBQSxnQkFBd0IsdURBQ3BCO2lCQUFBO2NBQUEsMERBQUc7VUFBQSxVQUFzQixtREFDdkI7VUFBQSxxQkFDTjtVQUFBO1VBQUEsZ0JBQTBCLHVEQUN0QjtpQkFBQTtjQUFBO1lBQUE7WUFBQTtZQUE4QztjQUFBO2NBQUE7WUFBQTtZQUE5QztVQUFBLGdDQUF5RTtNQUFjLHVEQUN2RjtVQUFBLDJFQUFBO1VBQUE7VUFBQSxlQUFrSix1REFDbEo7aUJBQUE7YUFBQTtVQUFBLHdCQUFrSjtNQUNoSiwrQ0FDSjtVQUFBLGlCQUNrQiwyQ0FDdEI7VUFBQSxhQUNpQix1Q0FDckI7VUFBQSxTQUNVOztJQXJCTTtJQUF0QixXQUFzQixTQUF0QjtJQUMrQztJQUEvQyxXQUErQyxTQUEvQztJQVl3SDtJQUF4RyxZQUF3RyxTQUF4RztJQUN3RztJQUF4RyxZQUF3RyxTQUF4Rzs7O0lBUndCO0lBQUE7SUFHckI7SUFBQTs7OztvQkNUbkI7TUFBQTthQUFBO1VBQUE7SUFBQTs7OzsifQ==

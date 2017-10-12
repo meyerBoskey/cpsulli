@@ -9,13 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Component } from '@angular/core';
 import { ErrorService } from './error.service';
+import { AuthService } from '../auth/auth.service';
 var ErrorComponent = /** @class */ (function () {
-    function ErrorComponent(errorService) {
+    function ErrorComponent(errorService, authService) {
         this.errorService = errorService;
+        this.authService = authService;
         this.display = 'none';
     }
     ErrorComponent.prototype.onErrorHandled = function () {
         this.display = 'none';
+    };
+    ErrorComponent.prototype.isLoggedIn = function () {
+        return this.authService.isLoggedIn();
     };
     ErrorComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -31,7 +36,7 @@ var ErrorComponent = /** @class */ (function () {
             templateUrl: './error.component.html',
             styles: ["\n        .backdrop {\n            background-color: rgba(0,0,0,0.6);\n            position: fixed;\n            top: 0;\n            left: 0;\n            width: 100%;\n            height: 100vh;\n        }\n    "]
         }),
-        __metadata("design:paramtypes", [ErrorService])
+        __metadata("design:paramtypes", [ErrorService, AuthService])
     ], ErrorComponent);
     return ErrorComponent;
 }());

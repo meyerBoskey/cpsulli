@@ -11,6 +11,8 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" (click)="onErrorHandled()">Close</button>
+                <button type="button" class="btn btn-default" (click)="onErrorHandled()" [routerLink]="['auth/signin']" *ngIf="!isLoggedIn()">signin page</button>
+                <button type="button" class="btn btn-default" (click)="onErrorHandled()" [routerLink]="['auth/signup']" *ngIf="!isLoggedIn()">signup page</button>
             </div>
         </div>
         <!-- /.modal-content -->

@@ -13,7 +13,8 @@ import * as i3 from '@angular/router';
 import * as i4 from './errors/error.component.ngfactory';
 import * as i5 from './errors/error.component';
 import * as i6 from './errors/error.service';
-import * as i7 from './app.component';
+import * as i7 from './auth/auth.service';
+import * as i8 from './app.component';
 const styles_AppComponent:any[] = ([] as any[]);
 export const RenderType_AppComponent:i0.RendererType2 = i0.ɵcrt({encapsulation:2,styles:styles_AppComponent,
     data:{}});
@@ -34,9 +35,9 @@ export function View_AppComponent_0(_l:any):i0.ɵViewDefinition {
       (_l()(),i0.ɵted((null as any),['\n'])),(_l()(),i0.ɵted((null as any),['\n'])),
       (_l()(),i0.ɵeld(0,(null as any),(null as any),1,'app-error',([] as any[]),(null as any),
           (null as any),(null as any),i4.View_ErrorComponent_0,i4.RenderType_ErrorComponent)),
-      i0.ɵdid(114688,(null as any),0,i5.ErrorComponent,[i6.ErrorService],(null as any),
-          (null as any)),(_l()(),i0.ɵted((null as any),['\n\n'])),(_l()(),i0.ɵted((null as any),
-          ['\n']))],(_ck,_v) => {
+      i0.ɵdid(114688,(null as any),0,i5.ErrorComponent,[i6.ErrorService,i7.AuthService],
+          (null as any),(null as any)),(_l()(),i0.ɵted((null as any),['\n\n'])),(_l()(),
+          i0.ɵted((null as any),['\n']))],(_ck,_v) => {
     _ck(_v,8,0);
     _ck(_v,12,0);
   },(null as any));
@@ -44,9 +45,9 @@ export function View_AppComponent_0(_l:any):i0.ɵViewDefinition {
 export function View_AppComponent_Host_0(_l:any):i0.ɵViewDefinition {
   return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),1,'my-app',([] as any[]),
       (null as any),(null as any),(null as any),View_AppComponent_0,RenderType_AppComponent)),
-      i0.ɵdid(49152,(null as any),0,i7.AppComponent,([] as any[]),(null as any),(null as any))],
+      i0.ɵdid(49152,(null as any),0,i8.AppComponent,([] as any[]),(null as any),(null as any))],
       (null as any),(null as any));
 }
-export const AppComponentNgFactory:i0.ComponentFactory<i7.AppComponent> = i0.ɵccf('my-app',
-    i7.AppComponent,View_AppComponent_Host_0,{},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9hbmd1bGFyL21lYW4tYXBwL21lYW4tYXBwL2Fzc2V0cy9hcHAvYXBwLmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9DOi9Vc2Vycy9jcHN1bC9kZXNrdG9wL2FuZ3VsYXIvbWVhbi1hcHAvbWVhbi1hcHAvYXNzZXRzL2FwcC9hcHAuY29tcG9uZW50LnRzIiwibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9hbmd1bGFyL21lYW4tYXBwL21lYW4tYXBwL2Fzc2V0cy9hcHAvYXBwLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9hbmd1bGFyL21lYW4tYXBwL21lYW4tYXBwL2Fzc2V0cy9hcHAvYXBwLmNvbXBvbmVudC50cy5BcHBDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8ZGl2IGNsYXNzPVwiY29udGFpbmVyXCI+XHJcbiAgICA8YXBwLWhlYWRlcj48L2FwcC1oZWFkZXI+XHJcbiAgICA8aHI+XHJcbiAgICA8cm91dGVyLW91dGxldD48L3JvdXRlci1vdXRsZXQ+XHJcbjwvZGl2PlxyXG48YXBwLWVycm9yPjwvYXBwLWVycm9yPlxyXG5cclxuPCEtLSBlbmFibGVzIGh0bWw1IHZhbGlkYXRpb25cclxuPGZvcm0gbmdOYXRpdmVWYWxpZGF0ZT48L2Zvcm0+IC0tPlxyXG4iLCI8bXktYXBwPjwvbXktYXBwPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O29CQ0FBO01BQUE7TUFBdUIsMkNBQ25CO1VBQUE7dUNBQUEsVUFBQTtVQUFBLDJDQUF5QjtVQUFBLGFBQ3pCO1VBQUE7TUFBSSwyQ0FDSjtVQUFBO1VBQUEsbURBQUE7VUFBQTtjQUFBO01BQStCLHVDQUM3QjtNQUNOO1VBQUE7YUFBQTtVQUFBLGVBQXVCLHlDQUdXO1VBQUE7SUFMOUI7SUFFSjs7OztvQkNMQTtNQUFBO2FBQUE7Ozs7In0=
+export const AppComponentNgFactory:i0.ComponentFactory<i8.AppComponent> = i0.ɵccf('my-app',
+    i8.AppComponent,View_AppComponent_Host_0,{},{},([] as any[]));
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2FwcC5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2FwcC5jb21wb25lbnQudHMiLCJuZzovLy9DOi9Vc2Vycy9jcHN1bC9kZXNrdG9wL21lYW4tYXBwL21lYW4tYXBwL2Fzc2V0cy9hcHAvYXBwLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2FwcC5jb21wb25lbnQudHMuQXBwQ29tcG9uZW50X0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiPGRpdiBjbGFzcz1cImNvbnRhaW5lclwiPlxyXG4gICAgPGFwcC1oZWFkZXI+PC9hcHAtaGVhZGVyPlxyXG4gICAgPGhyPlxyXG4gICAgPHJvdXRlci1vdXRsZXQ+PC9yb3V0ZXItb3V0bGV0PlxyXG48L2Rpdj5cclxuPGFwcC1lcnJvcj48L2FwcC1lcnJvcj5cclxuXHJcbjwhLS0gZW5hYmxlcyBodG1sNSB2YWxpZGF0aW9uXHJcbjxmb3JtIG5nTmF0aXZlVmFsaWRhdGU+PC9mb3JtPiAtLT5cclxuIiwiPG15LWFwcD48L215LWFwcD4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7b0JDQUE7TUFBQTtNQUF1QiwyQ0FDbkI7VUFBQTt1Q0FBQSxVQUFBO1VBQUEsMkNBQXlCO1VBQUEsYUFDekI7VUFBQTtNQUFJLDJDQUNKO1VBQUE7VUFBQSxtREFBQTtVQUFBO2NBQUE7TUFBK0IsdUNBQzdCO01BQ047VUFBQTthQUFBO1VBQUEsNkJBQXVCLHlDQUdXO2lCQUFBO0lBTDlCO0lBRUo7Ozs7b0JDTEE7TUFBQTthQUFBOzs7OyJ9

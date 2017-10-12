@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 
 import {Error} from './error.model';
 import {ErrorService} from './error.service';
+import {AuthService} from '../auth/auth.service';
 
 @Component({
     selector: 'app-error',
@@ -20,10 +21,14 @@ import {ErrorService} from './error.service';
 export class ErrorComponent implements OnInit {
     error: Error;
     display = 'none';
-    constructor(private errorService: ErrorService) {}
+    constructor(private errorService: ErrorService, private authService: AuthService) {}
 
     onErrorHandled() {
         this.display = 'none';
+    }
+
+    isLoggedIn() {
+        return this.authService.isLoggedIn();
     }
 
     ngOnInit() {
