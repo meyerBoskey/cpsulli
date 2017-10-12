@@ -46,7 +46,7 @@ export var AppModuleNgFactory = i0.ɵcmf(i1.AppModule, [i2.AppComponent], functi
             i12.ROUTER_CONFIGURATION]), i0.ɵmpd(512, i6.Location, i6.Location, [i6.LocationStrategy]),
         i0.ɵmpd(512, i0.Compiler, i0.Compiler, []), i0.ɵmpd(512, i0.NgModuleFactoryLoader, i0.SystemJsNgModuleLoader, [i0.Compiler, [2, i0.SystemJsNgModuleLoaderConfig]]),
         i0.ɵmpd(1024, i12.ROUTES, function () {
-            return [[{ path: '', redirectTo: '/messages', pathMatch: 'full' }, { path: 'messages',
+            return [[{ path: '', redirectTo: '/auth', pathMatch: 'full' }, { path: 'messages',
                         component: i14.MessagesComponent }, { path: 'auth', component: i15.AuthenticationComponent,
                         loadChildren: './auth/auth.module#AuthModule' }]];
         }, []), i0.ɵmpd(1024, i12.Router, i12.ɵe, [i0.ApplicationRef, i12.UrlSerializer,

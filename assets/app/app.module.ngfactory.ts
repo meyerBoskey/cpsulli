@@ -82,7 +82,7 @@ export const AppModuleNgFactory:i0.NgModuleFactory<i1.AppModule> = i0.ɵcmf(i1.A
           i0.ɵmpd(512,i0.Compiler,i0.Compiler,([] as any[])),i0.ɵmpd(512,i0.NgModuleFactoryLoader,
               i0.SystemJsNgModuleLoader,[i0.Compiler,[2,i0.SystemJsNgModuleLoaderConfig]]),
           i0.ɵmpd(1024,i12.ROUTES,() => {
-            return [[{path:'',redirectTo:'/messages',pathMatch:'full'},{path:'messages',
+            return [[{path:'',redirectTo:'/auth',pathMatch:'full'},{path:'messages',
                 component:i14.MessagesComponent},{path:'auth',component:i15.AuthenticationComponent,
                 loadChildren:'./auth/auth.module#AuthModule'}]];
           },([] as any[])),i0.ɵmpd(1024,i12.Router,i12.ɵe,[i0.ApplicationRef,i12.UrlSerializer,
