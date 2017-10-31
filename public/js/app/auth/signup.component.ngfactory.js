@@ -12,8 +12,8 @@ var styles_SignupComponent = [];
 export var RenderType_SignupComponent = i0.ɵcrt({ encapsulation: 2,
     styles: styles_SignupComponent, data: {} });
 export function View_SignupComponent_0(_l) {
-    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 63, 'div', [['class',
-                'col-md-8 col-md-offset-2']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 60, 'form', [['novalidate', '']], [[2, 'ng-untouched',
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 76, 'div', [['class',
+                'col-md-8 col-md-offset-2']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 73, 'form', [['novalidate', '']], [[2, 'ng-untouched',
                 null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
             [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid',
                 null], [2, 'ng-pending', null]], [[null, 'ngSubmit'],
@@ -123,7 +123,7 @@ export function View_SignupComponent_0(_l) {
         }, null, null)), i0.ɵdid(16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
             return [p0_0];
         }, [i2.DefaultValueAccessor]), i0.ɵdid(671744, null, 0, i2.FormControlName, [[3, i2.ControlContainer], [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { name: [0, 'name'] }, null), i0.ɵprd(2048, null, i2.NgControl, null, [i2.FormControlName]), i0.ɵdid(16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
-            i0.ɵeld(0, null, null, 14, 'div', [['class', 'form-group']], null, null, null, null, null)),
+            i0.ɵeld(0, null, null, 11, 'div', [['class', 'form-group']], null, null, null, null, null)),
         (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'password']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Password'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(),
             i0.ɵeld(0, null, null, 5, 'input', [['class', 'form-control'],
                 ['formControlName', 'password'], ['id', 'password'], ['type', 'password']], [[2, 'ng-untouched', null], [2, 'ng-touched', null], [2,
@@ -150,6 +150,36 @@ export function View_SignupComponent_0(_l) {
                 return ad;
             }, null, null)), i0.ɵdid(16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
             return [p0_0];
+        }, [i2.DefaultValueAccessor]), i0.ɵdid(671744, null, 0, i2.FormControlName, [[3, i2.ControlContainer], [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { name: [0, 'name'] }, null), i0.ɵprd(2048, null, i2.NgControl, null, [i2.FormControlName]), i0.ɵdid(16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, null, 14, 'div', [['class', 'form-group']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'adminCode']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Admin Code (optional)'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 5, 'input', [['class', 'form-control'],
+            ['formControlName', 'adminCode'], ['id', 'adminCode'], ['type', 'text']], [[2,
+                'ng-untouched', null], [2, 'ng-touched', null], [2, 'ng-pristine',
+                null], [2, 'ng-dirty', null], [2, 'ng-valid', null],
+            [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null,
+                'input'], [null, 'blur'], [null, 'compositionstart'], [null,
+                'compositionend']], function (_v, en, $event) {
+            var ad = true;
+            if (('input' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 66)._handleInput($event.target.value) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 66).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('compositionstart' === en)) {
+                var pd_2 = (i0.ɵnov(_v, 66)._compositionStart() !== false);
+                ad = (pd_2 && ad);
+            }
+            if (('compositionend' === en)) {
+                var pd_3 = (i0.ɵnov(_v, 66)._compositionEnd($event.target.value) !== false);
+                ad = (pd_3 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
         }, [i2.DefaultValueAccessor]), i0.ɵdid(671744, null, 0, i2.FormControlName, [[3, i2.ControlContainer], [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { name: [0, 'name'] }, null), i0.ɵprd(2048, null, i2.NgControl, null, [i2.FormControlName]), i0.ɵdid(16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary'], ['type', 'submit']], [[8, 'disabled', 0]], null, null, null, null)), (_l()(), i0.ɵted(null, ['Submit'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵted(null, ['\n']))], function (_ck, _v) {
         var _co = _v.component;
         var currVal_7 = _co.myForm;
@@ -162,6 +192,8 @@ export function View_SignupComponent_0(_l) {
         _ck(_v, 42, 0, currVal_31);
         var currVal_39 = 'password';
         _ck(_v, 55, 0, currVal_39);
+        var currVal_47 = 'adminCode';
+        _ck(_v, 68, 0, currVal_47);
     }, function (_ck, _v) {
         var _co = _v.component;
         var currVal_0 = i0.ɵnov(_v, 6).ngClassUntouched;
@@ -204,8 +236,16 @@ export function View_SignupComponent_0(_l) {
         var currVal_37 = i0.ɵnov(_v, 57).ngClassInvalid;
         var currVal_38 = i0.ɵnov(_v, 57).ngClassPending;
         _ck(_v, 52, 0, currVal_32, currVal_33, currVal_34, currVal_35, currVal_36, currVal_37, currVal_38);
-        var currVal_40 = !_co.myForm.valid;
-        _ck(_v, 59, 0, currVal_40);
+        var currVal_40 = i0.ɵnov(_v, 70).ngClassUntouched;
+        var currVal_41 = i0.ɵnov(_v, 70).ngClassTouched;
+        var currVal_42 = i0.ɵnov(_v, 70).ngClassPristine;
+        var currVal_43 = i0.ɵnov(_v, 70).ngClassDirty;
+        var currVal_44 = i0.ɵnov(_v, 70).ngClassValid;
+        var currVal_45 = i0.ɵnov(_v, 70).ngClassInvalid;
+        var currVal_46 = i0.ɵnov(_v, 70).ngClassPending;
+        _ck(_v, 65, 0, currVal_40, currVal_41, currVal_42, currVal_43, currVal_44, currVal_45, currVal_46);
+        var currVal_48 = !_co.myForm.valid;
+        _ck(_v, 72, 0, currVal_48);
     });
 }
 export function View_SignupComponent_Host_0(_l) {

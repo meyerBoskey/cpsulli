@@ -25,7 +25,7 @@ function View_AuthenticationComponent_1(_l) {
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, null, null)), i0.ɵdid(671744, [[2, 4]], 0, i1.RouterLinkWithHref, [i1.Router, i1.ActivatedRoute, i2.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1), (_l()(), i0.ɵted(null, ['Signup']))], function (_ck, _v) {
+        }, null, null)), i0.ɵdid(671744, [[2, 4]], 0, i1.RouterLinkWithHref, [i1.Router, i1.ActivatedRoute, i2.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1), (_l()(), i0.ɵted(null, ['User Signup']))], function (_ck, _v) {
         var currVal_0 = 'active';
         _ck(_v, 1, 0, currVal_0);
         var currVal_3 = _ck(_v, 6, 0, 'signup');
@@ -49,7 +49,7 @@ function View_AuthenticationComponent_2(_l) {
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, null, null)), i0.ɵdid(671744, [[4, 4]], 0, i1.RouterLinkWithHref, [i1.Router, i1.ActivatedRoute, i2.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1), (_l()(), i0.ɵted(null, ['Signin']))], function (_ck, _v) {
+        }, null, null)), i0.ɵdid(671744, [[4, 4]], 0, i1.RouterLinkWithHref, [i1.Router, i1.ActivatedRoute, i2.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1), (_l()(), i0.ɵted(null, ['User Signin']))], function (_ck, _v) {
         var currVal_0 = 'active';
         _ck(_v, 1, 0, currVal_0);
         var currVal_3 = _ck(_v, 6, 0, 'signin');
@@ -73,7 +73,79 @@ function View_AuthenticationComponent_3(_l) {
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, null, null)), i0.ɵdid(671744, [[6, 4]], 0, i1.RouterLinkWithHref, [i1.Router, i1.ActivatedRoute, i2.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1), (_l()(), i0.ɵted(null, ['Logout']))], function (_ck, _v) {
+        }, null, null)), i0.ɵdid(671744, [[6, 4]], 0, i1.RouterLinkWithHref, [i1.Router, i1.ActivatedRoute, i2.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1), (_l()(), i0.ɵted(null, ['Create Company']))], function (_ck, _v) {
+        var currVal_0 = 'active';
+        _ck(_v, 1, 0, currVal_0);
+        var currVal_3 = _ck(_v, 6, 0, 'createCompany');
+        _ck(_v, 5, 0, currVal_3);
+    }, function (_ck, _v) {
+        var currVal_1 = i0.ɵnov(_v, 5).target;
+        var currVal_2 = i0.ɵnov(_v, 5).href;
+        _ck(_v, 4, 0, currVal_1, currVal_2);
+    });
+}
+function View_AuthenticationComponent_4(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 7, 'li', [['routerLinkActive',
+                'active']], null, null, null, null, null)),
+        i0.ɵdid(1720320, null, 2, i1.RouterLinkActive, [i1.Router, i0.ElementRef,
+            i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null), i0.ɵqud(603979776, 7, { links: 1 }), i0.ɵqud(603979776, 8, { linksWithHrefs: 1 }),
+        (_l()(), i0.ɵeld(0, null, null, 3, 'a', [], [[1, 'target',
+                0], [8, 'href', 4]], [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 5).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(671744, [[8, 4]], 0, i1.RouterLinkWithHref, [i1.Router, i1.ActivatedRoute, i2.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1), (_l()(), i0.ɵted(null, ['Company Signin']))], function (_ck, _v) {
+        var currVal_0 = 'active';
+        _ck(_v, 1, 0, currVal_0);
+        var currVal_3 = _ck(_v, 6, 0, 'signinCompany');
+        _ck(_v, 5, 0, currVal_3);
+    }, function (_ck, _v) {
+        var currVal_1 = i0.ɵnov(_v, 5).target;
+        var currVal_2 = i0.ɵnov(_v, 5).href;
+        _ck(_v, 4, 0, currVal_1, currVal_2);
+    });
+}
+function View_AuthenticationComponent_5(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 7, 'li', [['routerLinkActive',
+                'active']], null, null, null, null, null)),
+        i0.ɵdid(1720320, null, 2, i1.RouterLinkActive, [i1.Router, i0.ElementRef,
+            i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null), i0.ɵqud(603979776, 9, { links: 1 }), i0.ɵqud(603979776, 10, { linksWithHrefs: 1 }),
+        (_l()(), i0.ɵeld(0, null, null, 3, 'a', [], [[1, 'target',
+                0], [8, 'href', 4]], [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 5).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(671744, [[10, 4]], 0, i1.RouterLinkWithHref, [i1.Router, i1.ActivatedRoute, i2.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1), (_l()(), i0.ɵted(null, ['Employee Signin']))], function (_ck, _v) {
+        var currVal_0 = 'active';
+        _ck(_v, 1, 0, currVal_0);
+        var currVal_3 = _ck(_v, 6, 0, 'employeeSignin');
+        _ck(_v, 5, 0, currVal_3);
+    }, function (_ck, _v) {
+        var currVal_1 = i0.ɵnov(_v, 5).target;
+        var currVal_2 = i0.ɵnov(_v, 5).href;
+        _ck(_v, 4, 0, currVal_1, currVal_2);
+    });
+}
+function View_AuthenticationComponent_6(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 7, 'li', [['routerLinkActive',
+                'active']], null, null, null, null, null)),
+        i0.ɵdid(1720320, null, 2, i1.RouterLinkActive, [i1.Router, i0.ElementRef,
+            i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null), i0.ɵqud(603979776, 11, { links: 1 }), i0.ɵqud(603979776, 12, { linksWithHrefs: 1 }),
+        (_l()(), i0.ɵeld(0, null, null, 3, 'a', [], [[1, 'target',
+                0], [8, 'href', 4]], [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 5).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(671744, [[12, 4]], 0, i1.RouterLinkWithHref, [i1.Router, i1.ActivatedRoute, i2.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1), (_l()(), i0.ɵted(null, ['Logout']))], function (_ck, _v) {
         var currVal_0 = 'active';
         _ck(_v, 1, 0, currVal_0);
         var currVal_3 = _ck(_v, 6, 0, 'logout');
@@ -85,8 +157,8 @@ function View_AuthenticationComponent_3(_l) {
     });
 }
 export function View_AuthenticationComponent_0(_l) {
-    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 16, 'header', [['class', 'row spacing']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 13, 'nav', [['class', 'col-md-8 col-md-offset-2']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])),
-        (_l()(), i0.ɵeld(0, null, null, 10, 'ul', [['class', 'nav nav-tabs']], null, null, null, null, null)),
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 25, 'header', [['class', 'row spacing']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 22, 'nav', [['class', 'col-md-8 col-md-offset-2']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, null, 19, 'ul', [['class', 'nav nav-tabs']], null, null, null, null, null)),
         (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵand(16777216, null, null, 1, null, View_AuthenticationComponent_1)),
         i0.ɵdid(16384, null, 0, i2.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0,
                 'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n                    '])),
@@ -94,6 +166,15 @@ export function View_AuthenticationComponent_0(_l) {
         i0.ɵdid(16384, null, 0, i2.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0,
                 'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n                    '])),
         (_l()(), i0.ɵand(16777216, null, null, 1, null, View_AuthenticationComponent_3)),
+        i0.ɵdid(16384, null, 0, i2.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵand(16777216, null, null, 1, null, View_AuthenticationComponent_4)),
+        i0.ɵdid(16384, null, 0, i2.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵand(16777216, null, null, 1, null, View_AuthenticationComponent_5)),
+        i0.ɵdid(16384, null, 0, i2.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵand(16777216, null, null, 1, null, View_AuthenticationComponent_6)),
         i0.ɵdid(16384, null, 0, i2.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0,
                 'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n                '])),
         (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
@@ -106,9 +187,15 @@ export function View_AuthenticationComponent_0(_l) {
         _ck(_v, 8, 0, currVal_0);
         var currVal_1 = !_co.isLoggedIn();
         _ck(_v, 11, 0, currVal_1);
-        var currVal_2 = _co.isLoggedIn();
+        var currVal_2 = !_co.isLoggedIn();
         _ck(_v, 14, 0, currVal_2);
-        _ck(_v, 22, 0);
+        var currVal_3 = !_co.isLoggedIn();
+        _ck(_v, 17, 0, currVal_3);
+        var currVal_4 = !_co.isLoggedIn();
+        _ck(_v, 20, 0, currVal_4);
+        var currVal_5 = _co.isLoggedIn();
+        _ck(_v, 23, 0, currVal_5);
+        _ck(_v, 31, 0);
     }, null);
 }
 export function View_AuthenticationComponent_Host_0(_l) {

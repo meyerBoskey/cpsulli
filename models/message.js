@@ -4,7 +4,8 @@ var User = require('./user')
 
 var schema = new Schema({
     content: {type: String, required: true},
-    user: {type: Schema.Types.ObjectId, ref: 'User'}
+    user: {type: Schema.Types.ObjectId, ref: 'User'},
+    adminCanEdit: {type: Boolean, value: true}
 });
 
 schema.post('remove', function(message) {

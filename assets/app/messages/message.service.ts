@@ -3,6 +3,8 @@ import {Injectable, EventEmitter} from '@angular/core';
 import 'rxjs/Rx';
 import {Observable} from 'rxjs/Observable';
 
+import {Employee} from '../auth/employees/employee.model';
+import {Company} from '../auth/company/company.model';
 import {Message} from './message.model';
 import {ErrorService} from '../errors/error.service';
 
@@ -25,7 +27,8 @@ export class MessageService {
                     result.obj.content,
                     result.user.firstName,
                     result.obj._id,
-                    result.user._id
+                    result.user._id,
+                    true
                 );
                 this.messages.push(message);
                 return message;
@@ -35,25 +38,23 @@ export class MessageService {
                 return Observable.throw(error.json())
             });
     }
-
     getMessages() {
         const token = localStorage.getItem('token')
-    ? '?token=' + localStorage.getItem('token')
-    : '';
+            ? '?token=' + localStorage.getItem('token')
+            : '';
         return this.http.get('https://cpsulli.herokuapp.com/message' + token)
             .map((response: Response) => {
                 const messages = response.json().obj;
-                console.log(messages);
                 let transformedMessages: Message[] = [];
                 for (let message of messages) {
                     transformedMessages.push(new Message(
                         message.content,
                         message.user.firstName,
                         message._id,
-                        message.user._id
+                        message.user._id,
+                        true
                     ));
                 }
-                // console.log(transformedMessages)
                 this.messages = transformedMessages;
                 return transformedMessages;
             })

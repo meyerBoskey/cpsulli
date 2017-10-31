@@ -24,6 +24,9 @@ var MessageComponent = /** @class */ (function () {
     MessageComponent.prototype.belongsToUser = function () {
         return localStorage.getItem('userID') == this.message.userId;
     };
+    MessageComponent.prototype.isAdmin = function () {
+        return localStorage.getItem('isAdmin') == 'true';
+    };
     __decorate([
         Input(),
         __metadata("design:type", Message)

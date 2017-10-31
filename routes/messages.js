@@ -7,7 +7,24 @@ var jwt = require('jsonwebtoken');
 
 router.get('/', function (req, res, next) {
     var decoded = jwt.decode(req.query.token);
-    if(decoded) {
+    console.log(decoded);
+    if(decoded && decoded.user.isAdmin == true) {
+        Message.find()
+    .populate('user', 'firstName')
+    .exec(function (err, messages) {
+        if (err) {
+            return res.status(500).json({
+                title: 'An error occurred',
+                error: err
+            });
+        }
+        res.status(200).json({
+            message: 'Success',
+            obj: messages
+        });
+    });
+    }
+    else if(decoded) {
         return Message.find({user: decoded.user._id})
             .populate('user', 'firstName')
             .exec(function(err, messages) {
@@ -30,7 +47,6 @@ router.get('/', function (req, res, next) {
             }
         });
     }
-
 });
 
 router.use('/', function(req, res, next) {
@@ -56,7 +72,8 @@ router.post('/', function (req, res, next) {
         }
         var message = new Message({
             content: req.body.content,
-            user: user._id
+            user: user._id,
+            adminCanEdit: true
         });
         message.save(function(err, result) {
             if (err) {

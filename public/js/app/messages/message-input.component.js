@@ -22,7 +22,7 @@ var MessageInputComponent = /** @class */ (function () {
             this.message = null;
         }
         else {
-            var message = new Message(form.value.content, 'Max');
+            var message = new Message(form.value.content, null);
             this.messageService.addMessage(message)
                 .subscribe(function (data) { return console.log(data); }, function (error) { return console.error(error); });
         }

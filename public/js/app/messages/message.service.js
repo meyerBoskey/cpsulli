@@ -30,7 +30,7 @@ var MessageService = /** @class */ (function () {
         return this.http.post('https://cpsulli.herokuapp.com/message' + token, body, { headers: headers })
             .map(function (response) {
             var result = response.json();
-            var message = new Message(result.obj.content, result.user.firstName, result.obj._id, result.user._id);
+            var message = new Message(result.obj.content, result.user.firstName, result.obj._id, result.user._id, true);
             _this.messages.push(message);
             return message;
         })
@@ -47,13 +47,11 @@ var MessageService = /** @class */ (function () {
         return this.http.get('https://cpsulli.herokuapp.com/message' + token)
             .map(function (response) {
             var messages = response.json().obj;
-            console.log(messages);
             var transformedMessages = [];
             for (var _i = 0, messages_1 = messages; _i < messages_1.length; _i++) {
                 var message = messages_1[_i];
-                transformedMessages.push(new Message(message.content, message.user.firstName, message._id, message.user._id));
+                transformedMessages.push(new Message(message.content, message.user.firstName, message._id, message.user._id, true));
             }
-            // console.log(transformedMessages)
             _this.messages = transformedMessages;
             return transformedMessages;
         })

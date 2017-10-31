@@ -10,80 +10,192 @@ import * as i0 from '@angular/core';
 import * as i1 from '@angular/router';
 import * as i2 from '@angular/common';
 import * as i3 from './header.component';
+import * as i4 from './auth/auth.service';
 const styles_HeaderComponent:any[] = ([] as any[]);
 export const RenderType_HeaderComponent:i0.RendererType2 = i0.ɵcrt({encapsulation:2,
     styles:styles_HeaderComponent,data:{}});
+function View_HeaderComponent_1(_l:any):i0.ɵViewDefinition {
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),7,'li',[['routerLinkActive',
+      'active']],(null as any),(null as any),(null as any),(null as any),(null as any))),
+      i0.ɵdid(1720320,(null as any),2,i1.RouterLinkActive,[i1.Router,i0.ElementRef,
+          i0.Renderer2,i0.ChangeDetectorRef],{routerLinkActive:[0,'routerLinkActive']},
+          (null as any)),i0.ɵqud(603979776,1,{links:1}),i0.ɵqud(603979776,2,{linksWithHrefs:1}),
+      (_l()(),i0.ɵeld(0,(null as any),(null as any),3,'a',([] as any[]),[[1,'target',
+          0],[8,'href',4]],[[(null as any),'click']],(_v,en,$event) => {
+        var ad:boolean = true;
+        if (('click' === en)) {
+          const pd_0:any = ((<any>i0.ɵnov(_v,5).onClick($event.button,$event.ctrlKey,
+              $event.metaKey,$event.shiftKey)) !== false);
+          ad = (pd_0 && ad);
+        }
+        return ad;
+      },(null as any),(null as any))),i0.ɵdid(671744,[[2,4]],0,i1.RouterLinkWithHref,
+          [i1.Router,i1.ActivatedRoute,i2.LocationStrategy],{routerLink:[0,'routerLink']},
+          (null as any)),i0.ɵpad(1),(_l()(),i0.ɵted((null as any),['Tasks']))],(_ck,
+      _v) => {
+    const currVal_0:any = 'active';
+    _ck(_v,1,0,currVal_0);
+    const currVal_3:any = _ck(_v,6,0,'/messages');
+    _ck(_v,5,0,currVal_3);
+  },(_ck,_v) => {
+    const currVal_1:any = i0.ɵnov(_v,5).target;
+    const currVal_2:any = i0.ɵnov(_v,5).href;
+    _ck(_v,4,0,currVal_1,currVal_2);
+  });
+}
+function View_HeaderComponent_2(_l:any):i0.ɵViewDefinition {
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),7,'li',[['routerLinkActive',
+      'active']],(null as any),(null as any),(null as any),(null as any),(null as any))),
+      i0.ɵdid(1720320,(null as any),2,i1.RouterLinkActive,[i1.Router,i0.ElementRef,
+          i0.Renderer2,i0.ChangeDetectorRef],{routerLinkActive:[0,'routerLinkActive']},
+          (null as any)),i0.ɵqud(603979776,3,{links:1}),i0.ɵqud(603979776,4,{linksWithHrefs:1}),
+      (_l()(),i0.ɵeld(0,(null as any),(null as any),3,'a',([] as any[]),[[1,'target',
+          0],[8,'href',4]],[[(null as any),'click']],(_v,en,$event) => {
+        var ad:boolean = true;
+        if (('click' === en)) {
+          const pd_0:any = ((<any>i0.ɵnov(_v,5).onClick($event.button,$event.ctrlKey,
+              $event.metaKey,$event.shiftKey)) !== false);
+          ad = (pd_0 && ad);
+        }
+        return ad;
+      },(null as any),(null as any))),i0.ɵdid(671744,[[4,4]],0,i1.RouterLinkWithHref,
+          [i1.Router,i1.ActivatedRoute,i2.LocationStrategy],{routerLink:[0,'routerLink']},
+          (null as any)),i0.ɵpad(1),(_l()(),i0.ɵted((null as any),['Manage Employees']))],
+      (_ck,_v) => {
+        const currVal_0:any = 'active';
+        _ck(_v,1,0,currVal_0);
+        const currVal_3:any = _ck(_v,6,0,'/employees');
+        _ck(_v,5,0,currVal_3);
+      },(_ck,_v) => {
+        const currVal_1:any = i0.ɵnov(_v,5).target;
+        const currVal_2:any = i0.ɵnov(_v,5).href;
+        _ck(_v,4,0,currVal_1,currVal_2);
+      });
+}
+function View_HeaderComponent_3(_l:any):i0.ɵViewDefinition {
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),7,'li',[['routerLinkActive',
+      'active']],(null as any),(null as any),(null as any),(null as any),(null as any))),
+      i0.ɵdid(1720320,(null as any),2,i1.RouterLinkActive,[i1.Router,i0.ElementRef,
+          i0.Renderer2,i0.ChangeDetectorRef],{routerLinkActive:[0,'routerLinkActive']},
+          (null as any)),i0.ɵqud(603979776,5,{links:1}),i0.ɵqud(603979776,6,{linksWithHrefs:1}),
+      (_l()(),i0.ɵeld(0,(null as any),(null as any),3,'a',([] as any[]),[[1,'target',
+          0],[8,'href',4]],[[(null as any),'click']],(_v,en,$event) => {
+        var ad:boolean = true;
+        if (('click' === en)) {
+          const pd_0:any = ((<any>i0.ɵnov(_v,5).onClick($event.button,$event.ctrlKey,
+              $event.metaKey,$event.shiftKey)) !== false);
+          ad = (pd_0 && ad);
+        }
+        return ad;
+      },(null as any),(null as any))),i0.ɵdid(671744,[[6,4]],0,i1.RouterLinkWithHref,
+          [i1.Router,i1.ActivatedRoute,i2.LocationStrategy],{routerLink:[0,'routerLink']},
+          (null as any)),i0.ɵpad(1),(_l()(),i0.ɵted((null as any),['Manage Tasks']))],
+      (_ck,_v) => {
+        const currVal_0:any = 'active';
+        _ck(_v,1,0,currVal_0);
+        const currVal_3:any = _ck(_v,6,0,'/tasks');
+        _ck(_v,5,0,currVal_3);
+      },(_ck,_v) => {
+        const currVal_1:any = i0.ɵnov(_v,5).target;
+        const currVal_2:any = i0.ɵnov(_v,5).href;
+        _ck(_v,4,0,currVal_1,currVal_2);
+      });
+}
+function View_HeaderComponent_4(_l:any):i0.ɵViewDefinition {
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),7,'li',[['routerLinkActive',
+      'active']],(null as any),(null as any),(null as any),(null as any),(null as any))),
+      i0.ɵdid(1720320,(null as any),2,i1.RouterLinkActive,[i1.Router,i0.ElementRef,
+          i0.Renderer2,i0.ChangeDetectorRef],{routerLinkActive:[0,'routerLinkActive']},
+          (null as any)),i0.ɵqud(603979776,7,{links:1}),i0.ɵqud(603979776,8,{linksWithHrefs:1}),
+      (_l()(),i0.ɵeld(0,(null as any),(null as any),3,'a',([] as any[]),[[1,'target',
+          0],[8,'href',4]],[[(null as any),'click']],(_v,en,$event) => {
+        var ad:boolean = true;
+        if (('click' === en)) {
+          const pd_0:any = ((<any>i0.ɵnov(_v,5).onClick($event.button,$event.ctrlKey,
+              $event.metaKey,$event.shiftKey)) !== false);
+          ad = (pd_0 && ad);
+        }
+        return ad;
+      },(null as any),(null as any))),i0.ɵdid(671744,[[8,4]],0,i1.RouterLinkWithHref,
+          [i1.Router,i1.ActivatedRoute,i2.LocationStrategy],{routerLink:[0,'routerLink']},
+          (null as any)),i0.ɵpad(1),(_l()(),i0.ɵted((null as any),['signin/signup']))],
+      (_ck,_v) => {
+        const currVal_0:any = 'active';
+        _ck(_v,1,0,currVal_0);
+        const currVal_3:any = _ck(_v,6,0,'/auth');
+        _ck(_v,5,0,currVal_3);
+      },(_ck,_v) => {
+        const currVal_1:any = i0.ɵnov(_v,5).target;
+        const currVal_2:any = i0.ɵnov(_v,5).href;
+        _ck(_v,4,0,currVal_1,currVal_2);
+      });
+}
+function View_HeaderComponent_5(_l:any):i0.ɵViewDefinition {
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),5,'li',[['routerLinkActive',
+      'active']],(null as any),[[(null as any),'click']],(_v,en,$event) => {
+    var ad:boolean = true;
+    var _co:any = _v.component;
+    if (('click' === en)) {
+      const pd_0:any = ((<any>_co.onLogout()) !== false);
+      ad = (pd_0 && ad);
+    }
+    return ad;
+  },(null as any),(null as any))),i0.ɵdid(1720320,(null as any),2,i1.RouterLinkActive,
+      [i1.Router,i0.ElementRef,i0.Renderer2,i0.ChangeDetectorRef],{routerLinkActive:[0,
+          'routerLinkActive']},(null as any)),i0.ɵqud(603979776,9,{links:1}),i0.ɵqud(603979776,
+      10,{linksWithHrefs:1}),(_l()(),i0.ɵeld(0,(null as any),(null as any),1,'a',([] as any[]),
+      (null as any),(null as any),(null as any),(null as any),(null as any))),(_l()(),
+      i0.ɵted((null as any),['logout']))],(_ck,_v) => {
+    const currVal_0:any = 'active';
+    _ck(_v,1,0,currVal_0);
+  },(null as any));
+}
 export function View_HeaderComponent_0(_l:any):i0.ɵViewDefinition {
   return i0.ɵvid(0,[(_l()(),i0.ɵted((null as any),['\n        '])),(_l()(),i0.ɵeld(0,
-      (null as any),(null as any),25,'header',[['class','row']],(null as any),(null as any),
-      (null as any),(null as any),(null as any))),(_l()(),i0.ɵted((null as any),['\n            '])),
-      (_l()(),i0.ɵeld(0,(null as any),(null as any),22,'nav',[['class','col-md-8 col-md-offset-2']],
-          (null as any),(null as any),(null as any),(null as any),(null as any))),
-      (_l()(),i0.ɵted((null as any),['\n                '])),(_l()(),i0.ɵeld(0,(null as any),
-          (null as any),19,'ul',[['class','nav nav-pills']],(null as any),(null as any),
-          (null as any),(null as any),(null as any))),(_l()(),i0.ɵted((null as any),
-          ['\n                    '])),(_l()(),i0.ɵeld(0,(null as any),(null as any),
-          7,'li',[['routerLinkActive','active']],(null as any),(null as any),(null as any),
-          (null as any),(null as any))),i0.ɵdid(1720320,(null as any),2,i1.RouterLinkActive,
-          [i1.Router,i0.ElementRef,i0.Renderer2,i0.ChangeDetectorRef],{routerLinkActive:[0,
-              'routerLinkActive']},(null as any)),i0.ɵqud(603979776,1,{links:1}),i0.ɵqud(603979776,
-          2,{linksWithHrefs:1}),(_l()(),i0.ɵeld(0,(null as any),(null as any),3,'a',
-          ([] as any[]),[[1,'target',0],[8,'href',4]],[[(null as any),'click']],(_v,
-              en,$event) => {
-            var ad:boolean = true;
-            if (('click' === en)) {
-              const pd_0:any = ((<any>i0.ɵnov(_v,12).onClick($event.button,$event.ctrlKey,
-                  $event.metaKey,$event.shiftKey)) !== false);
-              ad = (pd_0 && ad);
-            }
-            return ad;
-          },(null as any),(null as any))),i0.ɵdid(671744,[[2,4]],0,i1.RouterLinkWithHref,
-          [i1.Router,i1.ActivatedRoute,i2.LocationStrategy],{routerLink:[0,'routerLink']},
-          (null as any)),i0.ɵpad(1),(_l()(),i0.ɵted((null as any),['Messenger'])),
-      (_l()(),i0.ɵted((null as any),['\n                    '])),(_l()(),i0.ɵeld(0,
-          (null as any),(null as any),7,'li',[['routerLinkActive','active']],(null as any),
-          (null as any),(null as any),(null as any),(null as any))),i0.ɵdid(1720320,
-          (null as any),2,i1.RouterLinkActive,[i1.Router,i0.ElementRef,i0.Renderer2,
-              i0.ChangeDetectorRef],{routerLinkActive:[0,'routerLinkActive']},(null as any)),
-      i0.ɵqud(603979776,3,{links:1}),i0.ɵqud(603979776,4,{linksWithHrefs:1}),(_l()(),
-          i0.ɵeld(0,(null as any),(null as any),3,'a',([] as any[]),[[1,'target',0],
-              [8,'href',4]],[[(null as any),'click']],(_v,en,$event) => {
-            var ad:boolean = true;
-            if (('click' === en)) {
-              const pd_0:any = ((<any>i0.ɵnov(_v,21).onClick($event.button,$event.ctrlKey,
-                  $event.metaKey,$event.shiftKey)) !== false);
-              ad = (pd_0 && ad);
-            }
-            return ad;
-          },(null as any),(null as any))),i0.ɵdid(671744,[[4,4]],0,i1.RouterLinkWithHref,
-          [i1.Router,i1.ActivatedRoute,i2.LocationStrategy],{routerLink:[0,'routerLink']},
-          (null as any)),i0.ɵpad(1),(_l()(),i0.ɵted((null as any),['Authentication'])),
-      (_l()(),i0.ɵted((null as any),['\n                '])),(_l()(),i0.ɵted((null as any),
-          ['\n            '])),(_l()(),i0.ɵted((null as any),['\n        '])),(_l()(),
-          i0.ɵted((null as any),['\n    ']))],(_ck,_v) => {
-    const currVal_0:any = 'active';
+      (null as any),(null as any),22,'header',[['class','row'],['style','padding-left: 30px; padding-top: 30px; padding-bottom: 10px;']],
+      (null as any),(null as any),(null as any),(null as any),(null as any))),(_l()(),
+      i0.ɵted((null as any),['\n            '])),(_l()(),i0.ɵeld(0,(null as any),(null as any),
+      19,'nav',([] as any[]),(null as any),(null as any),(null as any),(null as any),
+      (null as any))),(_l()(),i0.ɵted((null as any),['\n                '])),(_l()(),
+      i0.ɵeld(0,(null as any),(null as any),16,'ul',[['class','nav nav-pills']],(null as any),
+          (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted((null as any),
+      ['\n                    '])),(_l()(),i0.ɵand(16777216,(null as any),(null as any),
+      1,(null as any),View_HeaderComponent_1)),i0.ɵdid(16384,(null as any),0,i2.NgIf,
+      [i0.ViewContainerRef,i0.TemplateRef],{ngIf:[0,'ngIf']},(null as any)),(_l()(),
+      i0.ɵted((null as any),['\n                    '])),(_l()(),i0.ɵand(16777216,
+      (null as any),(null as any),1,(null as any),View_HeaderComponent_2)),i0.ɵdid(16384,
+      (null as any),0,i2.NgIf,[i0.ViewContainerRef,i0.TemplateRef],{ngIf:[0,'ngIf']},
+      (null as any)),(_l()(),i0.ɵted((null as any),['\n                    '])),(_l()(),
+      i0.ɵand(16777216,(null as any),(null as any),1,(null as any),View_HeaderComponent_3)),
+      i0.ɵdid(16384,(null as any),0,i2.NgIf,[i0.ViewContainerRef,i0.TemplateRef],{ngIf:[0,
+          'ngIf']},(null as any)),(_l()(),i0.ɵted((null as any),['\n                    '])),
+      (_l()(),i0.ɵand(16777216,(null as any),(null as any),1,(null as any),View_HeaderComponent_4)),
+      i0.ɵdid(16384,(null as any),0,i2.NgIf,[i0.ViewContainerRef,i0.TemplateRef],{ngIf:[0,
+          'ngIf']},(null as any)),(_l()(),i0.ɵted((null as any),['\n                    '])),
+      (_l()(),i0.ɵand(16777216,(null as any),(null as any),1,(null as any),View_HeaderComponent_5)),
+      i0.ɵdid(16384,(null as any),0,i2.NgIf,[i0.ViewContainerRef,i0.TemplateRef],{ngIf:[0,
+          'ngIf']},(null as any)),(_l()(),i0.ɵted((null as any),['\n                '])),
+      (_l()(),i0.ɵted((null as any),['\n            '])),(_l()(),i0.ɵted((null as any),
+          ['\n        '])),(_l()(),i0.ɵted((null as any),['\n    ']))],(_ck,_v) => {
+    var _co:i3.HeaderComponent = _v.component;
+    const currVal_0:any = ((_co.isLoggedIn() && !_co.isCompany()) && !_co.isEmployee());
     _ck(_v,8,0,currVal_0);
-    const currVal_3:any = _ck(_v,13,0,'/messages');
-    _ck(_v,12,0,currVal_3);
-    const currVal_4:any = 'active';
-    _ck(_v,17,0,currVal_4);
-    const currVal_7:any = _ck(_v,22,0,'/auth');
-    _ck(_v,21,0,currVal_7);
-  },(_ck,_v) => {
-    const currVal_1:any = i0.ɵnov(_v,12).target;
-    const currVal_2:any = i0.ɵnov(_v,12).href;
-    _ck(_v,11,0,currVal_1,currVal_2);
-    const currVal_5:any = i0.ɵnov(_v,21).target;
-    const currVal_6:any = i0.ɵnov(_v,21).href;
-    _ck(_v,20,0,currVal_5,currVal_6);
-  });
+    const currVal_1:any = (_co.isLoggedIn() && _co.isCompany());
+    _ck(_v,11,0,currVal_1);
+    const currVal_2:any = ((_co.isLoggedIn() && _co.isEmployee()) || _co.isCompany());
+    _ck(_v,14,0,currVal_2);
+    const currVal_3:boolean = !_co.isLoggedIn();
+    _ck(_v,17,0,currVal_3);
+    const currVal_4:any = _co.isLoggedIn();
+    _ck(_v,20,0,currVal_4);
+  },(null as any));
 }
 export function View_HeaderComponent_Host_0(_l:any):i0.ɵViewDefinition {
   return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),1,'app-header',([] as any[]),
       (null as any),(null as any),(null as any),View_HeaderComponent_0,RenderType_HeaderComponent)),
-      i0.ɵdid(49152,(null as any),0,i3.HeaderComponent,([] as any[]),(null as any),
-          (null as any))],(null as any),(null as any));
+      i0.ɵdid(49152,(null as any),0,i3.HeaderComponent,[i4.AuthService,i1.Router],
+          (null as any),(null as any))],(null as any),(null as any));
 }
 export const HeaderComponentNgFactory:i0.ComponentFactory<i3.HeaderComponent> = i0.ɵccf('app-header',
     i3.HeaderComponent,View_HeaderComponent_Host_0,{},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2hlYWRlci5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2hlYWRlci5jb21wb25lbnQudHMiLCJuZzovLy9DOi9Vc2Vycy9jcHN1bC9kZXNrdG9wL21lYW4tYXBwL21lYW4tYXBwL2Fzc2V0cy9hcHAvaGVhZGVyLmNvbXBvbmVudC50cy5IZWFkZXJDb21wb25lbnQuaHRtbCIsIm5nOi8vL0M6L1VzZXJzL2Nwc3VsL2Rlc2t0b3AvbWVhbi1hcHAvbWVhbi1hcHAvYXNzZXRzL2FwcC9oZWFkZXIuY29tcG9uZW50LnRzLkhlYWRlckNvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIlxuICAgICAgICA8aGVhZGVyIGNsYXNzPVwicm93XCI+XG4gICAgICAgICAgICA8bmF2IGNsYXNzPVwiY29sLW1kLTggY29sLW1kLW9mZnNldC0yXCI+XG4gICAgICAgICAgICAgICAgPHVsIGNsYXNzPVwibmF2IG5hdi1waWxsc1wiPlxuICAgICAgICAgICAgICAgICAgICA8bGkgcm91dGVyTGlua0FjdGl2ZT1cImFjdGl2ZVwiPjxhIFtyb3V0ZXJMaW5rXT1cIlsnL21lc3NhZ2VzJ11cIj5NZXNzZW5nZXI8L2E+PC9saT5cbiAgICAgICAgICAgICAgICAgICAgPGxpIHJvdXRlckxpbmtBY3RpdmU9XCJhY3RpdmVcIj48YSBbcm91dGVyTGlua109XCJbJy9hdXRoJ11cIj5BdXRoZW50aWNhdGlvbjwvYT48L2xpPlxuICAgICAgICAgICAgICAgIDwvdWw+XG4gICAgICAgICAgICA8L25hdj5cbiAgICAgICAgPC9oZWFkZXI+XG4gICAgIiwiPGFwcC1oZWFkZXI+PC9hcHAtaGVhZGVyPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7b0JDQUEsK0NBQ1E7TUFBQTtNQUFBLDRDQUFvQjtNQUNoQjtVQUFBO01BQXNDLHVEQUNsQztVQUFBO1VBQUEsNENBQTBCO1VBQUEsNkJBQ3RCO1VBQUE7VUFBQSxxQ0FBQTtVQUFBO2NBQUE7VUFBQSxzQkFBOEI7VUFBQTt1QkFBQTtZQUFBO1lBQUE7Y0FBQTtrQkFBQTtjQUFBO1lBQUE7WUFBQTtVQUFBLHVDQUFBO1VBQUE7VUFBQSxzQkFBRyxJQUE2QjtNQUFrQiwyREFDaEY7VUFBQTtVQUFBLGlFQUFBO1VBQUE7a0NBQUE7YUFBQSxnRUFBOEI7aUJBQUE7Y0FBQTtZQUFBO1lBQUE7Y0FBQTtrQkFBQTtjQUFBO1lBQUE7WUFBQTtVQUFBLHVDQUFBO1VBQUE7VUFBQSxzQkFBRyxJQUF5QjtNQUF1Qix1REFDaEY7VUFBQSxxQkFDSCwrQ0FDRDtpQkFBQTtJQUpPO0lBQUosV0FBSSxTQUFKO0lBQWlDO0lBQUgsWUFBRyxTQUFIO0lBQzFCO0lBQUosWUFBSSxTQUFKO0lBQWlDO0lBQUgsWUFBRyxTQUFIOztJQURBO0lBQUE7SUFBQSxZQUFBLG1CQUFBO0lBQ0E7SUFBQTtJQUFBLFlBQUEsbUJBQUE7Ozs7b0JDTGxEO01BQUE7YUFBQTtVQUFBOzs7In0=
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2hlYWRlci5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2hlYWRlci5jb21wb25lbnQudHMiLCJuZzovLy9DOi9Vc2Vycy9jcHN1bC9kZXNrdG9wL21lYW4tYXBwL21lYW4tYXBwL2Fzc2V0cy9hcHAvaGVhZGVyLmNvbXBvbmVudC50cy5IZWFkZXJDb21wb25lbnQuaHRtbCIsIm5nOi8vL0M6L1VzZXJzL2Nwc3VsL2Rlc2t0b3AvbWVhbi1hcHAvbWVhbi1hcHAvYXNzZXRzL2FwcC9oZWFkZXIuY29tcG9uZW50LnRzLkhlYWRlckNvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIlxuICAgICAgICA8aGVhZGVyIGNsYXNzPVwicm93XCIgc3R5bGU9XCJwYWRkaW5nLWxlZnQ6IDMwcHg7IHBhZGRpbmctdG9wOiAzMHB4OyBwYWRkaW5nLWJvdHRvbTogMTBweDtcIj5cbiAgICAgICAgICAgIDxuYXY+XG4gICAgICAgICAgICAgICAgPHVsIGNsYXNzPVwibmF2IG5hdi1waWxsc1wiPlxuICAgICAgICAgICAgICAgICAgICA8bGkgcm91dGVyTGlua0FjdGl2ZT1cImFjdGl2ZVwiICpuZ0lmPVwiaXNMb2dnZWRJbigpICYmICFpc0NvbXBhbnkoKSAmJiAhaXNFbXBsb3llZSgpXCI+PGEgW3JvdXRlckxpbmtdPVwiWycvbWVzc2FnZXMnXVwiPlRhc2tzPC9hPjwvbGk+XG4gICAgICAgICAgICAgICAgICAgIDxsaSByb3V0ZXJMaW5rQWN0aXZlPVwiYWN0aXZlXCIgKm5nSWY9XCJpc0xvZ2dlZEluKCkgJiYgaXNDb21wYW55KClcIj48YSBbcm91dGVyTGlua109XCJbJy9lbXBsb3llZXMnXVwiPk1hbmFnZSBFbXBsb3llZXM8L2E+PC9saT5cbiAgICAgICAgICAgICAgICAgICAgPGxpIHJvdXRlckxpbmtBY3RpdmU9XCJhY3RpdmVcIiAqbmdJZj1cImlzTG9nZ2VkSW4oKSAmJiBpc0VtcGxveWVlKCkgfHwgaXNDb21wYW55KClcIj48YSBbcm91dGVyTGlua109XCJbJy90YXNrcyddXCI+TWFuYWdlIFRhc2tzPC9hPjwvbGk+XG4gICAgICAgICAgICAgICAgICAgIDxsaSByb3V0ZXJMaW5rQWN0aXZlPVwiYWN0aXZlXCIgKm5nSWY9XCIhaXNMb2dnZWRJbigpXCI+PGEgW3JvdXRlckxpbmtdPVwiWycvYXV0aCddXCI+c2lnbmluL3NpZ251cDwvYT48L2xpPlxuICAgICAgICAgICAgICAgICAgICA8bGkgcm91dGVyTGlua0FjdGl2ZT1cImFjdGl2ZVwiICpuZ0lmPVwiaXNMb2dnZWRJbigpXCIgKGNsaWNrKT1cIm9uTG9nb3V0KClcIj48YT5sb2dvdXQ8L2E+PC9saT5cbiAgICAgICAgICAgICAgICA8L3VsPlxuICAgICAgICAgICAgPC9uYXY+XG4gICAgICAgIDwvaGVhZGVyPlxuICAgICIsIjxhcHAtaGVhZGVyPjwvYXBwLWhlYWRlcj4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7OztvQkNJb0I7TUFBQTthQUFBOzJDQUFBO1VBQUE7TUFBb0Y7VUFBQTtRQUFBO1FBQUE7VUFBQTtjQUFBO1VBQUE7UUFBQTtRQUFBO01BQUEsdUNBQUE7VUFBQTtVQUFBLHNCQUFHLElBQTZCOztJQUFoSDtJQUFKLFdBQUksU0FBSjtJQUF1RjtJQUFILFdBQUcsU0FBSDs7SUFBQTtJQUFBO0lBQUEsV0FBQSxtQkFBQTs7OztvQkFDcEY7TUFBQTthQUFBOzJDQUFBO1VBQUE7TUFBa0U7VUFBQTtRQUFBO1FBQUE7VUFBQTtjQUFBO1VBQUE7UUFBQTtRQUFBO01BQUEsdUNBQUE7VUFBQTtVQUFBLHNCQUFHLElBQThCOztRQUEvRjtRQUFKLFdBQUksU0FBSjtRQUFxRTtRQUFILFdBQUcsU0FBSDs7UUFBQTtRQUFBO1FBQUEsV0FBQSxtQkFBQTs7OztvQkFDbEU7TUFBQTthQUFBOzJDQUFBO1VBQUE7TUFBa0Y7VUFBQTtRQUFBO1FBQUE7VUFBQTtjQUFBO1VBQUE7UUFBQTtRQUFBO01BQUEsdUNBQUE7VUFBQTtVQUFBLHNCQUFHLElBQTBCOztRQUEzRztRQUFKLFdBQUksU0FBSjtRQUFxRjtRQUFILFdBQUcsU0FBSDs7UUFBQTtRQUFBO1FBQUEsV0FBQSxtQkFBQTs7OztvQkFDbEY7TUFBQTthQUFBOzJDQUFBO1VBQUE7TUFBb0Q7VUFBQTtRQUFBO1FBQUE7VUFBQTtjQUFBO1VBQUE7UUFBQTtRQUFBO01BQUEsdUNBQUE7VUFBQTtVQUFBLHNCQUFHLElBQXlCOztRQUE1RTtRQUFKLFdBQUksU0FBSjtRQUF1RDtRQUFILFdBQUcsU0FBSDs7UUFBQTtRQUFBO1FBQUEsV0FBQSxtQkFBQTs7OztvQkFDcEQ7TUFBQTtJQUFBO0lBQUE7SUFBbUQ7TUFBQTtNQUFBO0lBQUE7SUFBbkQ7RUFBQSx1Q0FBQTtNQUFBO1VBQUE7TUFBQSx1QkFBd0U7TUFBQSx3RUFBRzthQUFBO0lBQXZFO0lBQUosV0FBSSxTQUFKOzs7O29CQVJwQiwrQ0FDUTtNQUFBO01BQUEsd0VBQXlGO2FBQUEsb0NBQ3JGO01BQUE7TUFBQSxnQkFBSyx1REFDRDthQUFBO1VBQUEsMERBQTBCO01BQUEsNkJBQ3RCO01BQUEsZ0RBQUE7TUFBQSxzRUFBa0k7YUFBQSw0Q0FDbEk7TUFBQSw0RUFBQTtNQUFBO01BQUEsZUFBNEgsMkRBQzVIO2FBQUE7YUFBQTtVQUFBLHdCQUFvSTtNQUNwSTthQUFBO1VBQUEsd0JBQXNHO01BQ3RHO2FBQUE7VUFBQSx3QkFBMEY7TUFDekYsbURBQ0g7VUFBQSxpQkFDRDs7SUFQaUM7SUFBOUIsV0FBOEIsU0FBOUI7SUFDOEI7SUFBOUIsWUFBOEIsU0FBOUI7SUFDOEI7SUFBOUIsWUFBOEIsU0FBOUI7SUFDOEI7SUFBOUIsWUFBOEIsU0FBOUI7SUFDOEI7SUFBOUIsWUFBOEIsU0FBOUI7Ozs7b0JDUnBCO01BQUE7YUFBQTtVQUFBOzs7In0=

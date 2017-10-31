@@ -9,6 +9,9 @@ var mongoose = require('mongoose');
 var appRoutes = require('./routes/app');
 var messageRoutes = require('./routes/messages');
 var userRoutes = require('./routes/user');
+var taskRoutes = require('./routes/task');
+var employeesRoutes = require('./routes/employees');
+var companyRoutes = require('./routes/company');
 
 var app = express();
 mongoose.connect('mongodb://testUser:testPassword@ds157584.mlab.com:57584/cpsulli', {useMongoClient:true});
@@ -34,6 +37,9 @@ app.use(function (req, res, next) {
 });
 app.use('/message', messageRoutes);
 app.use('/user', userRoutes);
+app.use('/employees', employeesRoutes);
+app.use('/company', companyRoutes);
+app.use('/task', taskRoutes);
 app.use('/', appRoutes);
 
 // catch 404 and forward to error handler

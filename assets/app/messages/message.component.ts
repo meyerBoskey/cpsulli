@@ -37,4 +37,7 @@ export class MessageComponent {
     belongsToUser() {
         return localStorage.getItem('userID') == this.message.userId;
     }
+    isAdmin() {
+        return localStorage.getItem('isAdmin') == 'true';
+    }
 }

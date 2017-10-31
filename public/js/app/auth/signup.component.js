@@ -16,10 +16,18 @@ var SignupComponent = /** @class */ (function () {
         this.authService = authService;
     }
     SignupComponent.prototype.onSubmit = function () {
-        var user = new User(this.myForm.value.email, this.myForm.value.password, this.myForm.value.firstName, this.myForm.value.lastName);
-        this.authService.signup(user)
-            .subscribe(function (data) { return console.log(data); }, function (error) { return console.log(error); });
-        this.myForm.reset();
+        if (this.myForm.value.adminCode == 123) {
+            var user = new User(this.myForm.value.email, this.myForm.value.password, this.myForm.value.firstName, this.myForm.value.lastName, true);
+            this.authService.signup(user)
+                .subscribe(function (data) { return console.log(data); }, function (error) { return console.log(error); });
+            this.myForm.reset();
+        }
+        else {
+            var user = new User(this.myForm.value.email, this.myForm.value.password, this.myForm.value.firstName, this.myForm.value.lastName, false);
+            this.authService.signup(user)
+                .subscribe(function (data) { return console.log(data); }, function (error) { return console.log(error); });
+            this.myForm.reset();
+        }
     };
     SignupComponent.prototype.ngOnInit = function () {
         this.myForm = new FormGroup({
@@ -29,7 +37,8 @@ var SignupComponent = /** @class */ (function () {
                 Validators.required,
                 Validators.email
             ]),
-            password: new FormControl(null, Validators.required)
+            password: new FormControl(null, Validators.required),
+            adminCode: new FormControl(null)
         });
     };
     SignupComponent = __decorate([

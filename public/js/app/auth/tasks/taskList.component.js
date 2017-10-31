@@ -8,24 +8,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthService } from "./auth.service";
-var LogoutComponent = /** @class */ (function () {
-    function LogoutComponent(authService, router) {
-        this.authService = authService;
-        this.router = router;
+import { EmployeeService } from "../employees/employee.service";
+var TaskListComponent = /** @class */ (function () {
+    function TaskListComponent(employeeService) {
+        this.employeeService = employeeService;
     }
-    LogoutComponent.prototype.onLogout = function () {
-        this.authService.logout();
-        this.router.navigate(['/auth', 'signin']);
+    TaskListComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.employeeService.getTasks()
+            .subscribe(function (tasks) {
+            _this.tasks = tasks;
+        });
     };
-    LogoutComponent = __decorate([
+    TaskListComponent = __decorate([
         Component({
-            selector: 'app-logout',
-            template: "\n    <div class=\"col-md-8 col-md-offset-2\">\n        <button class=\"btn btn-danger\" (click)=\"onLogout()\">Logout</button>\n    </div>\n    "
+            selector: 'app-task-list',
+            template: "\n    <div>\n        <app-task\n               [task]=\"task\"\n                *ngFor=\"let task of tasks\"></app-task>\n    </div>\n"
         }),
-        __metadata("design:paramtypes", [AuthService, Router])
-    ], LogoutComponent);
-    return LogoutComponent;
+        __metadata("design:paramtypes", [EmployeeService])
+    ], TaskListComponent);
+    return TaskListComponent;
 }());
-export { LogoutComponent };
+export { TaskListComponent };

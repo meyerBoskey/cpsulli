@@ -1,0 +1,18 @@
+<article class="panel panel-default">
+    <div class="panel-body">
+        {{ employee.firstName }} {{ employee.lastName }}
+    </div>
+    <footer class="panel-footer">
+        <div class="author">
+            {{ employee.jobTitle }}
+        </div>
+        <div class="author">
+            employee ID: {{ employee.employeeId }}
+            <div class="config">
+                <a *ngIf="router.url === '/employees'" (click)="onEdit()"><strong>Edit</strong></a>
+                <a *ngIf="router.url === '/employees'" (click)="onDelete()"><strong>Delete</strong></a>
+            </div>
+
+        </div>
+    </footer>
+</article>

@@ -44,7 +44,7 @@ export function View_MessageComponent_0(_l) {
                 'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(),
             i0.ɵted(null, ['\n'])), (_l()(), i0.ɵted(null, ['\n']))], function (_ck, _v) {
         var _co = _v.component;
-        var currVal_2 = _co.belongsToUser();
+        var currVal_2 = (_co.belongsToUser() || _co.isAdmin());
         _ck(_v, 11, 0, currVal_2);
     }, function (_ck, _v) {
         var _co = _v.component;

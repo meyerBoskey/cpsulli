@@ -2,9 +2,11 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import {LogoutComponent} from "./logout.component";
 import {SignupComponent} from "./signup.component";
 import {SigninComponent} from "./signin.component";
+import {EmployeeSigninComponent} from "./employees/employeeSignin.component";
+import {SigninCompanyComponent} from "./company/signin/signinCompany.component";
+import {CreateCompanyComponent} from "./company/create/createCompany.component";
 import {authRouting} from "./auth.routing";
 
 
@@ -13,7 +15,9 @@ import {authRouting} from "./auth.routing";
     declarations: [
         SignupComponent,
         SigninComponent,
-        LogoutComponent
+        EmployeeSigninComponent,
+        SigninCompanyComponent,
+        CreateCompanyComponent
     ],
     imports: [ ReactiveFormsModule, CommonModule, authRouting]
 })

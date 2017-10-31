@@ -23,7 +23,8 @@ export class SigninComponent {
                 data => {
                     localStorage.setItem('token', data.token);
                     localStorage.setItem('userID', data.userId);
-                    this.router.navigateByUrl('/');
+                    localStorage.setItem('isAdmin', data.isAdmin);
+                    this.router.navigateByUrl('/messages');
                 },
                 error => console.error(error)
             )

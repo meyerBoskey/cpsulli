@@ -14,18 +14,35 @@ export class SignupComponent implements OnInit {
     constructor(private authService: AuthService) {}
 
     onSubmit() {
-        const user = new User(
-            this.myForm.value.email,
-            this.myForm.value.password,
-            this.myForm.value.firstName,
-            this.myForm.value.lastName
-        );
-        this.authService.signup(user)
-            .subscribe(
-                data => console.log(data),
-                error => console.log(error)
+        if (this.myForm.value.adminCode == 123) {
+            const user = new User(
+                this.myForm.value.email,
+                this.myForm.value.password,
+                this.myForm.value.firstName,
+                this.myForm.value.lastName,
+                true
             );
-        this.myForm.reset();
+            this.authService.signup(user)
+                .subscribe(
+                    data => console.log(data),
+                    error => console.log(error)
+                );
+            this.myForm.reset();
+        } else {
+            const user = new User(
+                this.myForm.value.email,
+                this.myForm.value.password,
+                this.myForm.value.firstName,
+                this.myForm.value.lastName,
+                false
+            );
+            this.authService.signup(user)
+                .subscribe(
+                    data => console.log(data),
+                    error => console.log(error)
+                );
+            this.myForm.reset();
+        }
     }
 
     ngOnInit() {
@@ -36,7 +53,8 @@ export class SignupComponent implements OnInit {
                 Validators.required,
                 Validators.email
             ]),
-            password: new FormControl(null, Validators.required)
+            password: new FormControl(null, Validators.required),
+            adminCode: new FormControl(null)
         });
     }
 }

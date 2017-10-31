@@ -15,6 +15,8 @@ import { AuthService } from './auth/auth.service';
 import { ErrorComponent } from './errors/error.component';
 import { ErrorService } from "./errors/error.service";
 import { MessageModule } from "./messages/message.module";
+import { EmployeesModule } from "./auth/employees/employees.module";
+// import {MatDatePickerModule} from "@angular/material";
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -26,7 +28,7 @@ var AppModule = /** @class */ (function () {
                 HeaderComponent,
                 AuthenticationComponent
             ],
-            imports: [BrowserModule, routing, HttpModule, MessageModule],
+            imports: [BrowserModule, routing, HttpModule, MessageModule, EmployeesModule],
             providers: [AuthService, ErrorService],
             bootstrap: [AppComponent]
         })

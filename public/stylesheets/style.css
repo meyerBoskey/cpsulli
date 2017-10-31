@@ -1,27 +1,30 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    /*padding: 30px;*/
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
-  cursor: pointer;
+    color: #00B7FF;
+    cursor: pointer;
 }
 
-a:hover,
-a:active {
-  color: #00B7FF;
-  text-decoration: underline;
+a:hover, a:active {
+    color: #00B7FF;
+    text-decoration: underline;
+}
+
+label {
+    color: #ffffff;
 }
 
 a.danger {
-  color: red;
+    color: red;
 }
 
 .spacing {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 input.ng-invalid.ng-touched {
-  border: 1px solid red;
+    border: 1px solid red;
 }

@@ -24,7 +24,8 @@ var SigninComponent = /** @class */ (function () {
             .subscribe(function (data) {
             localStorage.setItem('token', data.token);
             localStorage.setItem('userID', data.userId);
-            _this.router.navigateByUrl('/');
+            localStorage.setItem('isAdmin', data.isAdmin);
+            _this.router.navigateByUrl('/messages');
         }, function (error) { return console.error(error); });
         this.myForm.reset();
     };
