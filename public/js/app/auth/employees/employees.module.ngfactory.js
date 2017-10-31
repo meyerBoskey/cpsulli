@@ -24,7 +24,7 @@ export var EmployeesModuleNgFactory = i0.ɵcmf(i1.EmployeesModule, [], function 
         i0.ɵmpd(4608, i7.AuthService, i7.AuthService, [i8.Http, i6.ErrorService]), i0.ɵmpd(4608, i9.EmployeeService, i9.EmployeeService, [i8.Http, i6.ErrorService]), i0.ɵmpd(512, i4.ɵba, i4.ɵba, []), i0.ɵmpd(512, i4.ReactiveFormsModule, i4.ReactiveFormsModule, []), i0.ɵmpd(512, i5.CommonModule, i5.CommonModule, []),
         i0.ɵmpd(512, i10.RouterModule, i10.RouterModule, [[2, i10.ɵa], [2, i10.Router]]),
         i0.ɵmpd(512, i1.EmployeesModule, i1.EmployeesModule, []), i0.ɵmpd(1024, i10.ROUTES, function () {
-            return [[{ path: '', redirectTo: 'employees', pathMatch: 'full' }, { path: 'add',
-                        component: i11.AddEmployeeComponent }, { path: 'tasks', component: i12.TasksComponent }]];
+            return [[{ path: 'add', component: i11.AddEmployeeComponent }, { path: 'tasks',
+                        component: i12.TasksComponent }]];
         }, [])]);
 });

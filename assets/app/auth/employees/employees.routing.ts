@@ -5,7 +5,7 @@ import {TasksComponent} from "../tasks/tasks.component";
 
 
 const EMPLOYEES_ROUTES: Routes = [
-    {path: '', redirectTo: 'employees', pathMatch: 'full'},
+    // {path: '', redirectTo: 'employees', pathMatch: 'full'},
     {path: 'add', component: AddEmployeeComponent},
     {path: 'tasks', component: TasksComponent},
     // {path: 'signin', component: SigninComponent},

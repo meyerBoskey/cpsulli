@@ -95,12 +95,11 @@ export const AppModuleNgFactory:i0.NgModuleFactory<i1.AppModule> = i0.ɵcmf(i1.A
               ([] as any[])),i0.ɵmpd(512,i0.NgModuleFactoryLoader,i0.SystemJsNgModuleLoader,
               [i0.Compiler,[2,i0.SystemJsNgModuleLoaderConfig]]),i0.ɵmpd(1024,i17.ROUTES,
               () => {
-                return [[{path:'',redirectTo:'employees',pathMatch:'full'},{path:'add',
-                    component:i18.AddEmployeeComponent},{path:'tasks',component:i19.TasksComponent}],
-                    [{path:'',redirectTo:'/auth',pathMatch:'full'},{path:'messages',
-                        component:i20.MessagesComponent},{path:'employees',component:i21.EmployeesComponent,
-                        loadChildren:'./auth/employees/employees.module#EmployeesModule'},
-                        {path:'auth',component:i22.AuthenticationComponent,loadChildren:'./auth/auth.module#AuthModule'}]];
+                return [[{path:'add',component:i18.AddEmployeeComponent},{path:'tasks',
+                    component:i19.TasksComponent}],[{path:'',redirectTo:'/auth/signup',
+                    pathMatch:'full'},{path:'messages',component:i20.MessagesComponent},
+                    {path:'employees',component:i21.EmployeesComponent,loadChildren:'./auth/employees/employees.module#EmployeesModule'},
+                    {path:'auth',component:i22.AuthenticationComponent,loadChildren:'./auth/auth.module#AuthModule'}]];
               },([] as any[])),i0.ɵmpd(1024,i17.Router,i17.ɵe,[i0.ApplicationRef,i17.UrlSerializer,
               i17.ChildrenOutletContexts,i9.Location,i0.Injector,i0.NgModuleFactoryLoader,
               i0.Compiler,i17.ROUTES,i17.ROUTER_CONFIGURATION,[2,i17.UrlHandlingStrategy],
@@ -113,4 +112,4 @@ export const AppModuleNgFactory:i0.NgModuleFactory<i1.AppModule> = i0.ɵcmf(i1.A
               i24.EmployeesModule,([] as any[])),i0.ɵmpd(512,i1.AppModule,i1.AppModule,
               ([] as any[]))]);
     });
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2FwcC5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2FwcC5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsifQ==
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2FwcC5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2FwcC5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyJ9

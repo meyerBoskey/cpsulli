@@ -33,8 +33,8 @@ export const EmployeesModuleNgFactory:i0.NgModuleFactory<i1.EmployeesModule> = i
           i0.ɵmpd(512,i10.RouterModule,i10.RouterModule,[[2,i10.ɵa],[2,i10.Router]]),
           i0.ɵmpd(512,i1.EmployeesModule,i1.EmployeesModule,([] as any[])),i0.ɵmpd(1024,
               i10.ROUTES,() => {
-                return [[{path:'',redirectTo:'employees',pathMatch:'full'},{path:'add',
-                    component:i11.AddEmployeeComponent},{path:'tasks',component:i12.TasksComponent}]];
+                return [[{path:'add',component:i11.AddEmployeeComponent},{path:'tasks',
+                    component:i12.TasksComponent}]];
               },([] as any[]))]);
     });
 //# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvZW1wbG95ZWVzL2VtcGxveWVlcy5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvZW1wbG95ZWVzL2VtcGxveWVlcy5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyJ9

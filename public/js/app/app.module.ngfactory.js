@@ -56,11 +56,10 @@ export var AppModuleNgFactory = i0.ɵcmf(i1.AppModule, [i2.AppComponent], functi
         i0.ɵmpd(512, i10.BrowserModule, i10.BrowserModule, [[3, i10.BrowserModule]]),
         i0.ɵmpd(1024, i17.ɵa, i17.ɵd, [[3, i17.Router]]), i0.ɵmpd(512, i17.UrlSerializer, i17.DefaultUrlSerializer, []), i0.ɵmpd(512, i17.ChildrenOutletContexts, i17.ChildrenOutletContexts, []), i0.ɵmpd(256, i17.ROUTER_CONFIGURATION, {}, []), i0.ɵmpd(1024, i9.LocationStrategy, i17.ɵc, [i9.PlatformLocation,
             [2, i9.APP_BASE_HREF], i17.ROUTER_CONFIGURATION]), i0.ɵmpd(512, i9.Location, i9.Location, [i9.LocationStrategy]), i0.ɵmpd(512, i0.Compiler, i0.Compiler, []), i0.ɵmpd(512, i0.NgModuleFactoryLoader, i0.SystemJsNgModuleLoader, [i0.Compiler, [2, i0.SystemJsNgModuleLoaderConfig]]), i0.ɵmpd(1024, i17.ROUTES, function () {
-            return [[{ path: '', redirectTo: 'employees', pathMatch: 'full' }, { path: 'add',
-                        component: i18.AddEmployeeComponent }, { path: 'tasks', component: i19.TasksComponent }],
-                [{ path: '', redirectTo: '/auth', pathMatch: 'full' }, { path: 'messages',
-                        component: i20.MessagesComponent }, { path: 'employees', component: i21.EmployeesComponent,
-                        loadChildren: './auth/employees/employees.module#EmployeesModule' },
+            return [[{ path: 'add', component: i18.AddEmployeeComponent }, { path: 'tasks',
+                        component: i19.TasksComponent }], [{ path: '', redirectTo: '/auth/signup',
+                        pathMatch: 'full' }, { path: 'messages', component: i20.MessagesComponent },
+                    { path: 'employees', component: i21.EmployeesComponent, loadChildren: './auth/employees/employees.module#EmployeesModule' },
                     { path: 'auth', component: i22.AuthenticationComponent, loadChildren: './auth/auth.module#AuthModule' }]];
         }, []), i0.ɵmpd(1024, i17.Router, i17.ɵe, [i0.ApplicationRef, i17.UrlSerializer,
             i17.ChildrenOutletContexts, i9.Location, i0.Injector, i0.NgModuleFactoryLoader,
