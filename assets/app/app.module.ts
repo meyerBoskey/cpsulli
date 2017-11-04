@@ -11,6 +11,7 @@ import {ErrorComponent} from './errors/error.component';
 import {ErrorService} from "./errors/error.service";
 import {MessageModule} from "./messages/message.module";
 import {EmployeesModule} from "./auth/employees/employees.module";
+import { AuthGuard } from './authGuard.guard';
 // import {MatDatePickerModule} from "@angular/material";
 
 @NgModule({
@@ -21,7 +22,7 @@ import {EmployeesModule} from "./auth/employees/employees.module";
         AuthenticationComponent
     ],
     imports: [BrowserModule, routing, HttpModule, MessageModule, EmployeesModule],
-    providers: [AuthService, ErrorService],
+    providers: [AuthService, ErrorService, AuthGuard],
     bootstrap: [AppComponent]
 })
 export class AppModule {

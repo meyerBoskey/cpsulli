@@ -19,7 +19,7 @@ import { EmployeeService } from "../employee.service";
         display: inline-block;
         text-align: right;
         font-size: 12px;
-        width: 40%;
+        width: 30%;
     }
 `]
 })

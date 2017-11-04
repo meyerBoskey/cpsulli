@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
                 <app-employee-list></app-employee-list>
             </div>
             <div class="col-md-8">
+                <h3 style="color: white;">Assign a task below or view your company's current tasks at the bottom.</h3>
                 <div class="row" style="padding-left: 30px;">
                     <app-add-tasks></app-add-tasks>
                 </div>
@@ -22,6 +23,7 @@ import { Component } from '@angular/core';
         </div>
     </div>
     <div class="container-fluid" *ngIf="isCompany() == false">
+        <h3 style="color: white;">Add a task below or view your current tasks at the bottom.</h3>
         <div class="row" style="padding-left: 30px;">
             <app-add-tasks></app-add-tasks>
         </div>

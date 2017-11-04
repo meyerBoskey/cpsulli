@@ -26,7 +26,7 @@ export class SigninCompanyComponent {
                     localStorage.setItem('company', data.company);
                     localStorage.setItem('isAdmin', 'true');
                     localStorage.setItem('adminCode', data.adminCode);
-                    this.router.navigateByUrl('/');
+                    this.router.navigateByUrl('/homePage');
                 },
                 error => console.error(error)
             )

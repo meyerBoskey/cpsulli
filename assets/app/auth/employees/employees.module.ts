@@ -15,6 +15,9 @@ import {TasksComponent} from "../tasks/tasks.component";
 import {AddTasksComponent} from "../tasks/add/addTask.component";
 import {TaskComponent} from "../tasks/task/task.component";
 import {TaskListComponent} from "../tasks/taskList.component";
+import {CompanyHomePageComponent} from "../company/homePage/CompanyHomePage.component";
+import { DatePickerModule } from "angular-io-datepicker/src/datepicker/index";
+import { OverlayModule } from "angular-io-overlay";
 
 
 
@@ -28,10 +31,11 @@ import {TaskListComponent} from "../tasks/taskList.component";
         TaskComponent,
         TaskListComponent,
         EmployeeListComponent,
-        AddEmployeeComponent
+        AddEmployeeComponent,
+        CompanyHomePageComponent
     ],
     providers: [AuthService, ErrorService, EmployeeService],
-    imports: [ ReactiveFormsModule, CommonModule, employeesRouting]
+    imports: [ ReactiveFormsModule, CommonModule, employeesRouting, OverlayModule, DatePickerModule]
 })
 export class EmployeesModule {
 
