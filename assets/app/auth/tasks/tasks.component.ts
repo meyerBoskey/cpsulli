@@ -2,38 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-tasks',
-    template: `
-    <div class="container-fluid" *ngIf="isCompany() == true">
-        <div class="row content" style="height: 550px;">
-            <div class="col-md-4" style="height: 100%;">
-                <h1 style="color: #ffffff">Employees</h1>
-                <app-employee-list></app-employee-list>
-            </div>
-            <div class="col-md-8">
-                <h3 style="color: white;">Assign a task below or view your company's current tasks at the bottom.</h3>
-                <div class="row" style="padding-left: 30px;">
-                    <app-add-tasks></app-add-tasks>
-                </div>
-                <hr>
-                <div class="row" style="padding-left: 30px;">
-                    <h3 style="color: #ffffff;">Tasks</h3>
-                    <app-task-list></app-task-list>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid" *ngIf="isCompany() == false">
-        <h3 style="color: white;">Add a task below or view your current tasks at the bottom.</h3>
-        <div class="row" style="padding-left: 30px;">
-            <app-add-tasks></app-add-tasks>
-        </div>
-        <hr>
-        <div class="row" style="padding-left: 30px;">
-            <h3 style="color: #ffffff;">Tasks</h3>
-            <app-task-list></app-task-list>
-        </div>
-    </div>
-    `
+    templateUrl: './tasks.component.html'
 })
 export class TasksComponent {
     isCompany() {

@@ -2,11 +2,11 @@
     <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label for="companyName">Company Name</label>
-            <input type="text" id="companyName" class="form-control" formControlName="companyName">
+            <input type="text" id="companyName" class="form-control" formControlName="companyName" placeholder="Company Name">
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" id="password" class="form-control" formControlName="password">
+            <input type="password" id="password" class="form-control" formControlName="password" placeholder="Password">
             <button class="btn btn-primary" type="submit" [disabled]="!myForm.valid">Submit</button>
         </div>
     </form>

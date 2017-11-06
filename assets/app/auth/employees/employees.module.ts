@@ -16,6 +16,7 @@ import {AddTasksComponent} from "../tasks/add/addTask.component";
 import {TaskComponent} from "../tasks/task/task.component";
 import {TaskListComponent} from "../tasks/taskList.component";
 import {CompanyHomePageComponent} from "../company/homePage/CompanyHomePage.component";
+import {SidePanelComponent} from "../company/sidePanel/sidePanel.component";
 import { DatePickerModule } from "angular-io-datepicker/src/datepicker/index";
 import { OverlayModule } from "angular-io-overlay";
 
@@ -26,6 +27,7 @@ import { OverlayModule } from "angular-io-overlay";
     declarations: [
         EmployeesComponent,
         EmployeeComponent,
+        SidePanelComponent,
         TasksComponent,
         AddTasksComponent,
         TaskComponent,

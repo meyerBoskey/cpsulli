@@ -1,0 +1,22 @@
+<div class="container" *ngIf="isCompany() == true">
+    <div class="row content" style="height: 550px;">
+        <div class="col-md-4" style="height: 100%;">
+            <app-side-panel></app-side-panel>
+        </div>
+        <div class="col-md-8">
+            <div style="padding-left: 30px;">
+                <app-task-list></app-task-list>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" *ngIf="isCompany() == false">
+    <div class="row">
+        <app-add-tasks></app-add-tasks>
+        <hr>
+        <!-- <div class="row" style="padding-left: 30px;">
+            <h3>Tasks</h3>
+            <app-task-list></app-task-list>
+        </div> -->
+    </div>
+</div>

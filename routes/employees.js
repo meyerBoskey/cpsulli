@@ -69,7 +69,8 @@ router.post('/signin', function (req, res, next) {
             message: 'Successfully logged in',
             token: token,
             employeeId: employee._id,
-            isAdmin: employee.isAdmin
+            isAdmin: employee.isAdmin,
+            firstName: employee.firstName
             // adminCode: company.adminCode
         });
     });

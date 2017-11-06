@@ -1,18 +1,23 @@
-<article class="panel panel-default">
-    <div class="panel-body">
-        {{ employee.firstName }} {{ employee.lastName }}
-    </div>
-    <footer class="panel-footer">
-        <div class="author">
+<table class="table table-striped table-hover">
+    <tr>
+        <td class="col-md-3">
+            {{ employee.firstName }}
+        </td>
+        <td class="col-md-3">
+            {{ employee.lastName }}
+        </td>
+        <td class="col-md-3">
             {{ employee.jobTitle }}
-        </div>
-        <div class="author">
-            employee ID: {{ employee.employeeId }}
-            <div class="config">
-                <a *ngIf="router.url === '/employees'" (click)="onEdit()"><strong>Edit</strong></a>
-                <a *ngIf="router.url === '/employees'" (click)="onDelete()"><strong>Delete</strong></a>
+        </td>
+        <td class="col-md-3">
+            {{ employee.employeeId }}
+        </td>
+        <td class="col-md-3">
+            <div>
+                <a class="btn btn-default" *ngIf="router.url === '/employees'" (click)="onEdit()"><strong>Edit</strong></a>
+                <a class="btn btn-danger" *ngIf="router.url === '/employees'" (click)="onDelete()"><strong>Delete</strong></a>
             </div>
 
-        </div>
-    </footer>
-</article>
+        </td>
+    </tr>
+</table>

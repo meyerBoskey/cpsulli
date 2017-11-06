@@ -12,11 +12,11 @@ import {Employee} from "./employee.model";
         <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="text" id="email" class="form-control" formControlName="email">
+                <input type="text" id="email" class="form-control" formControlName="email" placeholder="Email">
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" class="form-control" formControlName="password">
+                <input type="password" id="password" class="form-control" formControlName="password" placeholder="Password">
                 <button class="btn btn-primary" type="submit" [disabled]="!myForm.valid">Submit</button>
             </div>
         </form>
@@ -38,6 +38,7 @@ export class EmployeeSigninComponent {
                     localStorage.setItem('token', data.token);
                     localStorage.setItem('employeeID', data.employeeId);
                     localStorage.setItem('isAdmin', data.isAdmin);
+                    localStorage.setItem('firstName', data.firstName);
                     this.router.navigateByUrl('/tasks');
                 },
                 error => console.error(error)

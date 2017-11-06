@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { EmployeeService } from "./employee.service";
 import { Employee } from "./employee.model";
 import { Company } from "../company/company.model";
@@ -7,19 +8,14 @@ import { AddTasksComponent } from '../tasks/add/addTask.component';
 
 @Component({
     selector: 'app-employee-list',
-    template: `
-    <div>
-        <app-employee
-               [employee]="employee"
-                *ngFor="let employee of employees"></app-employee>
-    </div>
-`
+    templateUrl: './employeeList.component.html'
 })
 export class EmployeeListComponent implements OnInit {
     employees: Employee[];
+    @Input() employee: Employee;
 
-    constructor(private employeeService: EmployeeService,
-    ) {}
+
+    constructor(private employeeService: EmployeeService, private router: Router) {}
 
     ngOnInit() {
         if (localStorage.getItem('isAdmin') == 'true') {
@@ -31,4 +27,16 @@ export class EmployeeListComponent implements OnInit {
                 );
         }
     }
+
+    onEdit() {
+        this.employeeService.editEmployee(this.employee);
+    }
+
+    onDelete() {
+        this.employeeService.deleteEmployee(this.employee)
+            .subscribe(
+                result => console.log(result)
+            );
+    }
+
 }

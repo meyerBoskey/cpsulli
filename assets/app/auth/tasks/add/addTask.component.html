@@ -1,26 +1,40 @@
-<h1 style="color: #ffffff;"></h1>
-<div class="container-fluid">
-    <form [formGroup]="form" (ngSubmit)="onSubmit(f)" #f="ngForm" ngNativeValidate>
-        <div class="form-group">
-            <label for="content" style="color: #ffffff;">Task</label>
-            <input type="text" id="content" class="form-control" formControlName="content" [ngModel]="task?.content" required>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <app-side-panel></app-side-panel>
         </div>
-        <div class="form-group">
-            <label for="date" style="color: #ffffff;">Due Date</label>
-            <date-picker formControlName="date" id="date" class="form-control" [ngModel]="task?.dueDate"></date-picker>
-            <!-- <input type="text" id="dueDate" class="form-control" formControlName="dueDate" [ngModel]="task?.dueDate"> -->
+        <div class="col-md-8">
+            <form [formGroup]="form" (ngSubmit)="onSubmit(f)" #f="ngForm" ngNativeValidate>
+                <div class="form-group">
+                    <label for="content">Task</label>
+                    <input type="text" id="content" class="form-control" formControlName="content" [ngModel]="task?.content" required placeholder="Add Task">
+                </div>
+                <div class="form-group">
+                    <label for="date">Due Date</label>
+                    <date-picker formControlName="date" id="date" class="form-control" [ngModel]="task?.dueDate"></date-picker>
+                    <!-- <input type="text" id="dueDate" class="form-control" formControlName="dueDate" [ngModel]="task?.dueDate"> -->
+                </div>
+                <div class="form-group" *ngIf="isCompany()">
+                    <label for="employee">Employee</label><br>
+                    <select formControlName="employee">
+                        <option *ngFor="let employee of employees" [ngValue]="employee">
+                          {{ employee.firstName }} {{ employee.lastName }}
+                        </option>
+                      </select>
+                </div>
+                <!-- <button class=" btn btn-danger " type="button " (click)="onClear(f) ">Clear</button> -->
+                <button class="btn btn-primary " type="submit ">Save</button>
+            </form>
+            <!-- <form [formGroup]="date">
+                <date-picker formControlName="date"></date-picker>
+            </form> -->
         </div>
-        <div class="form-group" *ngIf="isCompany()">
-            <select formControlName="employee">
-                <option *ngFor="let employee of employees" [ngValue]="employee">
-                  {{ employee.firstName }} {{ employee.lastName }}
-                </option>
-              </select>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-4">
+            <app-task-list></app-task-list>
+
         </div>
-        <!-- <button class=" btn btn-danger " type="button " (click)="onClear(f) ">Clear</button> -->
-        <button class="btn btn-primary " type="submit ">Save</button>
-    </form>
-    <!-- <form [formGroup]="date">
-        <date-picker formControlName="date"></date-picker>
-    </form> -->
+    </div>
 </div>
