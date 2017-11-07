@@ -20,7 +20,9 @@ import {SidePanelComponent} from "../company/sidePanel/sidePanel.component";
 import { DatePickerModule } from "angular-io-datepicker/src/datepicker/index";
 import { OverlayModule } from "angular-io-overlay";
 
-
+export function PleaseJustWork(){
+    return DatePickerModule;
+}
 
 
 @NgModule({
@@ -30,6 +32,7 @@ import { OverlayModule } from "angular-io-overlay";
         SidePanelComponent,
         TasksComponent,
         AddTasksComponent,
+        PleaseJustWorkComponent,
         TaskComponent,
         TaskListComponent,
         EmployeeListComponent,
@@ -37,7 +40,7 @@ import { OverlayModule } from "angular-io-overlay";
         CompanyHomePageComponent
     ],
     providers: [AuthService, ErrorService, EmployeeService],
-    imports: [ ReactiveFormsModule, CommonModule, employeesRouting, OverlayModule, DatePickerModule]
+    imports: [ ReactiveFormsModule, CommonModule, employeesRouting, OverlayModule, DatePickerModule].concat(PleaseJustWork())
 })
 export class EmployeesModule {
 

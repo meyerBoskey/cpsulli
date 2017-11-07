@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { NgForm, FormGroup, FormControl, Validators, FormBuilder } from "@angular/forms";
-// import { DatePickerOptions, DateModel } from 'ng2-datepicker';
 
 import * as moment from 'moment';
 import { EmployeeService } from "../../employees/employee.service";

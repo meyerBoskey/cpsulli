@@ -6,7 +6,7 @@
   },
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
+    "start": "node ./bin/www",
     "build": "del-cli public/js/app && webpack --config webpack.config.dev.js --progress --profile --watch",
     "build:prod": "del-cli public/js/app && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli 'public/js/app/**/*.js' 'public/js/app/**/*.js.map' '!public/js/app/bundle.js' '!public/js/app/*.chunk.js' 'assets/app/**/*.ngfactory.ts' 'assets/app/**/*.shim.ts' 'assets/app/**/*.ngsummary.json' 'assets/app/**/*.ngstyle.ts'"
   },
@@ -46,6 +46,7 @@
     "zone.js": "^0.8.5"
   },
   "devDependencies": {
+    "@angular/cli": "^1.5.0",
     "@types/core-js": "0.9.36",
     "@types/node": "^6.0.45",
     "angular-router-loader": "^0.5.0",
