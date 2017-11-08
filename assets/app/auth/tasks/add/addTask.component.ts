@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { NgForm, FormGroup, FormControl, Validators, FormBuilder } from "@angular/forms";
 
-import * as moment from 'moment';
 import { EmployeeService } from "../../employees/employee.service";
 import { Employee } from "../../employees/employee.model";
 import { Task } from "../task.model";
@@ -14,13 +13,12 @@ export class AddTasksComponent implements OnInit {
     task: Task;
     employees: Employee[];
     form: FormGroup;
-    date: FormGroup;
-    constructor(private employeeService: EmployeeService, private fb: FormBuilder) {}
+    // date: FormGroup;
+    constructor(private employeeService: EmployeeService) {}
 
     onSubmit(form: NgForm) {
-        var dueDate = form.value.date.format('L');
         if (form.value.employee) {
-            const task = new Task(form.value.content, dueDate, null, form.value.employee.employeeId);
+            const task = new Task(form.value.content, form.value.dueDate, null, form.value.employee.employeeId);
             this.employeeService.addTask(task)
                 .subscribe(
                     data => console.log(data),
@@ -28,7 +26,7 @@ export class AddTasksComponent implements OnInit {
                 );
 
         } else {
-            const task = new Task(form.value.content, dueDate);
+            const task = new Task(form.value.content, form.value.dueDate);
             this.employeeService.addTask(task)
                 .subscribe(
                     data => console.log(data),
@@ -44,12 +42,9 @@ export class AddTasksComponent implements OnInit {
         return false
     }
     ngOnInit() {
-        this.date = this.fb.group({
-            date: ''
-        });
         this.form = new FormGroup({
             content: new FormControl(null, Validators.required),
-            date: new FormControl(null),
+            dueDate: new FormControl(null),
             employee: new FormControl(null),
         });
         this.employeeService.getEmployees()

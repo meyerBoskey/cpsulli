@@ -7,44 +7,112 @@
 
 
 import * as i0 from '@angular/core';
-import * as i1 from './task/task.component.ngfactory';
-import * as i2 from './task/task.component';
+import * as i1 from '@angular/common';
+import * as i2 from './taskList.component';
 import * as i3 from '../employees/employee.service';
-import * as i4 from '@angular/common';
-import * as i5 from './taskList.component';
 const styles_TaskListComponent:any[] = ([] as any[]);
 export const RenderType_TaskListComponent:i0.RendererType2 = i0.ɵcrt({encapsulation:2,
     styles:styles_TaskListComponent,data:{}});
 function View_TaskListComponent_1(_l:any):i0.ɵViewDefinition {
-  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),1,'app-task',([] as any[]),
-      (null as any),(null as any),(null as any),i1.View_TaskComponent_0,i1.RenderType_TaskComponent)),
-      i0.ɵdid(49152,(null as any),0,i2.TaskComponent,[i3.EmployeeService],{task:[0,
-          'task']},(null as any))],(_ck,_v) => {
-    const currVal_0:any = _v.context.$implicit;
-    _ck(_v,1,0,currVal_0);
-  },(null as any));
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,0,(null as any),(null as any),17,'tr',([] as any[]),
+      (null as any),(null as any),(null as any),(null as any),(null as any))),(_l()(),
+      i0.ɵted(-1,(null as any),['\n                    '])),(_l()(),i0.ɵeld(2,0,(null as any),
+      (null as any),1,'td',([] as any[]),(null as any),(null as any),(null as any),
+      (null as any),(null as any))),(_l()(),i0.ɵted(3,(null as any),['',''])),(_l()(),
+      i0.ɵted(-1,(null as any),['\n                    '])),(_l()(),i0.ɵeld(5,0,(null as any),
+      (null as any),1,'td',([] as any[]),(null as any),(null as any),(null as any),
+      (null as any),(null as any))),(_l()(),i0.ɵted(6,(null as any),['',''])),(_l()(),
+      i0.ɵted(-1,(null as any),['\n                    '])),(_l()(),i0.ɵeld(8,0,(null as any),
+      (null as any),1,'td',([] as any[]),(null as any),(null as any),(null as any),
+      (null as any),(null as any))),(_l()(),i0.ɵted(9,(null as any),['',''])),(_l()(),
+      i0.ɵted(-1,(null as any),['\n                    '])),(_l()(),i0.ɵeld(11,0,(null as any),
+      (null as any),1,'td',([] as any[]),(null as any),(null as any),(null as any),
+      (null as any),(null as any))),(_l()(),i0.ɵted(12,(null as any),['',''])),(_l()(),
+      i0.ɵted(-1,(null as any),['\n                    '])),(_l()(),i0.ɵeld(14,0,(null as any),
+      (null as any),2,'td',([] as any[]),(null as any),(null as any),(null as any),
+      (null as any),(null as any))),(_l()(),i0.ɵted(-1,(null as any),['\n                        '])),
+      (_l()(),i0.ɵted(-1,(null as any),['\n                    '])),(_l()(),i0.ɵted(-1,
+          (null as any),['\n                ']))],(null as any),(_ck,_v) => {
+    const currVal_0:any = _v.context.$implicit.employeeFirstName;
+    _ck(_v,3,0,currVal_0);
+    const currVal_1:any = _v.context.$implicit.employeeLastName;
+    _ck(_v,6,0,currVal_1);
+    const currVal_2:any = _v.context.$implicit.dueDate;
+    _ck(_v,9,0,currVal_2);
+    const currVal_3:any = _v.context.$implicit.content;
+    _ck(_v,12,0,currVal_3);
+  });
 }
 export function View_TaskListComponent_0(_l:any):i0.ɵViewDefinition {
-  return i0.ɵvid(0,[(_l()(),i0.ɵted((null as any),['\n    '])),(_l()(),i0.ɵeld(0,(null as any),
-      (null as any),4,'div',([] as any[]),(null as any),(null as any),(null as any),
-      (null as any),(null as any))),(_l()(),i0.ɵted((null as any),['\n        '])),
-      (_l()(),i0.ɵand(16777216,(null as any),(null as any),1,(null as any),View_TaskListComponent_1)),
-      i0.ɵdid(802816,(null as any),0,i4.NgForOf,[i0.ViewContainerRef,i0.TemplateRef,
-          i0.IterableDiffers],{ngForOf:[0,'ngForOf']},(null as any)),(_l()(),i0.ɵted((null as any),
-          ['\n    '])),(_l()(),i0.ɵted((null as any),['\n']))],(_ck,_v) => {
-    var _co:i5.TaskListComponent = _v.component;
+  return i0.ɵvid(0,[(_l()(),i0.ɵted(-1,(null as any),['\n'])),(_l()(),i0.ɵeld(1,0,
+      (null as any),(null as any),47,'div',[['class','panel panel-default']],(null as any),
+      (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted(-1,
+      (null as any),['\n    '])),(_l()(),i0.ɵeld(3,0,(null as any),(null as any),4,
+      'div',[['class','panel-heading main-color-bg']],(null as any),(null as any),
+      (null as any),(null as any),(null as any))),(_l()(),i0.ɵted(-1,(null as any),
+      ['\n        '])),(_l()(),i0.ɵeld(5,0,(null as any),(null as any),1,'h3',[['class',
+      'panel-title']],(null as any),(null as any),(null as any),(null as any),(null as any))),
+      (_l()(),i0.ɵted(-1,(null as any),['Tasks'])),(_l()(),i0.ɵted(-1,(null as any),
+          ['\n    '])),(_l()(),i0.ɵted(-1,(null as any),['\n    '])),(_l()(),i0.ɵeld(9,
+          0,(null as any),(null as any),38,'div',[['class','panel-body']],(null as any),
+          (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted(-1,
+          (null as any),['\n        '])),(_l()(),i0.ɵeld(11,0,(null as any),(null as any),
+          6,'div',[['class','row']],(null as any),(null as any),(null as any),(null as any),
+          (null as any))),(_l()(),i0.ɵted(-1,(null as any),['\n            '])),(_l()(),
+          i0.ɵeld(13,0,(null as any),(null as any),3,'div',[['class','col-md-12']],
+              (null as any),(null as any),(null as any),(null as any),(null as any))),
+      (_l()(),i0.ɵted(-1,(null as any),['\n                '])),(_l()(),i0.ɵeld(15,
+          0,(null as any),(null as any),0,'input',[['class','form-control'],['placeholder',
+              'Filter Pages...'],['type','text']],(null as any),(null as any),(null as any),
+          (null as any),(null as any))),(_l()(),i0.ɵted(-1,(null as any),['\n            '])),
+      (_l()(),i0.ɵted(-1,(null as any),['\n        '])),(_l()(),i0.ɵted(-1,(null as any),
+          ['\n        '])),(_l()(),i0.ɵeld(19,0,(null as any),(null as any),0,'br',
+          ([] as any[]),(null as any),(null as any),(null as any),(null as any),(null as any))),
+      (_l()(),i0.ɵted(-1,(null as any),['\n        '])),(_l()(),i0.ɵeld(21,0,(null as any),
+          (null as any),25,'div',([] as any[]),(null as any),(null as any),(null as any),
+          (null as any),(null as any))),(_l()(),i0.ɵted(-1,(null as any),['\n            '])),
+      (_l()(),i0.ɵeld(23,0,(null as any),(null as any),22,'table',[['class','table table-striped table-hover']],
+          (null as any),(null as any),(null as any),(null as any),(null as any))),
+      (_l()(),i0.ɵted(-1,(null as any),['\n                '])),(_l()(),i0.ɵeld(25,
+          0,(null as any),(null as any),20,'tbody',([] as any[]),(null as any),(null as any),
+          (null as any),(null as any),(null as any))),(_l()(),i0.ɵeld(26,0,(null as any),
+          (null as any),15,'tr',([] as any[]),(null as any),(null as any),(null as any),
+          (null as any),(null as any))),(_l()(),i0.ɵted(-1,(null as any),['\n                    '])),
+      (_l()(),i0.ɵeld(28,0,(null as any),(null as any),1,'th',([] as any[]),(null as any),
+          (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted(-1,
+          (null as any),['First Name'])),(_l()(),i0.ɵted(-1,(null as any),['\n                    '])),
+      (_l()(),i0.ɵeld(31,0,(null as any),(null as any),1,'th',([] as any[]),(null as any),
+          (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted(-1,
+          (null as any),['Last Name'])),(_l()(),i0.ɵted(-1,(null as any),['\n                    '])),
+      (_l()(),i0.ɵeld(34,0,(null as any),(null as any),1,'th',([] as any[]),(null as any),
+          (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted(-1,
+          (null as any),['Date Due'])),(_l()(),i0.ɵted(-1,(null as any),['\n                    '])),
+      (_l()(),i0.ɵeld(37,0,(null as any),(null as any),1,'th',([] as any[]),(null as any),
+          (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted(-1,
+          (null as any),['Task'])),(_l()(),i0.ɵted(-1,(null as any),['\n                    '])),
+      (_l()(),i0.ɵeld(40,0,(null as any),(null as any),0,'th',([] as any[]),(null as any),
+          (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted(-1,
+          (null as any),['\n                '])),(_l()(),i0.ɵted(-1,(null as any),
+          ['\n                '])),(_l()(),i0.ɵand(16777216,(null as any),(null as any),
+          1,(null as any),View_TaskListComponent_1)),i0.ɵdid(44,802816,(null as any),
+          0,i1.NgForOf,[i0.ViewContainerRef,i0.TemplateRef,i0.IterableDiffers],{ngForOf:[0,
+              'ngForOf']},(null as any)),(_l()(),i0.ɵted(-1,(null as any),['\n            '])),
+      (_l()(),i0.ɵted(-1,(null as any),['\n        '])),(_l()(),i0.ɵted(-1,(null as any),
+          ['\n    '])),(_l()(),i0.ɵted(-1,(null as any),['\n'])),(_l()(),i0.ɵted(-1,
+          (null as any),['\n']))],(_ck,_v) => {
+    var _co:i2.TaskListComponent = _v.component;
     const currVal_0:any = _co.tasks;
-    _ck(_v,4,0,currVal_0);
+    _ck(_v,44,0,currVal_0);
   },(null as any));
 }
 export function View_TaskListComponent_Host_0(_l:any):i0.ɵViewDefinition {
-  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),1,'app-task-list',
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,0,(null as any),(null as any),1,'app-task-list',
       ([] as any[]),(null as any),(null as any),(null as any),View_TaskListComponent_0,
-      RenderType_TaskListComponent)),i0.ɵdid(114688,(null as any),0,i5.TaskListComponent,
+      RenderType_TaskListComponent)),i0.ɵdid(1,114688,(null as any),0,i2.TaskListComponent,
       [i3.EmployeeService],(null as any),(null as any))],(_ck,_v) => {
     _ck(_v,1,0);
   },(null as any));
 }
-export const TaskListComponentNgFactory:i0.ComponentFactory<i5.TaskListComponent> = i0.ɵccf('app-task-list',
-    i5.TaskListComponent,View_TaskListComponent_Host_0,{},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvdGFza3MvdGFza0xpc3QuY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0M6L1VzZXJzL2Nwc3VsL2Rlc2t0b3AvbWVhbi1hcHAvbWVhbi1hcHAvYXNzZXRzL2FwcC9hdXRoL3Rhc2tzL3Rhc2tMaXN0LmNvbXBvbmVudC50cyIsIm5nOi8vL0M6L1VzZXJzL2Nwc3VsL2Rlc2t0b3AvbWVhbi1hcHAvbWVhbi1hcHAvYXNzZXRzL2FwcC9hdXRoL3Rhc2tzL3Rhc2tMaXN0LmNvbXBvbmVudC50cy5UYXNrTGlzdENvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvdGFza3MvdGFza0xpc3QuY29tcG9uZW50LnRzLlRhc2tMaXN0Q29tcG9uZW50X0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiXG4gICAgPGRpdj5cbiAgICAgICAgPGFwcC10YXNrXG4gICAgICAgICAgICAgICBbdGFza109XCJ0YXNrXCJcbiAgICAgICAgICAgICAgICAqbmdGb3I9XCJsZXQgdGFzayBvZiB0YXNrc1wiPjwvYXBwLXRhc2s+XG4gICAgPC9kaXY+XG4iLCI8YXBwLXRhc2stbGlzdD48L2FwcC10YXNrLWxpc3Q+Il0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7O29CQ0VRO01BQUE7YUFBQTtVQUFBO0lBQ087SUFEUCxXQUNPLFNBRFA7Ozs7b0JBRlIsMkNBQ0k7TUFBQTtNQUFBLDhCQUFLO01BQ0Q7YUFBQTs0QkFBQSx5Q0FFOEM7VUFBQSxhQUM1Qzs7SUFETTtJQUZSLFdBRVEsU0FGUjs7OztvQkNGUjtNQUFBO2tDQUFBLFVBQUE7TUFBQTtJQUFBOzs7OyJ9
+export const TaskListComponentNgFactory:i0.ComponentFactory<i2.TaskListComponent> = i0.ɵccf('app-task-list',
+    i2.TaskListComponent,View_TaskListComponent_Host_0,{},{},([] as any[]));
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvdGFza3MvdGFza0xpc3QuY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0M6L1VzZXJzL2Nwc3VsL2Rlc2t0b3AvbWVhbi1hcHAvbWVhbi1hcHAvYXNzZXRzL2FwcC9hdXRoL3Rhc2tzL3Rhc2tMaXN0LmNvbXBvbmVudC50cyIsIm5nOi8vL0M6L1VzZXJzL2Nwc3VsL2Rlc2t0b3AvbWVhbi1hcHAvbWVhbi1hcHAvYXNzZXRzL2FwcC9hdXRoL3Rhc2tzL3Rhc2tMaXN0LmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvdGFza3MvdGFza0xpc3QuY29tcG9uZW50LnRzLlRhc2tMaXN0Q29tcG9uZW50X0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiPCEtLSA8ZGl2PlxyXG4gICAgPGFwcC10YXNrIFt0YXNrXT1cInRhc2tcIiAqbmdGb3I9XCJsZXQgdGFzayBvZiB0YXNrc1wiPjwvYXBwLXRhc2s+XHJcbjwvZGl2PiAtLT5cclxuPGRpdiBjbGFzcz1cInBhbmVsIHBhbmVsLWRlZmF1bHRcIj5cclxuICAgIDxkaXYgY2xhc3M9XCJwYW5lbC1oZWFkaW5nIG1haW4tY29sb3ItYmdcIj5cclxuICAgICAgICA8aDMgY2xhc3M9XCJwYW5lbC10aXRsZVwiPlRhc2tzPC9oMz5cclxuICAgIDwvZGl2PlxyXG4gICAgPGRpdiBjbGFzcz1cInBhbmVsLWJvZHlcIj5cclxuICAgICAgICA8ZGl2IGNsYXNzPVwicm93XCI+XHJcbiAgICAgICAgICAgIDxkaXYgY2xhc3M9XCJjb2wtbWQtMTJcIj5cclxuICAgICAgICAgICAgICAgIDxpbnB1dCB0eXBlPVwidGV4dFwiIHBsYWNlaG9sZGVyPVwiRmlsdGVyIFBhZ2VzLi4uXCIgY2xhc3M9XCJmb3JtLWNvbnRyb2xcIj5cclxuICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgPGJyPlxyXG4gICAgICAgIDxkaXY+XHJcbiAgICAgICAgICAgIDx0YWJsZSBjbGFzcz1cInRhYmxlIHRhYmxlLXN0cmlwZWQgdGFibGUtaG92ZXJcIj5cclxuICAgICAgICAgICAgICAgIDx0cj5cclxuICAgICAgICAgICAgICAgICAgICA8dGg+Rmlyc3QgTmFtZTwvdGg+XHJcbiAgICAgICAgICAgICAgICAgICAgPHRoPkxhc3QgTmFtZTwvdGg+XHJcbiAgICAgICAgICAgICAgICAgICAgPHRoPkRhdGUgRHVlPC90aD5cclxuICAgICAgICAgICAgICAgICAgICA8dGg+VGFzazwvdGg+XHJcbiAgICAgICAgICAgICAgICAgICAgPHRoPjwvdGg+XHJcbiAgICAgICAgICAgICAgICA8L3RyPlxyXG4gICAgICAgICAgICAgICAgPHRyICpuZ0Zvcj1cImxldCB0YXNrIG9mIHRhc2tzXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgPHRkPnt7dGFzay5lbXBsb3llZUZpcnN0TmFtZX19PC90ZD5cclxuICAgICAgICAgICAgICAgICAgICA8dGQ+e3t0YXNrLmVtcGxveWVlTGFzdE5hbWV9fTwvdGQ+XHJcbiAgICAgICAgICAgICAgICAgICAgPHRkPnt7dGFzay5kdWVEYXRlfX08L3RkPlxyXG4gICAgICAgICAgICAgICAgICAgIDx0ZD57e3Rhc2suY29udGVudH19PC90ZD5cclxuICAgICAgICAgICAgICAgICAgICA8dGQ+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDwhLS0gPGEgY2xhc3M9XCJidG4gYnRuLWRlZmF1bHRcIiAqbmdJZj1cInJvdXRlci51cmwgPT09ICcvZW1wbG95ZWVzJ1wiIChjbGljayk9XCJvbkVkaXQoKVwiPjxzdHJvbmc+RWRpdDwvc3Ryb25nPjwvYT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPGEgY2xhc3M9XCJidG4gYnRuLWRhbmdlclwiICpuZ0lmPVwicm91dGVyLnVybCA9PT0gJy9lbXBsb3llZXMnXCIgKGNsaWNrKT1cIm9uRGVsZXRlKClcIj48c3Ryb25nPkRlbGV0ZTwvc3Ryb25nPjwvYT4gLS0+XHJcbiAgICAgICAgICAgICAgICAgICAgPC90ZD5cclxuICAgICAgICAgICAgICAgIDwvdHI+XHJcbiAgICAgICAgICAgIDwvdGFibGU+XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICA8L2Rpdj5cclxuPC9kaXY+XHJcbiIsIjxhcHAtdGFzay1saXN0PjwvYXBwLXRhc2stbGlzdD4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7O29CQ3VCZ0I7TUFBQSx3RUFBK0I7YUFBQSwrQ0FDM0I7TUFBQTtNQUFBLDhCQUFJLDBDQUErQjthQUFBLCtDQUNuQztNQUFBO01BQUEsOEJBQUksMENBQThCO2FBQUEsK0NBQ2xDO01BQUE7TUFBQSw4QkFBSSwwQ0FBcUI7YUFBQSwrQ0FDekI7TUFBQTtNQUFBLDhCQUFJLDJDQUFxQjthQUFBLCtDQUN6QjtNQUFBO01BQUEsOEJBQUk7TUFFa0gsOERBQ2pIO1VBQUE7SUFQRDtJQUFBO0lBQ0E7SUFBQTtJQUNBO0lBQUE7SUFDQTtJQUFBOzs7O29CQXpCZCwwQ0FDVjtNQUFBO01BQUEsMERBQWlDO01BQUEsMkJBQzdCO01BQUE7TUFBQSw0Q0FBeUM7TUFBQSxpQkFDckM7TUFBQTtNQUF3Qiw2Q0FBVTtVQUFBLGFBQ2hDLDhDQUNOO1VBQUE7VUFBQSwwREFBd0I7VUFBQSwrQkFDcEI7VUFBQTtVQUFBLGdCQUFpQixzREFDYjtpQkFBQTtjQUFBO01BQXVCLDBEQUNuQjtVQUFBO2NBQUE7VUFBQSw4QkFBc0U7TUFDcEUsa0RBQ0o7VUFBQSxpQkFDTjtVQUFBO01BQUksa0RBQ0o7VUFBQTtVQUFBLDhCQUFLO01BQ0Q7VUFBQTtNQUErQywwREFDM0M7VUFBQTtVQUFBO1VBQUE7VUFBQSw4QkFBSTtNQUNBO1VBQUEsMERBQUk7VUFBQSwrQkFBZTtNQUNuQjtVQUFBLDBEQUFJO1VBQUEsOEJBQWM7TUFDbEI7VUFBQSwwREFBSTtVQUFBLDZCQUFhO01BQ2pCO1VBQUEsMERBQUk7VUFBQSx5QkFBUztNQUNiO1VBQUEsMERBQVM7VUFBQSx1Q0FDUjtVQUFBLHlCQUNMO1VBQUEsa0RBQUE7VUFBQTtjQUFBLDJCQVNLO01BQ0Qsa0RBQ047VUFBQSxhQUNKLDBDQUNKO1VBQUE7O0lBYmM7SUFBSixZQUFJLFNBQUo7Ozs7b0JDdkJoQjtNQUFBO2tDQUFBLFVBQUE7TUFBQTtJQUFBOzs7OyJ9

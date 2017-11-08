@@ -14,9 +14,9 @@ const styles_MessageComponent:any[] = ['.author[_ngcontent-%COMP%] {\n        di
 export const RenderType_MessageComponent:i0.RendererType2 = i0.ɵcrt({encapsulation:0,
     styles:styles_MessageComponent,data:{}});
 function View_MessageComponent_1(_l:any):i0.ɵViewDefinition {
-  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),7,'div',[['class',
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,0,(null as any),(null as any),7,'div',[['class',
       'config']],(null as any),(null as any),(null as any),(null as any),(null as any))),
-      (_l()(),i0.ɵted((null as any),['\n            '])),(_l()(),i0.ɵeld(0,(null as any),
+      (_l()(),i0.ɵted(-1,(null as any),['\n            '])),(_l()(),i0.ɵeld(2,0,(null as any),
           (null as any),1,'a',([] as any[]),(null as any),[[(null as any),'click']],
           (_v,en,$event) => {
             var ad:boolean = true;
@@ -26,8 +26,8 @@ function View_MessageComponent_1(_l:any):i0.ɵViewDefinition {
               ad = (pd_0 && ad);
             }
             return ad;
-          },(null as any),(null as any))),(_l()(),i0.ɵted((null as any),['Edit'])),
-      (_l()(),i0.ɵted((null as any),['\n            '])),(_l()(),i0.ɵeld(0,(null as any),
+          },(null as any),(null as any))),(_l()(),i0.ɵted(-1,(null as any),['Edit'])),
+      (_l()(),i0.ɵted(-1,(null as any),['\n            '])),(_l()(),i0.ɵeld(5,0,(null as any),
           (null as any),1,'a',([] as any[]),(null as any),[[(null as any),'click']],
           (_v,en,$event) => {
             var ad:boolean = true;
@@ -37,43 +37,44 @@ function View_MessageComponent_1(_l:any):i0.ɵViewDefinition {
               ad = (pd_0 && ad);
             }
             return ad;
-          },(null as any),(null as any))),(_l()(),i0.ɵted((null as any),['Delete'])),
-      (_l()(),i0.ɵted((null as any),['\n        ']))],(null as any),(null as any));
+          },(null as any),(null as any))),(_l()(),i0.ɵted(-1,(null as any),['Delete'])),
+      (_l()(),i0.ɵted(-1,(null as any),['\n        ']))],(null as any),(null as any));
 }
 export function View_MessageComponent_0(_l:any):i0.ɵViewDefinition {
-  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),13,'article',[['class',
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,0,(null as any),(null as any),13,'article',[['class',
       'panel panel-default']],(null as any),(null as any),(null as any),(null as any),
-      (null as any))),(_l()(),i0.ɵted((null as any),['\n    '])),(_l()(),i0.ɵeld(0,
-      (null as any),(null as any),1,'div',[['class','panel-body']],(null as any),(null as any),
-      (null as any),(null as any),(null as any))),(_l()(),i0.ɵted((null as any),['\n        ',
-      '\n    '])),(_l()(),i0.ɵted((null as any),['\n    '])),(_l()(),i0.ɵeld(0,(null as any),
-      (null as any),7,'footer',[['class','panel-footer']],(null as any),(null as any),
-      (null as any),(null as any),(null as any))),(_l()(),i0.ɵted((null as any),['\n        '])),
-      (_l()(),i0.ɵeld(0,(null as any),(null as any),1,'div',[['class','author']],(null as any),
-          (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted((null as any),
-          ['\n            ','\n        '])),(_l()(),i0.ɵted((null as any),['\n        '])),
-      (_l()(),i0.ɵand(16777216,(null as any),(null as any),1,(null as any),View_MessageComponent_1)),
-      i0.ɵdid(16384,(null as any),0,i1.NgIf,[i0.ViewContainerRef,i0.TemplateRef],{ngIf:[0,
-          'ngIf']},(null as any)),(_l()(),i0.ɵted((null as any),['\n    '])),(_l()(),
-          i0.ɵted((null as any),['\n'])),(_l()(),i0.ɵted((null as any),['\n']))],(_ck,
-      _v) => {
-    var _co:i2.MessageComponent = _v.component;
-    const currVal_2:any = (_co.belongsToUser() || _co.isAdmin());
-    _ck(_v,11,0,currVal_2);
-  },(_ck,_v) => {
-    var _co:i2.MessageComponent = _v.component;
-    const currVal_0:any = _co.message.content;
-    _ck(_v,3,0,currVal_0);
-    const currVal_1:any = _co.message.username;
-    _ck(_v,8,0,currVal_1);
-  });
+      (null as any))),(_l()(),i0.ɵted(-1,(null as any),['\n    '])),(_l()(),i0.ɵeld(2,
+      0,(null as any),(null as any),1,'div',[['class','panel-body']],(null as any),
+      (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted(3,
+      (null as any),['\n        ','\n    '])),(_l()(),i0.ɵted(-1,(null as any),['\n    '])),
+      (_l()(),i0.ɵeld(5,0,(null as any),(null as any),7,'footer',[['class','panel-footer']],
+          (null as any),(null as any),(null as any),(null as any),(null as any))),
+      (_l()(),i0.ɵted(-1,(null as any),['\n        '])),(_l()(),i0.ɵeld(7,0,(null as any),
+          (null as any),1,'div',[['class','author']],(null as any),(null as any),(null as any),
+          (null as any),(null as any))),(_l()(),i0.ɵted(8,(null as any),['\n            ',
+          '\n        '])),(_l()(),i0.ɵted(-1,(null as any),['\n        '])),(_l()(),
+          i0.ɵand(16777216,(null as any),(null as any),1,(null as any),View_MessageComponent_1)),
+      i0.ɵdid(11,16384,(null as any),0,i1.NgIf,[i0.ViewContainerRef,i0.TemplateRef],
+          {ngIf:[0,'ngIf']},(null as any)),(_l()(),i0.ɵted(-1,(null as any),['\n    '])),
+      (_l()(),i0.ɵted(-1,(null as any),['\n'])),(_l()(),i0.ɵted(-1,(null as any),['\n']))],
+      (_ck,_v) => {
+        var _co:i2.MessageComponent = _v.component;
+        const currVal_2:any = (_co.belongsToUser() || _co.isAdmin());
+        _ck(_v,11,0,currVal_2);
+      },(_ck,_v) => {
+        var _co:i2.MessageComponent = _v.component;
+        const currVal_0:any = _co.message.content;
+        _ck(_v,3,0,currVal_0);
+        const currVal_1:any = _co.message.username;
+        _ck(_v,8,0,currVal_1);
+      });
 }
 export function View_MessageComponent_Host_0(_l:any):i0.ɵViewDefinition {
-  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),1,'app-message',
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,0,(null as any),(null as any),1,'app-message',
       ([] as any[]),(null as any),(null as any),(null as any),View_MessageComponent_0,
-      RenderType_MessageComponent)),i0.ɵdid(49152,(null as any),0,i2.MessageComponent,
+      RenderType_MessageComponent)),i0.ɵdid(1,49152,(null as any),0,i2.MessageComponent,
       [i3.MessageService],(null as any),(null as any))],(null as any),(null as any));
 }
 export const MessageComponentNgFactory:i0.ComponentFactory<i2.MessageComponent> = i0.ɵccf('app-message',
     i2.MessageComponent,View_MessageComponent_Host_0,{message:'message'},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL21lc3NhZ2VzL21lc3NhZ2UuY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0M6L1VzZXJzL2Nwc3VsL2Rlc2t0b3AvbWVhbi1hcHAvbWVhbi1hcHAvYXNzZXRzL2FwcC9tZXNzYWdlcy9tZXNzYWdlLmNvbXBvbmVudC50cyIsIm5nOi8vL0M6L1VzZXJzL2Nwc3VsL2Rlc2t0b3AvbWVhbi1hcHAvbWVhbi1hcHAvYXNzZXRzL2FwcC9tZXNzYWdlcy9tZXNzYWdlLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL21lc3NhZ2VzL21lc3NhZ2UuY29tcG9uZW50LnRzLk1lc3NhZ2VDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8YXJ0aWNsZSBjbGFzcz1cInBhbmVsIHBhbmVsLWRlZmF1bHRcIj5cclxuICAgIDxkaXYgY2xhc3M9XCJwYW5lbC1ib2R5XCI+XHJcbiAgICAgICAge3sgbWVzc2FnZS5jb250ZW50IH19XHJcbiAgICA8L2Rpdj5cclxuICAgIDxmb290ZXIgY2xhc3M9XCJwYW5lbC1mb290ZXJcIj5cclxuICAgICAgICA8ZGl2IGNsYXNzPVwiYXV0aG9yXCI+XHJcbiAgICAgICAgICAgIHt7IG1lc3NhZ2UudXNlcm5hbWUgfX1cclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgICA8ZGl2IGNsYXNzPVwiY29uZmlnXCIgKm5nSWY9XCJiZWxvbmdzVG9Vc2VyKCkgfHwgaXNBZG1pbigpXCI+XHJcbiAgICAgICAgICAgIDxhIChjbGljayk9XCJvbkVkaXQoKVwiPkVkaXQ8L2E+XHJcbiAgICAgICAgICAgIDxhIChjbGljayk9XCJvbkRlbGV0ZSgpXCI+RGVsZXRlPC9hPlxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgPC9mb290ZXI+XHJcbjwvYXJ0aWNsZT5cclxuIiwiPGFwcC1tZXNzYWdlPjwvYXBwLW1lc3NhZ2U+Il0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7OztvQkNRUTtNQUFBO01BQXlELG1EQUNyRDtVQUFBO1VBQUE7WUFBQTtZQUFBO1lBQUc7Y0FBQTtjQUFBO1lBQUE7WUFBSDtVQUFBLGdDQUFzQjtNQUFRLG1EQUM5QjtVQUFBO1VBQUE7WUFBQTtZQUFBO1lBQUc7Y0FBQTtjQUFBO1lBQUE7WUFBSDtVQUFBLGdDQUF3QjtNQUFVOzs7b0JBVjlDO01BQUE7TUFBQSxnQkFBcUMsMkNBQ2pDO01BQUE7TUFBQSw0Q0FBd0I7TUFBQSxZQUVsQiwyQ0FDTjtNQUFBO01BQUEsNENBQTZCO01BQ3pCO1VBQUEsMERBQW9CO1VBQUEsa0NBRWQ7TUFDTjthQUFBO1VBQUEsd0JBR00sMkNBQ0Q7aUJBQUEsd0JBQ0g7OztJQUxrQjtJQUFwQixZQUFvQixTQUFwQjs7O0lBUG9CO0lBQUE7SUFJQTtJQUFBOzs7O29CQ0w1QjtNQUFBO2lDQUFBLFVBQUE7TUFBQTs7OyJ9
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL21lc3NhZ2VzL21lc3NhZ2UuY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0M6L1VzZXJzL2Nwc3VsL2Rlc2t0b3AvbWVhbi1hcHAvbWVhbi1hcHAvYXNzZXRzL2FwcC9tZXNzYWdlcy9tZXNzYWdlLmNvbXBvbmVudC50cyIsIm5nOi8vL0M6L1VzZXJzL2Nwc3VsL2Rlc2t0b3AvbWVhbi1hcHAvbWVhbi1hcHAvYXNzZXRzL2FwcC9tZXNzYWdlcy9tZXNzYWdlLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL21lc3NhZ2VzL21lc3NhZ2UuY29tcG9uZW50LnRzLk1lc3NhZ2VDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8YXJ0aWNsZSBjbGFzcz1cInBhbmVsIHBhbmVsLWRlZmF1bHRcIj5cclxuICAgIDxkaXYgY2xhc3M9XCJwYW5lbC1ib2R5XCI+XHJcbiAgICAgICAge3sgbWVzc2FnZS5jb250ZW50IH19XHJcbiAgICA8L2Rpdj5cclxuICAgIDxmb290ZXIgY2xhc3M9XCJwYW5lbC1mb290ZXJcIj5cclxuICAgICAgICA8ZGl2IGNsYXNzPVwiYXV0aG9yXCI+XHJcbiAgICAgICAgICAgIHt7IG1lc3NhZ2UudXNlcm5hbWUgfX1cclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgICA8ZGl2IGNsYXNzPVwiY29uZmlnXCIgKm5nSWY9XCJiZWxvbmdzVG9Vc2VyKCkgfHwgaXNBZG1pbigpXCI+XHJcbiAgICAgICAgICAgIDxhIChjbGljayk9XCJvbkVkaXQoKVwiPkVkaXQ8L2E+XHJcbiAgICAgICAgICAgIDxhIChjbGljayk9XCJvbkRlbGV0ZSgpXCI+RGVsZXRlPC9hPlxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgPC9mb290ZXI+XHJcbjwvYXJ0aWNsZT5cclxuIiwiPGFwcC1tZXNzYWdlPjwvYXBwLW1lc3NhZ2U+Il0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7OztvQkNRUTtNQUFBO01BQXlELHNEQUNyRDtVQUFBO1VBQUE7WUFBQTtZQUFBO1lBQUc7Y0FBQTtjQUFBO1lBQUE7WUFBSDtVQUFBLGdDQUFzQjtNQUFRLHNEQUM5QjtVQUFBO1VBQUE7WUFBQTtZQUFBO1lBQUc7Y0FBQTtjQUFBO1lBQUE7WUFBSDtVQUFBLGdDQUF3QjtNQUFVOzs7b0JBVjlDO01BQUE7TUFBQSxnQkFBcUMsOENBQ2pDO01BQUE7TUFBQSwwREFBd0I7TUFBQSx3Q0FFbEI7TUFDTjtVQUFBO01BQTZCLGtEQUN6QjtVQUFBO1VBQUEsOEJBQW9CO1VBQUEsZ0JBRWQsa0RBQ047aUJBQUE7YUFBQTtVQUFBLGlDQUdNO01BQ0QsMENBQ0g7OztRQUxrQjtRQUFwQixZQUFvQixTQUFwQjs7O1FBUG9CO1FBQUE7UUFJQTtRQUFBOzs7O29CQ0w1QjtNQUFBO2lDQUFBLFVBQUE7TUFBQTs7OyJ9

@@ -7,115 +7,86 @@
 
 
 import * as i0 from '@angular/core';
-import * as i1 from '../employees/employeeList.component.ngfactory';
-import * as i2 from '../employees/employeeList.component';
+import * as i1 from '../company/sidePanel/sidePanel.component.ngfactory';
+import * as i2 from '../company/sidePanel/sidePanel.component';
 import * as i3 from '../employees/employee.service';
-import * as i4 from './add/addTask.component.ngfactory';
-import * as i5 from './add/addTask.component';
-import * as i6 from './taskList.component.ngfactory';
-import * as i7 from './taskList.component';
+import * as i4 from './taskList.component.ngfactory';
+import * as i5 from './taskList.component';
+import * as i6 from './add/addTask.component.ngfactory';
+import * as i7 from './add/addTask.component';
 import * as i8 from '@angular/common';
 import * as i9 from './tasks.component';
 const styles_TasksComponent:any[] = ([] as any[]);
 export const RenderType_TasksComponent:i0.RendererType2 = i0.ɵcrt({encapsulation:2,
     styles:styles_TasksComponent,data:{}});
 function View_TasksComponent_1(_l:any):i0.ɵViewDefinition {
-  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),33,'div',[['class',
-      'container-fluid']],(null as any),(null as any),(null as any),(null as any),
-      (null as any))),(_l()(),i0.ɵted((null as any),['\n        '])),(_l()(),i0.ɵeld(0,
-      (null as any),(null as any),30,'div',[['class','row content'],['style','height: 550px;']],
-      (null as any),(null as any),(null as any),(null as any),(null as any))),(_l()(),
-      i0.ɵted((null as any),['\n            '])),(_l()(),i0.ɵeld(0,(null as any),(null as any),
-      7,'div',[['class','col-md-4'],['style','height: 100%;']],(null as any),(null as any),
-      (null as any),(null as any),(null as any))),(_l()(),i0.ɵted((null as any),['\n                '])),
-      (_l()(),i0.ɵeld(0,(null as any),(null as any),1,'h1',[['style','color: #ffffff']],
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,0,(null as any),(null as any),19,'div',[['class',
+      'container']],(null as any),(null as any),(null as any),(null as any),(null as any))),
+      (_l()(),i0.ɵted(-1,(null as any),['\n    '])),(_l()(),i0.ɵeld(2,0,(null as any),
+          (null as any),16,'div',[['class','row content'],['style','height: 550px;']],
           (null as any),(null as any),(null as any),(null as any),(null as any))),
-      (_l()(),i0.ɵted((null as any),['Employees'])),(_l()(),i0.ɵted((null as any),
-          ['\n                '])),(_l()(),i0.ɵeld(0,(null as any),(null as any),1,
-          'app-employee-list',([] as any[]),(null as any),(null as any),(null as any),
-          i1.View_EmployeeListComponent_0,i1.RenderType_EmployeeListComponent)),i0.ɵdid(114688,
-          (null as any),0,i2.EmployeeListComponent,[i3.EmployeeService],(null as any),
-          (null as any)),(_l()(),i0.ɵted((null as any),['\n            '])),(_l()(),
-          i0.ɵted((null as any),['\n            '])),(_l()(),i0.ɵeld(0,(null as any),
-          (null as any),18,'div',[['class','col-md-8']],(null as any),(null as any),
-          (null as any),(null as any),(null as any))),(_l()(),i0.ɵted((null as any),
-          ['\n                '])),(_l()(),i0.ɵeld(0,(null as any),(null as any),4,
-          'div',[['class','row'],['style','padding-left: 30px;']],(null as any),(null as any),
-          (null as any),(null as any),(null as any))),(_l()(),i0.ɵted((null as any),
-          ['\n                    '])),(_l()(),i0.ɵeld(0,(null as any),(null as any),
-          1,'app-add-tasks',([] as any[]),(null as any),(null as any),(null as any),
-          i4.View_AddTasksComponent_0,i4.RenderType_AddTasksComponent)),i0.ɵdid(114688,
-          (null as any),0,i5.AddTasksComponent,[i3.EmployeeService],(null as any),
-          (null as any)),(_l()(),i0.ɵted((null as any),['\n                '])),(_l()(),
-          i0.ɵted((null as any),['\n                '])),(_l()(),i0.ɵeld(0,(null as any),
-          (null as any),0,'hr',([] as any[]),(null as any),(null as any),(null as any),
-          (null as any),(null as any))),(_l()(),i0.ɵted((null as any),['\n                '])),
-      (_l()(),i0.ɵeld(0,(null as any),(null as any),7,'div',[['class','row'],['style',
-          'padding-left: 30px;']],(null as any),(null as any),(null as any),(null as any),
-          (null as any))),(_l()(),i0.ɵted((null as any),['\n                    '])),
-      (_l()(),i0.ɵeld(0,(null as any),(null as any),1,'h3',[['style','color: #ffffff;']],
-          (null as any),(null as any),(null as any),(null as any),(null as any))),
-      (_l()(),i0.ɵted((null as any),['Tasks'])),(_l()(),i0.ɵted((null as any),['\n                    '])),
-      (_l()(),i0.ɵeld(0,(null as any),(null as any),1,'app-task-list',([] as any[]),
-          (null as any),(null as any),(null as any),i6.View_TaskListComponent_0,i6.RenderType_TaskListComponent)),
-      i0.ɵdid(114688,(null as any),0,i7.TaskListComponent,[i3.EmployeeService],(null as any),
-          (null as any)),(_l()(),i0.ɵted((null as any),['\n                '])),(_l()(),
-          i0.ɵted((null as any),['\n            '])),(_l()(),i0.ɵted((null as any),
-          ['\n        '])),(_l()(),i0.ɵted((null as any),['\n    ']))],(_ck,_v) => {
-    _ck(_v,10,0);
-    _ck(_v,18,0);
-    _ck(_v,29,0);
+      (_l()(),i0.ɵted(-1,(null as any),['\n        '])),(_l()(),i0.ɵeld(4,0,(null as any),
+          (null as any),4,'div',[['class','col-md-4'],['style','height: 100%;']],(null as any),
+          (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted(-1,
+          (null as any),['\n            '])),(_l()(),i0.ɵeld(6,0,(null as any),(null as any),
+          1,'app-side-panel',([] as any[]),(null as any),(null as any),(null as any),
+          i1.View_SidePanelComponent_0,i1.RenderType_SidePanelComponent)),i0.ɵdid(7,
+          114688,(null as any),0,i2.SidePanelComponent,[i3.EmployeeService],(null as any),
+          (null as any)),(_l()(),i0.ɵted(-1,(null as any),['\n        '])),(_l()(),
+          i0.ɵted(-1,(null as any),['\n        '])),(_l()(),i0.ɵeld(10,0,(null as any),
+          (null as any),7,'div',[['class','col-md-8']],(null as any),(null as any),
+          (null as any),(null as any),(null as any))),(_l()(),i0.ɵted(-1,(null as any),
+          ['\n            '])),(_l()(),i0.ɵeld(12,0,(null as any),(null as any),4,
+          'div',[['style','padding-left: 30px;']],(null as any),(null as any),(null as any),
+          (null as any),(null as any))),(_l()(),i0.ɵted(-1,(null as any),['\n                '])),
+      (_l()(),i0.ɵeld(14,0,(null as any),(null as any),1,'app-task-list',([] as any[]),
+          (null as any),(null as any),(null as any),i4.View_TaskListComponent_0,i4.RenderType_TaskListComponent)),
+      i0.ɵdid(15,114688,(null as any),0,i5.TaskListComponent,[i3.EmployeeService],
+          (null as any),(null as any)),(_l()(),i0.ɵted(-1,(null as any),['\n            '])),
+      (_l()(),i0.ɵted(-1,(null as any),['\n        '])),(_l()(),i0.ɵted(-1,(null as any),
+          ['\n    '])),(_l()(),i0.ɵted(-1,(null as any),['\n']))],(_ck,_v) => {
+    _ck(_v,7,0);
+    _ck(_v,15,0);
   },(null as any));
 }
 function View_TasksComponent_2(_l:any):i0.ɵViewDefinition {
-  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),18,'div',[['class',
-      'container-fluid']],(null as any),(null as any),(null as any),(null as any),
-      (null as any))),(_l()(),i0.ɵted((null as any),['\n        '])),(_l()(),i0.ɵeld(0,
-      (null as any),(null as any),4,'div',[['class','row'],['style','padding-left: 30px;']],
-      (null as any),(null as any),(null as any),(null as any),(null as any))),(_l()(),
-      i0.ɵted((null as any),['\n            '])),(_l()(),i0.ɵeld(0,(null as any),(null as any),
-      1,'app-add-tasks',([] as any[]),(null as any),(null as any),(null as any),i4.View_AddTasksComponent_0,
-      i4.RenderType_AddTasksComponent)),i0.ɵdid(114688,(null as any),0,i5.AddTasksComponent,
-      [i3.EmployeeService],(null as any),(null as any)),(_l()(),i0.ɵted((null as any),
-      ['\n        '])),(_l()(),i0.ɵted((null as any),['\n        '])),(_l()(),i0.ɵeld(0,
-      (null as any),(null as any),0,'hr',([] as any[]),(null as any),(null as any),
-      (null as any),(null as any),(null as any))),(_l()(),i0.ɵted((null as any),['\n        '])),
-      (_l()(),i0.ɵeld(0,(null as any),(null as any),7,'div',[['class','row'],['style',
-          'padding-left: 30px;']],(null as any),(null as any),(null as any),(null as any),
-          (null as any))),(_l()(),i0.ɵted((null as any),['\n            '])),(_l()(),
-          i0.ɵeld(0,(null as any),(null as any),1,'h3',[['style','color: #ffffff;']],
-              (null as any),(null as any),(null as any),(null as any),(null as any))),
-      (_l()(),i0.ɵted((null as any),['Tasks'])),(_l()(),i0.ɵted((null as any),['\n            '])),
-      (_l()(),i0.ɵeld(0,(null as any),(null as any),1,'app-task-list',([] as any[]),
-          (null as any),(null as any),(null as any),i6.View_TaskListComponent_0,i6.RenderType_TaskListComponent)),
-      i0.ɵdid(114688,(null as any),0,i7.TaskListComponent,[i3.EmployeeService],(null as any),
-          (null as any)),(_l()(),i0.ɵted((null as any),['\n        '])),(_l()(),i0.ɵted((null as any),
-          ['\n    ']))],(_ck,_v) => {
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,0,(null as any),(null as any),10,'div',[['class',
+      'container']],(null as any),(null as any),(null as any),(null as any),(null as any))),
+      (_l()(),i0.ɵted(-1,(null as any),['\n    '])),(_l()(),i0.ɵeld(2,0,(null as any),
+          (null as any),7,'div',[['class','row']],(null as any),(null as any),(null as any),
+          (null as any),(null as any))),(_l()(),i0.ɵted(-1,(null as any),['\n        '])),
+      (_l()(),i0.ɵeld(4,0,(null as any),(null as any),1,'app-add-tasks',([] as any[]),
+          (null as any),(null as any),(null as any),i6.View_AddTasksComponent_0,i6.RenderType_AddTasksComponent)),
+      i0.ɵdid(5,114688,(null as any),0,i7.AddTasksComponent,[i3.EmployeeService],(null as any),
+          (null as any)),(_l()(),i0.ɵted(-1,(null as any),['\n        '])),(_l()(),
+          i0.ɵeld(7,0,(null as any),(null as any),0,'hr',([] as any[]),(null as any),
+              (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted(-1,
+          (null as any),['\n        '])),(_l()(),i0.ɵted(-1,(null as any),['\n    '])),
+      (_l()(),i0.ɵted(-1,(null as any),['\n']))],(_ck,_v) => {
     _ck(_v,5,0);
-    _ck(_v,16,0);
   },(null as any));
 }
 export function View_TasksComponent_0(_l:any):i0.ɵViewDefinition {
-  return i0.ɵvid(0,[(_l()(),i0.ɵted((null as any),['\n    '])),(_l()(),i0.ɵand(16777216,
-      (null as any),(null as any),1,(null as any),View_TasksComponent_1)),i0.ɵdid(16384,
-      (null as any),0,i8.NgIf,[i0.ViewContainerRef,i0.TemplateRef],{ngIf:[0,'ngIf']},
-      (null as any)),(_l()(),i0.ɵted((null as any),['\n    '])),(_l()(),i0.ɵand(16777216,
-      (null as any),(null as any),1,(null as any),View_TasksComponent_2)),i0.ɵdid(16384,
-      (null as any),0,i8.NgIf,[i0.ViewContainerRef,i0.TemplateRef],{ngIf:[0,'ngIf']},
-      (null as any)),(_l()(),i0.ɵted((null as any),['\n    ']))],(_ck,_v) => {
+  return i0.ɵvid(0,[(_l()(),i0.ɵand(16777216,(null as any),(null as any),1,(null as any),
+      View_TasksComponent_1)),i0.ɵdid(1,16384,(null as any),0,i8.NgIf,[i0.ViewContainerRef,
+      i0.TemplateRef],{ngIf:[0,'ngIf']},(null as any)),(_l()(),i0.ɵted(-1,(null as any),
+      ['\n'])),(_l()(),i0.ɵand(16777216,(null as any),(null as any),1,(null as any),
+      View_TasksComponent_2)),i0.ɵdid(4,16384,(null as any),0,i8.NgIf,[i0.ViewContainerRef,
+      i0.TemplateRef],{ngIf:[0,'ngIf']},(null as any)),(_l()(),i0.ɵted(-1,(null as any),
+      ['\n']))],(_ck,_v) => {
     var _co:i9.TasksComponent = _v.component;
     const currVal_0:any = (_co.isCompany() == true);
-    _ck(_v,2,0,currVal_0);
+    _ck(_v,1,0,currVal_0);
     const currVal_1:any = (_co.isCompany() == false);
-    _ck(_v,5,0,currVal_1);
+    _ck(_v,4,0,currVal_1);
   },(null as any));
 }
 export function View_TasksComponent_Host_0(_l:any):i0.ɵViewDefinition {
-  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),1,'app-tasks',([] as any[]),
-      (null as any),(null as any),(null as any),View_TasksComponent_0,RenderType_TasksComponent)),
-      i0.ɵdid(49152,(null as any),0,i9.TasksComponent,([] as any[]),(null as any),
-          (null as any))],(null as any),(null as any));
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,0,(null as any),(null as any),1,'app-tasks',
+      ([] as any[]),(null as any),(null as any),(null as any),View_TasksComponent_0,
+      RenderType_TasksComponent)),i0.ɵdid(1,49152,(null as any),0,i9.TasksComponent,
+      ([] as any[]),(null as any),(null as any))],(null as any),(null as any));
 }
 export const TasksComponentNgFactory:i0.ComponentFactory<i9.TasksComponent> = i0.ɵccf('app-tasks',
     i9.TasksComponent,View_TasksComponent_Host_0,{},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvdGFza3MvdGFza3MuY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0M6L1VzZXJzL2Nwc3VsL2Rlc2t0b3AvbWVhbi1hcHAvbWVhbi1hcHAvYXNzZXRzL2FwcC9hdXRoL3Rhc2tzL3Rhc2tzLmNvbXBvbmVudC50cyIsIm5nOi8vL0M6L1VzZXJzL2Nwc3VsL2Rlc2t0b3AvbWVhbi1hcHAvbWVhbi1hcHAvYXNzZXRzL2FwcC9hdXRoL3Rhc2tzL3Rhc2tzLmNvbXBvbmVudC50cy5UYXNrc0NvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvdGFza3MvdGFza3MuY29tcG9uZW50LnRzLlRhc2tzQ29tcG9uZW50X0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiXG4gICAgPGRpdiBjbGFzcz1cImNvbnRhaW5lci1mbHVpZFwiICpuZ0lmPVwiaXNDb21wYW55KCkgPT0gdHJ1ZVwiPlxuICAgICAgICA8ZGl2IGNsYXNzPVwicm93IGNvbnRlbnRcIiBzdHlsZT1cImhlaWdodDogNTUwcHg7XCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzPVwiY29sLW1kLTRcIiBzdHlsZT1cImhlaWdodDogMTAwJTtcIj5cbiAgICAgICAgICAgICAgICA8aDEgc3R5bGU9XCJjb2xvcjogI2ZmZmZmZlwiPkVtcGxveWVlczwvaDE+XG4gICAgICAgICAgICAgICAgPGFwcC1lbXBsb3llZS1saXN0PjwvYXBwLWVtcGxveWVlLWxpc3Q+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3M9XCJjb2wtbWQtOFwiPlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9XCJyb3dcIiBzdHlsZT1cInBhZGRpbmctbGVmdDogMzBweDtcIj5cbiAgICAgICAgICAgICAgICAgICAgPGFwcC1hZGQtdGFza3M+PC9hcHAtYWRkLXRhc2tzPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDxocj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPVwicm93XCIgc3R5bGU9XCJwYWRkaW5nLWxlZnQ6IDMwcHg7XCI+XG4gICAgICAgICAgICAgICAgICAgIDxoMyBzdHlsZT1cImNvbG9yOiAjZmZmZmZmO1wiPlRhc2tzPC9oMz5cbiAgICAgICAgICAgICAgICAgICAgPGFwcC10YXNrLWxpc3Q+PC9hcHAtdGFzay1saXN0PlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgIDwvZGl2PlxuICAgIDxkaXYgY2xhc3M9XCJjb250YWluZXItZmx1aWRcIiAqbmdJZj1cImlzQ29tcGFueSgpID09IGZhbHNlXCI+XG4gICAgICAgIDxkaXYgY2xhc3M9XCJyb3dcIiBzdHlsZT1cInBhZGRpbmctbGVmdDogMzBweDtcIj5cbiAgICAgICAgICAgIDxhcHAtYWRkLXRhc2tzPjwvYXBwLWFkZC10YXNrcz5cbiAgICAgICAgPC9kaXY+XG4gICAgICAgIDxocj5cbiAgICAgICAgPGRpdiBjbGFzcz1cInJvd1wiIHN0eWxlPVwicGFkZGluZy1sZWZ0OiAzMHB4O1wiPlxuICAgICAgICAgICAgPGgzIHN0eWxlPVwiY29sb3I6ICNmZmZmZmY7XCI+VGFza3M8L2gzPlxuICAgICAgICAgICAgPGFwcC10YXNrLWxpc3Q+PC9hcHAtdGFzay1saXN0PlxuICAgICAgICA8L2Rpdj5cbiAgICA8L2Rpdj5cbiAgICAiLCI8YXBwLXRhc2tzPjwvYXBwLXRhc2tzPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7b0JDQ0k7TUFBQTtNQUFBLGdCQUF5RCwrQ0FDckQ7TUFBQTtNQUFBLHdFQUFnRDthQUFBLG9DQUM1QztNQUFBO01BQUEsNENBQTRDO01BQ3hDO1VBQUE7TUFBMkIsOENBQWM7VUFBQSx5QkFDekM7VUFBQTs2RUFBQSxVQUFBO1VBQUE7VUFBQSxlQUF1QyxtREFDckM7aUJBQUEsb0NBQ047VUFBQTtVQUFBLDRDQUFzQjtVQUFBLHlCQUNsQjtVQUFBO1VBQUEsNENBQTZDO1VBQUEsNkJBQ3pDO1VBQUE7cUVBQUEsVUFBQTtVQUFBO1VBQUEsZUFBK0IsdURBQzdCO2lCQUFBLHdDQUNOO1VBQUE7VUFBQSw4QkFBSTtNQUNKO1VBQUE7VUFBQSxnQkFBNkM7TUFDekM7VUFBQTtNQUE0QiwwQ0FBVTtNQUN0QztVQUFBO2FBQUE7VUFBQSxlQUErQix1REFDN0I7aUJBQUEsb0NBQ0o7VUFBQSxpQkFDSjtJQVpFO0lBSUk7SUFLQTs7OztvQkFLaEI7TUFBQTtNQUFBLGdCQUEwRCwrQ0FDdEQ7TUFBQTtNQUFBLHdFQUE2QzthQUFBLG9DQUN6QztNQUFBO3FDQUFBLFVBQUE7TUFBQSxrREFBK0I7TUFBQSxpQkFDN0IsK0NBQ047TUFBQTtNQUFBLDRDQUFJO01BQ0o7VUFBQTtVQUFBLGdCQUE2QyxtREFDekM7aUJBQUE7Y0FBQTtNQUE0QiwwQ0FBVTtNQUN0QztVQUFBO2FBQUE7VUFBQSxlQUErQiwrQ0FDN0I7VUFBQTtJQU5GO0lBS0E7Ozs7b0JBMUJaLDJDQUNJO01BQUEsMkVBQUE7TUFBQTtNQUFBLGVBaUJNLDJDQUNOO01BQUEsMkVBQUE7TUFBQTtNQUFBLGVBU007O0lBM0J1QjtJQUE3QixXQUE2QixTQUE3QjtJQWtCNkI7SUFBN0IsV0FBNkIsU0FBN0I7Ozs7b0JDbkJKO01BQUE7YUFBQTtVQUFBOzs7In0=
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvdGFza3MvdGFza3MuY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0M6L1VzZXJzL2Nwc3VsL2Rlc2t0b3AvbWVhbi1hcHAvbWVhbi1hcHAvYXNzZXRzL2FwcC9hdXRoL3Rhc2tzL3Rhc2tzLmNvbXBvbmVudC50cyIsIm5nOi8vL0M6L1VzZXJzL2Nwc3VsL2Rlc2t0b3AvbWVhbi1hcHAvbWVhbi1hcHAvYXNzZXRzL2FwcC9hdXRoL3Rhc2tzL3Rhc2tzLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvdGFza3MvdGFza3MuY29tcG9uZW50LnRzLlRhc2tzQ29tcG9uZW50X0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiPGRpdiBjbGFzcz1cImNvbnRhaW5lclwiICpuZ0lmPVwiaXNDb21wYW55KCkgPT0gdHJ1ZVwiPlxyXG4gICAgPGRpdiBjbGFzcz1cInJvdyBjb250ZW50XCIgc3R5bGU9XCJoZWlnaHQ6IDU1MHB4O1wiPlxyXG4gICAgICAgIDxkaXYgY2xhc3M9XCJjb2wtbWQtNFwiIHN0eWxlPVwiaGVpZ2h0OiAxMDAlO1wiPlxyXG4gICAgICAgICAgICA8YXBwLXNpZGUtcGFuZWw+PC9hcHAtc2lkZS1wYW5lbD5cclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgICA8ZGl2IGNsYXNzPVwiY29sLW1kLThcIj5cclxuICAgICAgICAgICAgPGRpdiBzdHlsZT1cInBhZGRpbmctbGVmdDogMzBweDtcIj5cclxuICAgICAgICAgICAgICAgIDxhcHAtdGFzay1saXN0PjwvYXBwLXRhc2stbGlzdD5cclxuICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICA8L2Rpdj5cclxuPC9kaXY+XHJcbjxkaXYgY2xhc3M9XCJjb250YWluZXJcIiAqbmdJZj1cImlzQ29tcGFueSgpID09IGZhbHNlXCI+XHJcbiAgICA8ZGl2IGNsYXNzPVwicm93XCI+XHJcbiAgICAgICAgPGFwcC1hZGQtdGFza3M+PC9hcHAtYWRkLXRhc2tzPlxyXG4gICAgICAgIDxocj5cclxuICAgICAgICA8IS0tIDxkaXYgY2xhc3M9XCJyb3dcIiBzdHlsZT1cInBhZGRpbmctbGVmdDogMzBweDtcIj5cclxuICAgICAgICAgICAgPGgzPlRhc2tzPC9oMz5cclxuICAgICAgICAgICAgPGFwcC10YXNrLWxpc3Q+PC9hcHAtdGFzay1saXN0PlxyXG4gICAgICAgIDwvZGl2PiAtLT5cclxuICAgIDwvZGl2PlxyXG48L2Rpdj5cclxuIiwiPGFwcC10YXNrcz48L2FwcC10YXNrcz4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O29CQ0FBO01BQUE7TUFBbUQsOENBQy9DO1VBQUE7VUFBQTtNQUFnRCxrREFDNUM7VUFBQTtVQUFBLDBEQUE0QztVQUFBLG1DQUN4QztVQUFBO3VFQUFBLFVBQUE7VUFBQTtVQUFBLGVBQWlDLGtEQUMvQjtpQkFBQSxtQ0FDTjtVQUFBO1VBQUEsNENBQXNCO1VBQUEscUJBQ2xCO1VBQUE7VUFBQSw4QkFBaUM7TUFDN0I7VUFBQTthQUFBO1VBQUEsNkJBQStCO01BQzdCLGtEQUNKO1VBQUEsYUFDSjtJQVBFO0lBSUk7Ozs7b0JBS2hCO01BQUE7TUFBb0QsOENBQ2hEO1VBQUE7VUFBQSw4QkFBaUI7TUFDYjtVQUFBO2FBQUE7VUFBQSxlQUErQixrREFDL0I7aUJBQUE7Y0FBQSwwREFBSTtVQUFBLCtCQUlNO01BQ1I7SUFORjs7OztvQkFkUjtNQUFBLCtCQUFBO29CQUFBLG1DQVdNO01BQUEsU0FDTjtNQUFBLCtCQUFBO29CQUFBLG1DQVNNO01BQUE7O0lBckJpQjtJQUF2QixXQUF1QixTQUF2QjtJQVl1QjtJQUF2QixXQUF1QixTQUF2Qjs7OztvQkNaQTtNQUFBOytCQUFBLFVBQUE7TUFBQTs7OyJ9

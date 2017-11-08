@@ -13,42 +13,43 @@ const styles_TaskComponent:any[] = ['.author[_ngcontent-%COMP%] {\n            d
 export const RenderType_TaskComponent:i0.RendererType2 = i0.ɵcrt({encapsulation:0,
     styles:styles_TaskComponent,data:{}});
 export function View_TaskComponent_0(_l:any):i0.ɵViewDefinition {
-  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),17,'article',[['class',
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,0,(null as any),(null as any),17,'article',[['class',
       'panel panel-default']],(null as any),(null as any),(null as any),(null as any),
-      (null as any))),(_l()(),i0.ɵted((null as any),['\n    '])),(_l()(),i0.ɵeld(0,
-      (null as any),(null as any),1,'div',[['class','panel-body']],(null as any),(null as any),
-      (null as any),(null as any),(null as any))),(_l()(),i0.ɵted((null as any),['\n        ',
-      '\n    '])),(_l()(),i0.ɵted((null as any),['\n    '])),(_l()(),i0.ɵeld(0,(null as any),
-      (null as any),11,'footer',[['class','panel-footer']],(null as any),(null as any),
-      (null as any),(null as any),(null as any))),(_l()(),i0.ɵted((null as any),['\n        '])),
-      (_l()(),i0.ɵeld(0,(null as any),(null as any),1,'div',[['class','author']],(null as any),
-          (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted((null as any),
-          ['\n            Employee: ',' ','\n        '])),(_l()(),i0.ɵted((null as any),
-          ['\n        '])),(_l()(),i0.ɵeld(0,(null as any),(null as any),1,'div',[['class',
-          'author']],(null as any),(null as any),(null as any),(null as any),(null as any))),
-      (_l()(),i0.ɵted((null as any),['\n            Date Due: ','\n        '])),(_l()(),
-          i0.ɵted((null as any),['\n        '])),(_l()(),i0.ɵeld(0,(null as any),(null as any),
+      (null as any))),(_l()(),i0.ɵted(-1,(null as any),['\n    '])),(_l()(),i0.ɵeld(2,
+      0,(null as any),(null as any),1,'div',[['class','panel-body']],(null as any),
+      (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted(3,
+      (null as any),['\n        ','\n    '])),(_l()(),i0.ɵted(-1,(null as any),['\n    '])),
+      (_l()(),i0.ɵeld(5,0,(null as any),(null as any),11,'footer',[['class','panel-footer']],
+          (null as any),(null as any),(null as any),(null as any),(null as any))),
+      (_l()(),i0.ɵted(-1,(null as any),['\n        '])),(_l()(),i0.ɵeld(7,0,(null as any),
+          (null as any),1,'div',[['class','author']],(null as any),(null as any),(null as any),
+          (null as any),(null as any))),(_l()(),i0.ɵted(8,(null as any),['\n            Employee: ',
+          ' ','\n        '])),(_l()(),i0.ɵted(-1,(null as any),['\n        '])),(_l()(),
+          i0.ɵeld(10,0,(null as any),(null as any),1,'div',[['class','author']],(null as any),
+              (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted(11,
+          (null as any),['\n            Date Due: ','\n        '])),(_l()(),i0.ɵted(-1,
+          (null as any),['\n        '])),(_l()(),i0.ɵeld(13,0,(null as any),(null as any),
           2,'div',[['class','config']],(null as any),(null as any),(null as any),(null as any),
-          (null as any))),(_l()(),i0.ɵted((null as any),['\n            '])),(_l()(),
-          i0.ɵted((null as any),['\n        '])),(_l()(),i0.ɵted((null as any),['\n    '])),
-      (_l()(),i0.ɵted((null as any),['\n'])),(_l()(),i0.ɵted((null as any),['\n']))],
-      (null as any),(_ck,_v) => {
-        var _co:i1.TaskComponent = _v.component;
-        const currVal_0:any = _co.task.content;
-        _ck(_v,3,0,currVal_0);
-        const currVal_1:any = _co.task.employeeFirstName;
-        const currVal_2:any = _co.task.employeeLastName;
-        _ck(_v,8,0,currVal_1,currVal_2);
-        const currVal_3:any = _co.task.dueDate;
-        _ck(_v,11,0,currVal_3);
-      });
+          (null as any))),(_l()(),i0.ɵted(-1,(null as any),['\n            '])),(_l()(),
+          i0.ɵted(-1,(null as any),['\n        '])),(_l()(),i0.ɵted(-1,(null as any),
+          ['\n    '])),(_l()(),i0.ɵted(-1,(null as any),['\n'])),(_l()(),i0.ɵted(-1,
+          (null as any),['\n']))],(null as any),(_ck,_v) => {
+    var _co:i1.TaskComponent = _v.component;
+    const currVal_0:any = _co.task.content;
+    _ck(_v,3,0,currVal_0);
+    const currVal_1:any = _co.task.employeeFirstName;
+    const currVal_2:any = _co.task.employeeLastName;
+    _ck(_v,8,0,currVal_1,currVal_2);
+    const currVal_3:any = _co.task.dueDate;
+    _ck(_v,11,0,currVal_3);
+  });
 }
 export function View_TaskComponent_Host_0(_l:any):i0.ɵViewDefinition {
-  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),1,'app-task',([] as any[]),
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,0,(null as any),(null as any),1,'app-task',([] as any[]),
       (null as any),(null as any),(null as any),View_TaskComponent_0,RenderType_TaskComponent)),
-      i0.ɵdid(49152,(null as any),0,i1.TaskComponent,[i2.EmployeeService],(null as any),
+      i0.ɵdid(1,49152,(null as any),0,i1.TaskComponent,[i2.EmployeeService],(null as any),
           (null as any))],(null as any),(null as any));
 }
 export const TaskComponentNgFactory:i0.ComponentFactory<i1.TaskComponent> = i0.ɵccf('app-task',
     i1.TaskComponent,View_TaskComponent_Host_0,{task:'task'},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvdGFza3MvdGFzay90YXNrLmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9DOi9Vc2Vycy9jcHN1bC9kZXNrdG9wL21lYW4tYXBwL21lYW4tYXBwL2Fzc2V0cy9hcHAvYXV0aC90YXNrcy90YXNrL3Rhc2suY29tcG9uZW50LnRzIiwibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvdGFza3MvdGFzay90YXNrLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvdGFza3MvdGFzay90YXNrLmNvbXBvbmVudC50cy5UYXNrQ29tcG9uZW50X0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiPGFydGljbGUgY2xhc3M9XCJwYW5lbCBwYW5lbC1kZWZhdWx0XCI+XHJcbiAgICA8ZGl2IGNsYXNzPVwicGFuZWwtYm9keVwiPlxyXG4gICAgICAgIHt7IHRhc2suY29udGVudCB9fVxyXG4gICAgPC9kaXY+XHJcbiAgICA8Zm9vdGVyIGNsYXNzPVwicGFuZWwtZm9vdGVyXCI+XHJcbiAgICAgICAgPGRpdiBjbGFzcz1cImF1dGhvclwiPlxyXG4gICAgICAgICAgICBFbXBsb3llZToge3sgdGFzay5lbXBsb3llZUZpcnN0TmFtZSB9fSB7eyB0YXNrLmVtcGxveWVlTGFzdE5hbWUgfX1cclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgICA8ZGl2IGNsYXNzPVwiYXV0aG9yXCI+XHJcbiAgICAgICAgICAgIERhdGUgRHVlOiB7eyB0YXNrLmR1ZURhdGUgfX1cclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgICA8ZGl2IGNsYXNzPVwiY29uZmlnXCI+XHJcbiAgICAgICAgICAgIDwhLS0gPGEgKGNsaWNrKT1cIm9uRWRpdCgpXCI+RWRpdDwvYT5cclxuICAgICAgICAgICAgPGEgKGNsaWNrKT1cIm9uRGVsZXRlKClcIj5EZWxldGU8L2E+IC0tPlxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgPC9mb290ZXI+XHJcbjwvYXJ0aWNsZT5cclxuIiwiPGFwcC10YXNrPjwvYXBwLXRhc2s+Il0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7O29CQ0FBO01BQUE7TUFBQSxnQkFBcUMsMkNBQ2pDO01BQUE7TUFBQSw0Q0FBd0I7TUFBQSxZQUVsQiwyQ0FDTjtNQUFBO01BQUEsNENBQTZCO01BQ3pCO1VBQUEsMERBQW9CO1VBQUEsZ0RBRWQ7VUFBQSxpQkFDTjtVQUFBO01BQW9CLDBFQUVkO2lCQUFBLGdDQUNOO1VBQUE7VUFBQSxnQkFBb0IsbURBRXNCO2lCQUFBLGdDQUNwQztNQUNELHVDQUNIOzs7UUFma0I7UUFBQTtRQUlBO1FBQUE7UUFBQTtRQUdBO1FBQUE7Ozs7b0JDUjVCO01BQUE7YUFBQTtVQUFBOzs7In0=
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvdGFza3MvdGFzay90YXNrLmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9DOi9Vc2Vycy9jcHN1bC9kZXNrdG9wL21lYW4tYXBwL21lYW4tYXBwL2Fzc2V0cy9hcHAvYXV0aC90YXNrcy90YXNrL3Rhc2suY29tcG9uZW50LnRzIiwibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvdGFza3MvdGFzay90YXNrLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvdGFza3MvdGFzay90YXNrLmNvbXBvbmVudC50cy5UYXNrQ29tcG9uZW50X0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiPGFydGljbGUgY2xhc3M9XCJwYW5lbCBwYW5lbC1kZWZhdWx0XCI+XHJcbiAgICA8ZGl2IGNsYXNzPVwicGFuZWwtYm9keVwiPlxyXG4gICAgICAgIHt7IHRhc2suY29udGVudCB9fVxyXG4gICAgPC9kaXY+XHJcbiAgICA8Zm9vdGVyIGNsYXNzPVwicGFuZWwtZm9vdGVyXCI+XHJcbiAgICAgICAgPGRpdiBjbGFzcz1cImF1dGhvclwiPlxyXG4gICAgICAgICAgICBFbXBsb3llZToge3sgdGFzay5lbXBsb3llZUZpcnN0TmFtZSB9fSB7eyB0YXNrLmVtcGxveWVlTGFzdE5hbWUgfX1cclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgICA8ZGl2IGNsYXNzPVwiYXV0aG9yXCI+XHJcbiAgICAgICAgICAgIERhdGUgRHVlOiB7eyB0YXNrLmR1ZURhdGUgfX1cclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgICA8ZGl2IGNsYXNzPVwiY29uZmlnXCI+XHJcbiAgICAgICAgICAgIDwhLS0gPGEgKGNsaWNrKT1cIm9uRWRpdCgpXCI+RWRpdDwvYT5cclxuICAgICAgICAgICAgPGEgKGNsaWNrKT1cIm9uRGVsZXRlKClcIj5EZWxldGU8L2E+IC0tPlxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgPC9mb290ZXI+XHJcbjwvYXJ0aWNsZT5cclxuIiwiPGFwcC10YXNrPjwvYXBwLXRhc2s+Il0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7O29CQ0FBO01BQUE7TUFBQSxnQkFBcUMsOENBQ2pDO01BQUE7TUFBQSwwREFBd0I7TUFBQSx3Q0FFbEI7TUFDTjtVQUFBO01BQTZCLGtEQUN6QjtVQUFBO1VBQUEsOEJBQW9CO1VBQUEsb0JBRWQsa0RBQ047aUJBQUE7Y0FBQSwwREFBb0I7VUFBQSwwREFFZDtVQUFBLCtCQUNOO1VBQUE7VUFBQSxnQkFBb0Isc0RBRXNCO2lCQUFBLG1DQUNwQztVQUFBLGFBQ0QsMENBQ0g7VUFBQTs7SUFma0I7SUFBQTtJQUlBO0lBQUE7SUFBQTtJQUdBO0lBQUE7Ozs7b0JDUjVCO01BQUE7YUFBQTtVQUFBOzs7In0=

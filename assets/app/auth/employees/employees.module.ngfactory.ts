@@ -8,33 +8,46 @@
 
 import * as i0 from '@angular/core';
 import * as i1 from './employees.module';
-import * as i2 from './add/addEmployee.component.ngfactory';
-import * as i3 from '../tasks/tasks.component.ngfactory';
-import * as i4 from '@angular/forms';
-import * as i5 from '@angular/common';
-import * as i6 from '../../errors/error.service';
-import * as i7 from '../auth.service';
-import * as i8 from '@angular/http';
-import * as i9 from './employee.service';
-import * as i10 from '@angular/router';
-import * as i11 from './add/addEmployee.component';
-import * as i12 from '../tasks/tasks.component';
+import * as i2 from '../company/homePage/CompanyHomePage.component.ngfactory';
+import * as i3 from './add/addEmployee.component.ngfactory';
+import * as i4 from '../tasks/add/addTask.component.ngfactory';
+import * as i5 from './employeeList.component.ngfactory';
+import * as i6 from '../tasks/tasks.component.ngfactory';
+import * as i7 from '@angular/forms';
+import * as i8 from '@angular/common';
+import * as i9 from '../../errors/error.service';
+import * as i10 from '../auth.service';
+import * as i11 from '@angular/http';
+import * as i12 from '@angular/router';
+import * as i13 from './employee.service';
+import * as i14 from '../company/homePage/CompanyHomePage.component';
+import * as i15 from '../../authGuard.guard';
+import * as i16 from './add/addEmployee.component';
+import * as i17 from '../tasks/add/addTask.component';
+import * as i18 from './employeeList.component';
+import * as i19 from '../tasks/tasks.component';
 export const EmployeesModuleNgFactory:i0.NgModuleFactory<i1.EmployeesModule> = i0.ɵcmf(i1.EmployeesModule,
     ([] as any[]),(_l:any) => {
       return i0.ɵmod([i0.ɵmpd(512,i0.ComponentFactoryResolver,i0.ɵCodegenComponentFactoryResolver,
-          [[8,[i2.AddEmployeeComponentNgFactory,i3.TasksComponentNgFactory]],[3,i0.ComponentFactoryResolver],
-              i0.NgModuleRef]),i0.ɵmpd(4608,i4.FormBuilder,i4.FormBuilder,([] as any[])),
-          i0.ɵmpd(4608,i4.ɵi,i4.ɵi,([] as any[])),i0.ɵmpd(4608,i5.NgLocalization,i5.NgLocaleLocalization,
-              [i0.LOCALE_ID]),i0.ɵmpd(4608,i6.ErrorService,i6.ErrorService,([] as any[])),
-          i0.ɵmpd(4608,i7.AuthService,i7.AuthService,[i8.Http,i6.ErrorService]),i0.ɵmpd(4608,
-              i9.EmployeeService,i9.EmployeeService,[i8.Http,i6.ErrorService]),i0.ɵmpd(512,
-              i4.ɵba,i4.ɵba,([] as any[])),i0.ɵmpd(512,i4.ReactiveFormsModule,i4.ReactiveFormsModule,
-              ([] as any[])),i0.ɵmpd(512,i5.CommonModule,i5.CommonModule,([] as any[])),
-          i0.ɵmpd(512,i10.RouterModule,i10.RouterModule,[[2,i10.ɵa],[2,i10.Router]]),
+          [[8,[i2.CompanyHomePageComponentNgFactory,i3.AddEmployeeComponentNgFactory,
+              i4.AddTasksComponentNgFactory,i5.EmployeeListComponentNgFactory,i6.TasksComponentNgFactory]],
+              [3,i0.ComponentFactoryResolver],i0.NgModuleRef]),i0.ɵmpd(4608,i7.FormBuilder,
+          i7.FormBuilder,([] as any[])),i0.ɵmpd(4608,i7.ɵi,i7.ɵi,([] as any[])),i0.ɵmpd(4608,
+          i8.NgLocalization,i8.NgLocaleLocalization,[i0.LOCALE_ID]),i0.ɵmpd(4608,i9.ErrorService,
+          i9.ErrorService,([] as any[])),i0.ɵmpd(4608,i10.AuthService,i10.AuthService,
+          [i11.Http,i9.ErrorService,i12.Router]),i0.ɵmpd(4608,i13.EmployeeService,
+          i13.EmployeeService,[i11.Http,i9.ErrorService]),i0.ɵmpd(512,i7.ɵba,i7.ɵba,
+          ([] as any[])),i0.ɵmpd(512,i7.ReactiveFormsModule,i7.ReactiveFormsModule,
+          ([] as any[])),i0.ɵmpd(512,i8.CommonModule,i8.CommonModule,([] as any[])),
+          i0.ɵmpd(512,i12.RouterModule,i12.RouterModule,[[2,i12.ɵa],[2,i12.Router]]),
           i0.ɵmpd(512,i1.EmployeesModule,i1.EmployeesModule,([] as any[])),i0.ɵmpd(1024,
-              i10.ROUTES,() => {
-                return [[{path:'add',component:i11.AddEmployeeComponent},{path:'tasks',
-                    component:i12.TasksComponent}]];
+              i12.ROUTES,() => {
+                return [[{path:'',redirectTo:'home',pathMatch:'full'},{path:'homePage',
+                    component:i14.CompanyHomePageComponent,canActivate:[i15.AuthGuard]},
+                    {path:'add',component:i16.AddEmployeeComponent,canActivate:[i15.AuthGuard]},
+                    {path:'addtasks',component:i17.AddTasksComponent,canActivate:[i15.AuthGuard]},
+                    {path:'home',component:i18.EmployeeListComponent,canActivate:[i15.AuthGuard]},
+                    {path:'tasks',component:i19.TasksComponent,canActivate:[i15.AuthGuard]}]];
               },([] as any[]))]);
     });
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvZW1wbG95ZWVzL2VtcGxveWVlcy5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvZW1wbG95ZWVzL2VtcGxveWVlcy5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyJ9
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvZW1wbG95ZWVzL2VtcGxveWVlcy5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvZW1wbG95ZWVzL2VtcGxveWVlcy5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsifQ==

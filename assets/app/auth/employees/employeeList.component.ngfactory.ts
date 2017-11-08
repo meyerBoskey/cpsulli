@@ -7,46 +7,153 @@
 
 
 import * as i0 from '@angular/core';
-import * as i1 from './employee/employee.component.ngfactory';
-import * as i2 from './employee/employee.component';
+import * as i1 from '@angular/common';
+import * as i2 from './employeeList.component';
 import * as i3 from './employee.service';
 import * as i4 from '@angular/router';
-import * as i5 from '@angular/common';
-import * as i6 from './employeeList.component';
 const styles_EmployeeListComponent:any[] = ([] as any[]);
 export const RenderType_EmployeeListComponent:i0.RendererType2 = i0.ɵcrt({encapsulation:2,
     styles:styles_EmployeeListComponent,data:{}});
+function View_EmployeeListComponent_2(_l:any):i0.ɵViewDefinition {
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,0,(null as any),(null as any),2,'a',[['class',
+      'btn btn-default']],(null as any),[[(null as any),'click']],(_v,en,$event) => {
+    var ad:boolean = true;
+    var _co:any = _v.component;
+    if (('click' === en)) {
+      const pd_0:any = ((<any>_co.onEdit()) !== false);
+      ad = (pd_0 && ad);
+    }
+    return ad;
+  },(null as any),(null as any))),(_l()(),i0.ɵeld(1,0,(null as any),(null as any),
+      1,'strong',([] as any[]),(null as any),(null as any),(null as any),(null as any),
+      (null as any))),(_l()(),i0.ɵted(-1,(null as any),['Edit']))],(null as any),(null as any));
+}
+function View_EmployeeListComponent_3(_l:any):i0.ɵViewDefinition {
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,0,(null as any),(null as any),2,'a',[['class',
+      'btn btn-danger']],(null as any),[[(null as any),'click']],(_v,en,$event) => {
+    var ad:boolean = true;
+    var _co:any = _v.component;
+    if (('click' === en)) {
+      const pd_0:any = ((<any>_co.onDelete()) !== false);
+      ad = (pd_0 && ad);
+    }
+    return ad;
+  },(null as any),(null as any))),(_l()(),i0.ɵeld(1,0,(null as any),(null as any),
+      1,'strong',([] as any[]),(null as any),(null as any),(null as any),(null as any),
+      (null as any))),(_l()(),i0.ɵted(-1,(null as any),['Delete']))],(null as any),
+      (null as any));
+}
 function View_EmployeeListComponent_1(_l:any):i0.ɵViewDefinition {
-  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),1,'app-employee',
-      ([] as any[]),(null as any),(null as any),(null as any),i1.View_EmployeeComponent_0,
-      i1.RenderType_EmployeeComponent)),i0.ɵdid(49152,(null as any),0,i2.EmployeeComponent,
-      [i3.EmployeeService,i4.Router],{employee:[0,'employee']},(null as any))],(_ck,
-      _v) => {
-    const currVal_0:any = _v.context.$implicit;
-    _ck(_v,1,0,currVal_0);
-  },(null as any));
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,0,(null as any),(null as any),22,'tr',([] as any[]),
+      (null as any),(null as any),(null as any),(null as any),(null as any))),(_l()(),
+      i0.ɵted(-1,(null as any),['\n                    '])),(_l()(),i0.ɵeld(2,0,(null as any),
+      (null as any),1,'td',([] as any[]),(null as any),(null as any),(null as any),
+      (null as any),(null as any))),(_l()(),i0.ɵted(3,(null as any),['',''])),(_l()(),
+      i0.ɵted(-1,(null as any),['\n                    '])),(_l()(),i0.ɵeld(5,0,(null as any),
+      (null as any),1,'td',([] as any[]),(null as any),(null as any),(null as any),
+      (null as any),(null as any))),(_l()(),i0.ɵted(6,(null as any),['',''])),(_l()(),
+      i0.ɵted(-1,(null as any),['\n                    '])),(_l()(),i0.ɵeld(8,0,(null as any),
+      (null as any),1,'td',([] as any[]),(null as any),(null as any),(null as any),
+      (null as any),(null as any))),(_l()(),i0.ɵted(9,(null as any),['',''])),(_l()(),
+      i0.ɵted(-1,(null as any),['\n                    '])),(_l()(),i0.ɵeld(11,0,(null as any),
+      (null as any),1,'td',([] as any[]),(null as any),(null as any),(null as any),
+      (null as any),(null as any))),(_l()(),i0.ɵted(12,(null as any),['',''])),(_l()(),
+      i0.ɵted(-1,(null as any),['\n                    '])),(_l()(),i0.ɵeld(14,0,(null as any),
+      (null as any),7,'td',([] as any[]),(null as any),(null as any),(null as any),
+      (null as any),(null as any))),(_l()(),i0.ɵted(-1,(null as any),['\n                        '])),
+      (_l()(),i0.ɵand(16777216,(null as any),(null as any),1,(null as any),View_EmployeeListComponent_2)),
+      i0.ɵdid(17,16384,(null as any),0,i1.NgIf,[i0.ViewContainerRef,i0.TemplateRef],
+          {ngIf:[0,'ngIf']},(null as any)),(_l()(),i0.ɵted(-1,(null as any),['\n                        '])),
+      (_l()(),i0.ɵand(16777216,(null as any),(null as any),1,(null as any),View_EmployeeListComponent_3)),
+      i0.ɵdid(20,16384,(null as any),0,i1.NgIf,[i0.ViewContainerRef,i0.TemplateRef],
+          {ngIf:[0,'ngIf']},(null as any)),(_l()(),i0.ɵted(-1,(null as any),['\n                    '])),
+      (_l()(),i0.ɵted(-1,(null as any),['\n                ']))],(_ck,_v) => {
+    var _co:any = _v.component;
+    const currVal_4:any = (_co.router.url === '/employees');
+    _ck(_v,17,0,currVal_4);
+    const currVal_5:any = (_co.router.url === '/employees');
+    _ck(_v,20,0,currVal_5);
+  },(_ck,_v) => {
+    const currVal_0:any = _v.context.$implicit.firstName;
+    _ck(_v,3,0,currVal_0);
+    const currVal_1:any = _v.context.$implicit.lastName;
+    _ck(_v,6,0,currVal_1);
+    const currVal_2:any = _v.context.$implicit.jobTitle;
+    _ck(_v,9,0,currVal_2);
+    const currVal_3:any = _v.context.$implicit.employeeId;
+    _ck(_v,12,0,currVal_3);
+  });
 }
 export function View_EmployeeListComponent_0(_l:any):i0.ɵViewDefinition {
-  return i0.ɵvid(0,[(_l()(),i0.ɵted((null as any),['\n    '])),(_l()(),i0.ɵeld(0,(null as any),
-      (null as any),4,'div',([] as any[]),(null as any),(null as any),(null as any),
-      (null as any),(null as any))),(_l()(),i0.ɵted((null as any),['\n        '])),
-      (_l()(),i0.ɵand(16777216,(null as any),(null as any),1,(null as any),View_EmployeeListComponent_1)),
-      i0.ɵdid(802816,(null as any),0,i5.NgForOf,[i0.ViewContainerRef,i0.TemplateRef,
-          i0.IterableDiffers],{ngForOf:[0,'ngForOf']},(null as any)),(_l()(),i0.ɵted((null as any),
-          ['\n    '])),(_l()(),i0.ɵted((null as any),['\n']))],(_ck,_v) => {
-    var _co:i6.EmployeeListComponent = _v.component;
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,0,(null as any),(null as any),47,'div',[['class',
+      'panel panel-default']],(null as any),(null as any),(null as any),(null as any),
+      (null as any))),(_l()(),i0.ɵted(-1,(null as any),['\n    '])),(_l()(),i0.ɵeld(2,
+      0,(null as any),(null as any),4,'div',[['class','panel-heading main-color-bg']],
+      (null as any),(null as any),(null as any),(null as any),(null as any))),(_l()(),
+      i0.ɵted(-1,(null as any),['\n        '])),(_l()(),i0.ɵeld(4,0,(null as any),
+      (null as any),1,'h3',[['class','panel-title']],(null as any),(null as any),(null as any),
+      (null as any),(null as any))),(_l()(),i0.ɵted(-1,(null as any),['Employees'])),
+      (_l()(),i0.ɵted(-1,(null as any),['\n    '])),(_l()(),i0.ɵted(-1,(null as any),
+          ['\n    '])),(_l()(),i0.ɵeld(8,0,(null as any),(null as any),38,'div',[['class',
+          'panel-body']],(null as any),(null as any),(null as any),(null as any),(null as any))),
+      (_l()(),i0.ɵted(-1,(null as any),['\n        '])),(_l()(),i0.ɵeld(10,0,(null as any),
+          (null as any),6,'div',[['class','row']],(null as any),(null as any),(null as any),
+          (null as any),(null as any))),(_l()(),i0.ɵted(-1,(null as any),['\n            '])),
+      (_l()(),i0.ɵeld(12,0,(null as any),(null as any),3,'div',[['class','col-md-12']],
+          (null as any),(null as any),(null as any),(null as any),(null as any))),
+      (_l()(),i0.ɵted(-1,(null as any),['\n                '])),(_l()(),i0.ɵeld(14,
+          0,(null as any),(null as any),0,'input',[['class','form-control'],['placeholder',
+              'Filter Pages...'],['type','text']],(null as any),(null as any),(null as any),
+          (null as any),(null as any))),(_l()(),i0.ɵted(-1,(null as any),['\n            '])),
+      (_l()(),i0.ɵted(-1,(null as any),['\n        '])),(_l()(),i0.ɵted(-1,(null as any),
+          ['\n        '])),(_l()(),i0.ɵeld(18,0,(null as any),(null as any),0,'br',
+          ([] as any[]),(null as any),(null as any),(null as any),(null as any),(null as any))),
+      (_l()(),i0.ɵted(-1,(null as any),['\n        '])),(_l()(),i0.ɵeld(20,0,(null as any),
+          (null as any),25,'div',([] as any[]),(null as any),(null as any),(null as any),
+          (null as any),(null as any))),(_l()(),i0.ɵted(-1,(null as any),['\n            '])),
+      (_l()(),i0.ɵeld(22,0,(null as any),(null as any),22,'table',[['class','table table-striped table-hover']],
+          (null as any),(null as any),(null as any),(null as any),(null as any))),
+      (_l()(),i0.ɵted(-1,(null as any),['\n                '])),(_l()(),i0.ɵeld(24,
+          0,(null as any),(null as any),20,'tbody',([] as any[]),(null as any),(null as any),
+          (null as any),(null as any),(null as any))),(_l()(),i0.ɵeld(25,0,(null as any),
+          (null as any),15,'tr',([] as any[]),(null as any),(null as any),(null as any),
+          (null as any),(null as any))),(_l()(),i0.ɵted(-1,(null as any),['\n                    '])),
+      (_l()(),i0.ɵeld(27,0,(null as any),(null as any),1,'th',([] as any[]),(null as any),
+          (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted(-1,
+          (null as any),['First Name'])),(_l()(),i0.ɵted(-1,(null as any),['\n                    '])),
+      (_l()(),i0.ɵeld(30,0,(null as any),(null as any),1,'th',([] as any[]),(null as any),
+          (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted(-1,
+          (null as any),['Last Name'])),(_l()(),i0.ɵted(-1,(null as any),['\n                    '])),
+      (_l()(),i0.ɵeld(33,0,(null as any),(null as any),1,'th',([] as any[]),(null as any),
+          (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted(-1,
+          (null as any),['Job Title'])),(_l()(),i0.ɵted(-1,(null as any),['\n                    '])),
+      (_l()(),i0.ɵeld(36,0,(null as any),(null as any),1,'th',([] as any[]),(null as any),
+          (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted(-1,
+          (null as any),['ID'])),(_l()(),i0.ɵted(-1,(null as any),['\n                    '])),
+      (_l()(),i0.ɵeld(39,0,(null as any),(null as any),0,'th',([] as any[]),(null as any),
+          (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted(-1,
+          (null as any),['\n                '])),(_l()(),i0.ɵted(-1,(null as any),
+          ['\n                '])),(_l()(),i0.ɵand(16777216,(null as any),(null as any),
+          1,(null as any),View_EmployeeListComponent_1)),i0.ɵdid(43,802816,(null as any),
+          0,i1.NgForOf,[i0.ViewContainerRef,i0.TemplateRef,i0.IterableDiffers],{ngForOf:[0,
+              'ngForOf']},(null as any)),(_l()(),i0.ɵted(-1,(null as any),['\n            '])),
+      (_l()(),i0.ɵted(-1,(null as any),['\n        '])),(_l()(),i0.ɵted(-1,(null as any),
+          ['\n    '])),(_l()(),i0.ɵted(-1,(null as any),['\n'])),(_l()(),i0.ɵted(-1,
+          (null as any),['\n']))],(_ck,_v) => {
+    var _co:i2.EmployeeListComponent = _v.component;
     const currVal_0:any = _co.employees;
-    _ck(_v,4,0,currVal_0);
+    _ck(_v,43,0,currVal_0);
   },(null as any));
 }
 export function View_EmployeeListComponent_Host_0(_l:any):i0.ɵViewDefinition {
-  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),1,'app-employee-list',
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,0,(null as any),(null as any),1,'app-employee-list',
       ([] as any[]),(null as any),(null as any),(null as any),View_EmployeeListComponent_0,
-      RenderType_EmployeeListComponent)),i0.ɵdid(114688,(null as any),0,i6.EmployeeListComponent,
-      [i3.EmployeeService],(null as any),(null as any))],(_ck,_v) => {
+      RenderType_EmployeeListComponent)),i0.ɵdid(1,114688,(null as any),0,i2.EmployeeListComponent,
+      [i3.EmployeeService,i4.Router],(null as any),(null as any))],(_ck,_v) => {
     _ck(_v,1,0);
   },(null as any));
 }
-export const EmployeeListComponentNgFactory:i0.ComponentFactory<i6.EmployeeListComponent> = i0.ɵccf('app-employee-list',
-    i6.EmployeeListComponent,View_EmployeeListComponent_Host_0,{},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvZW1wbG95ZWVzL2VtcGxveWVlTGlzdC5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvZW1wbG95ZWVzL2VtcGxveWVlTGlzdC5jb21wb25lbnQudHMiLCJuZzovLy9DOi9Vc2Vycy9jcHN1bC9kZXNrdG9wL21lYW4tYXBwL21lYW4tYXBwL2Fzc2V0cy9hcHAvYXV0aC9lbXBsb3llZXMvZW1wbG95ZWVMaXN0LmNvbXBvbmVudC50cy5FbXBsb3llZUxpc3RDb21wb25lbnQuaHRtbCIsIm5nOi8vL0M6L1VzZXJzL2Nwc3VsL2Rlc2t0b3AvbWVhbi1hcHAvbWVhbi1hcHAvYXNzZXRzL2FwcC9hdXRoL2VtcGxveWVlcy9lbXBsb3llZUxpc3QuY29tcG9uZW50LnRzLkVtcGxveWVlTGlzdENvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIlxuICAgIDxkaXY+XG4gICAgICAgIDxhcHAtZW1wbG95ZWVcbiAgICAgICAgICAgICAgIFtlbXBsb3llZV09XCJlbXBsb3llZVwiXG4gICAgICAgICAgICAgICAgKm5nRm9yPVwibGV0IGVtcGxveWVlIG9mIGVtcGxveWVlc1wiPjwvYXBwLWVtcGxveWVlPlxuICAgIDwvZGl2PlxuIiwiPGFwcC1lbXBsb3llZS1saXN0PjwvYXBwLWVtcGxveWVlLWxpc3Q+Il0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7OztvQkNFUTtNQUFBO3FDQUFBLFVBQUE7TUFBQTs7SUFDTztJQURQLFdBQ08sU0FEUDs7OztvQkFGUiwyQ0FDSTtNQUFBO01BQUEsOEJBQUs7TUFDRDthQUFBOzRCQUFBLHlDQUUwRDtVQUFBLGFBQ3hEOztJQURNO0lBRlIsV0FFUSxTQUZSOzs7O29CQ0ZSO01BQUE7c0NBQUEsVUFBQTtNQUFBO0lBQUE7Ozs7In0=
+export const EmployeeListComponentNgFactory:i0.ComponentFactory<i2.EmployeeListComponent> = i0.ɵccf('app-employee-list',
+    i2.EmployeeListComponent,View_EmployeeListComponent_Host_0,{employee:'employee'},
+    {},([] as any[]));
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvZW1wbG95ZWVzL2VtcGxveWVlTGlzdC5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvZW1wbG95ZWVzL2VtcGxveWVlTGlzdC5jb21wb25lbnQudHMiLCJuZzovLy9DOi9Vc2Vycy9jcHN1bC9kZXNrdG9wL21lYW4tYXBwL21lYW4tYXBwL2Fzc2V0cy9hcHAvYXV0aC9lbXBsb3llZXMvZW1wbG95ZWVMaXN0LmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvZW1wbG95ZWVzL2VtcGxveWVlTGlzdC5jb21wb25lbnQudHMuRW1wbG95ZWVMaXN0Q29tcG9uZW50X0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiPGRpdiBjbGFzcz1cInBhbmVsIHBhbmVsLWRlZmF1bHRcIj5cclxuICAgIDxkaXYgY2xhc3M9XCJwYW5lbC1oZWFkaW5nIG1haW4tY29sb3ItYmdcIj5cclxuICAgICAgICA8aDMgY2xhc3M9XCJwYW5lbC10aXRsZVwiPkVtcGxveWVlczwvaDM+XHJcbiAgICA8L2Rpdj5cclxuICAgIDxkaXYgY2xhc3M9XCJwYW5lbC1ib2R5XCI+XHJcbiAgICAgICAgPGRpdiBjbGFzcz1cInJvd1wiPlxyXG4gICAgICAgICAgICA8ZGl2IGNsYXNzPVwiY29sLW1kLTEyXCI+XHJcbiAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT1cInRleHRcIiBwbGFjZWhvbGRlcj1cIkZpbHRlciBQYWdlcy4uLlwiIGNsYXNzPVwiZm9ybS1jb250cm9sXCI+XHJcbiAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgICAgIDxicj5cclxuICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICA8dGFibGUgY2xhc3M9XCJ0YWJsZSB0YWJsZS1zdHJpcGVkIHRhYmxlLWhvdmVyXCI+XHJcbiAgICAgICAgICAgICAgICA8dHI+XHJcbiAgICAgICAgICAgICAgICAgICAgPHRoPkZpcnN0IE5hbWU8L3RoPlxyXG4gICAgICAgICAgICAgICAgICAgIDx0aD5MYXN0IE5hbWU8L3RoPlxyXG4gICAgICAgICAgICAgICAgICAgIDx0aD5Kb2IgVGl0bGU8L3RoPlxyXG4gICAgICAgICAgICAgICAgICAgIDx0aD5JRDwvdGg+XHJcbiAgICAgICAgICAgICAgICAgICAgPHRoPjwvdGg+XHJcbiAgICAgICAgICAgICAgICA8L3RyPlxyXG4gICAgICAgICAgICAgICAgPHRyICpuZ0Zvcj1cImxldCBlbXBsb3llZSBvZiBlbXBsb3llZXNcIj5cclxuICAgICAgICAgICAgICAgICAgICA8dGQ+e3tlbXBsb3llZS5maXJzdE5hbWV9fTwvdGQ+XHJcbiAgICAgICAgICAgICAgICAgICAgPHRkPnt7ZW1wbG95ZWUubGFzdE5hbWV9fTwvdGQ+XHJcbiAgICAgICAgICAgICAgICAgICAgPHRkPnt7ZW1wbG95ZWUuam9iVGl0bGV9fTwvdGQ+XHJcbiAgICAgICAgICAgICAgICAgICAgPHRkPnt7ZW1wbG95ZWUuZW1wbG95ZWVJZH19PC90ZD5cclxuICAgICAgICAgICAgICAgICAgICA8dGQ+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxhIGNsYXNzPVwiYnRuIGJ0bi1kZWZhdWx0XCIgKm5nSWY9XCJyb3V0ZXIudXJsID09PSAnL2VtcGxveWVlcydcIiAoY2xpY2spPVwib25FZGl0KClcIj48c3Ryb25nPkVkaXQ8L3N0cm9uZz48L2E+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxhIGNsYXNzPVwiYnRuIGJ0bi1kYW5nZXJcIiAqbmdJZj1cInJvdXRlci51cmwgPT09ICcvZW1wbG95ZWVzJ1wiIChjbGljayk9XCJvbkRlbGV0ZSgpXCI+PHN0cm9uZz5EZWxldGU8L3N0cm9uZz48L2E+XHJcbiAgICAgICAgICAgICAgICAgICAgPC90ZD5cclxuICAgICAgICAgICAgICAgIDwvdHI+XHJcbiAgICAgICAgICAgIDwvdGFibGU+XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICA8L2Rpdj5cclxuPC9kaXY+XHJcbiIsIjxhcHAtZW1wbG95ZWUtbGlzdD48L2FwcC1lbXBsb3llZS1saXN0PiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7O29CQzBCd0I7TUFBQTtJQUFBO0lBQUE7SUFBK0Q7TUFBQTtNQUFBO0lBQUE7SUFBL0Q7RUFBQSxnQ0FBa0Y7TUFBQTtNQUFBLGdCQUFROzs7b0JBQzFGO01BQUE7SUFBQTtJQUFBO0lBQThEO01BQUE7TUFBQTtJQUFBO0lBQTlEO0VBQUEsZ0NBQW1GO01BQUE7TUFBQSxnQkFBUTs7OztvQkFQbkc7TUFBQSx3RUFBdUM7YUFBQSwrQ0FDbkM7TUFBQTtNQUFBLDhCQUFJLDBDQUEyQjthQUFBLCtDQUMvQjtNQUFBO01BQUEsOEJBQUksMENBQTBCO2FBQUEsK0NBQzlCO01BQUE7TUFBQSw4QkFBSSwwQ0FBMEI7YUFBQSwrQ0FDOUI7TUFBQTtNQUFBLDhCQUFJLDJDQUE0QjthQUFBLCtDQUNoQztNQUFBO01BQUEsOEJBQUk7TUFDQTthQUFBO1VBQUEsaUNBQTJHO01BQzNHO2FBQUE7VUFBQSxpQ0FBOEc7TUFDN0c7O0lBRjBCO0lBQTNCLFlBQTJCLFNBQTNCO0lBQzBCO0lBQTFCLFlBQTBCLFNBQTFCOztJQU5BO0lBQUE7SUFDQTtJQUFBO0lBQ0E7SUFBQTtJQUNBO0lBQUE7Ozs7b0JBeEJ4QjtNQUFBO01BQUEsZ0JBQWlDLDhDQUM3QjtNQUFBO01BQUEsd0VBQXlDO2FBQUEsbUNBQ3JDO01BQUE7TUFBQSw4QkFBd0I7TUFBYyw4Q0FDcEM7VUFBQSxhQUNOO1VBQUE7TUFBd0Isa0RBQ3BCO1VBQUE7VUFBQSw4QkFBaUI7TUFDYjtVQUFBO01BQXVCLDBEQUNuQjtVQUFBO2NBQUE7VUFBQSw4QkFBc0U7TUFDcEUsa0RBQ0o7VUFBQSxpQkFDTjtVQUFBO01BQUksa0RBQ0o7VUFBQTtVQUFBLDhCQUFLO01BQ0Q7VUFBQTtNQUErQywwREFDM0M7VUFBQTtVQUFBO1VBQUE7VUFBQSw4QkFBSTtNQUNBO1VBQUEsMERBQUk7VUFBQSwrQkFBZTtNQUNuQjtVQUFBLDBEQUFJO1VBQUEsOEJBQWM7TUFDbEI7VUFBQSwwREFBSTtVQUFBLDhCQUFjO01BQ2xCO1VBQUEsMERBQUk7VUFBQSx1QkFBTztNQUNYO1VBQUEsMERBQVM7VUFBQSx1Q0FDUjtVQUFBLHlCQUNMO1VBQUEsc0RBQUE7VUFBQTtjQUFBLDJCQVNLO01BQ0Qsa0RBQ047VUFBQSxhQUNKLDBDQUNKO1VBQUE7O0lBYmM7SUFBSixZQUFJLFNBQUo7Ozs7b0JDcEJoQjtNQUFBO3NDQUFBLFVBQUE7TUFBQTtJQUFBOzs7OzsifQ==

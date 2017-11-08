@@ -7,55 +7,56 @@
 
 
 import * as i0 from '@angular/core';
-import * as i1 from './employeeList.component.ngfactory';
-import * as i2 from './employeeList.component';
+import * as i1 from '../company/sidePanel/sidePanel.component.ngfactory';
+import * as i2 from '../company/sidePanel/sidePanel.component';
 import * as i3 from './employee.service';
-import * as i4 from './add/addEmployee.component.ngfactory';
-import * as i5 from './add/addEmployee.component';
-import * as i6 from './employees.component';
+import * as i4 from '@angular/router';
+import * as i5 from './employees.component';
 const styles_EmployeesComponent:any[] = ([] as any[]);
 export const RenderType_EmployeesComponent:i0.RendererType2 = i0.ɵcrt({encapsulation:2,
     styles:styles_EmployeesComponent,data:{}});
 export function View_EmployeesComponent_0(_l:any):i0.ɵViewDefinition {
-  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),22,'div',[['class',
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,0,(null as any),(null as any),23,'div',[['class',
       'container-fluid']],(null as any),(null as any),(null as any),(null as any),
-      (null as any))),(_l()(),i0.ɵted((null as any),['\n    '])),(_l()(),i0.ɵeld(0,
-      (null as any),(null as any),19,'div',[['class','row content'],['style','height: 550px;']],
+      (null as any))),(_l()(),i0.ɵted(-1,(null as any),['\n    '])),(_l()(),i0.ɵeld(2,
+      0,(null as any),(null as any),20,'div',[['class','row content'],['style','height: 550px;']],
       (null as any),(null as any),(null as any),(null as any),(null as any))),(_l()(),
-      i0.ɵted((null as any),['\n        '])),(_l()(),i0.ɵeld(0,(null as any),(null as any),
-      7,'div',[['class','col-md-4'],['style','height: 100%;']],(null as any),(null as any),
-      (null as any),(null as any),(null as any))),(_l()(),i0.ɵted((null as any),['\n            '])),
-      (_l()(),i0.ɵeld(0,(null as any),(null as any),1,'h1',[['style','color: #ffffff;']],
-          (null as any),(null as any),(null as any),(null as any),(null as any))),
-      (_l()(),i0.ɵted((null as any),['Employees'])),(_l()(),i0.ɵted((null as any),
-          ['\n            '])),(_l()(),i0.ɵeld(0,(null as any),(null as any),1,'app-employee-list',
-          ([] as any[]),(null as any),(null as any),(null as any),i1.View_EmployeeListComponent_0,
-          i1.RenderType_EmployeeListComponent)),i0.ɵdid(114688,(null as any),0,i2.EmployeeListComponent,
-          [i3.EmployeeService],(null as any),(null as any)),(_l()(),i0.ɵted((null as any),
-          ['\n        '])),(_l()(),i0.ɵted((null as any),['\n        '])),(_l()(),
-          i0.ɵeld(0,(null as any),(null as any),7,'div',[['class','col-md-8']],(null as any),
-              (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted((null as any),
-          ['\n            '])),(_l()(),i0.ɵeld(0,(null as any),(null as any),4,'div',
-          [['class','row'],['style','padding-left: 30px;']],(null as any),(null as any),
-          (null as any),(null as any),(null as any))),(_l()(),i0.ɵted((null as any),
-          ['\n                '])),(_l()(),i0.ɵeld(0,(null as any),(null as any),1,
-          'app-add-employees',([] as any[]),(null as any),(null as any),(null as any),
-          i4.View_AddEmployeeComponent_0,i4.RenderType_AddEmployeeComponent)),i0.ɵdid(114688,
-          (null as any),0,i5.AddEmployeeComponent,[i3.EmployeeService],(null as any),
-          (null as any)),(_l()(),i0.ɵted((null as any),['\n            '])),(_l()(),
-          i0.ɵted((null as any),['\n        '])),(_l()(),i0.ɵted((null as any),['\n    '])),
-      (_l()(),i0.ɵted((null as any),['\n'])),(_l()(),i0.ɵted((null as any),['\n']))],
-      (_ck,_v) => {
-        _ck(_v,10,0);
-        _ck(_v,18,0);
-      },(null as any));
+      i0.ɵted(-1,(null as any),['\n        '])),(_l()(),i0.ɵeld(4,0,(null as any),
+      (null as any),16,'div',[['class','container']],(null as any),(null as any),(null as any),
+      (null as any),(null as any))),(_l()(),i0.ɵted(-1,(null as any),['\n            '])),
+      (_l()(),i0.ɵeld(6,0,(null as any),(null as any),13,'div',[['class','row']],(null as any),
+          (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted(-1,
+          (null as any),['\n                '])),(_l()(),i0.ɵeld(8,0,(null as any),
+          (null as any),4,'div',[['class','col-md-4']],(null as any),(null as any),
+          (null as any),(null as any),(null as any))),(_l()(),i0.ɵted(-1,(null as any),
+          ['\n                    '])),(_l()(),i0.ɵeld(10,0,(null as any),(null as any),
+          1,'app-side-panel',([] as any[]),(null as any),(null as any),(null as any),
+          i1.View_SidePanelComponent_0,i1.RenderType_SidePanelComponent)),i0.ɵdid(11,
+          114688,(null as any),0,i2.SidePanelComponent,[i3.EmployeeService],(null as any),
+          (null as any)),(_l()(),i0.ɵted(-1,(null as any),['\n                '])),
+      (_l()(),i0.ɵted(-1,(null as any),['\n                '])),(_l()(),i0.ɵeld(14,
+          0,(null as any),(null as any),4,'div',[['class','col-md-8']],(null as any),
+          (null as any),(null as any),(null as any),(null as any))),(_l()(),i0.ɵted(-1,
+          (null as any),['\n                    '])),(_l()(),i0.ɵeld(16,16777216,(null as any),
+          (null as any),1,'router-outlet',([] as any[]),(null as any),(null as any),
+          (null as any),(null as any),(null as any))),i0.ɵdid(17,212992,(null as any),
+          0,i4.RouterOutlet,[i4.ChildrenOutletContexts,i0.ViewContainerRef,i0.ComponentFactoryResolver,
+              [8,(null as any)],i0.ChangeDetectorRef],(null as any),(null as any)),
+      (_l()(),i0.ɵted(-1,(null as any),['\n                '])),(_l()(),i0.ɵted(-1,
+          (null as any),['\n            '])),(_l()(),i0.ɵted(-1,(null as any),['\n        '])),
+      (_l()(),i0.ɵted(-1,(null as any),['\n        '])),(_l()(),i0.ɵted(-1,(null as any),
+          ['\n    '])),(_l()(),i0.ɵted(-1,(null as any),['\n'])),(_l()(),i0.ɵted(-1,
+          (null as any),['\n'])),(_l()(),i0.ɵted(-1,(null as any),['\n']))],(_ck,_v) => {
+    _ck(_v,11,0);
+    _ck(_v,17,0);
+  },(null as any));
 }
 export function View_EmployeesComponent_Host_0(_l:any):i0.ɵViewDefinition {
-  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,(null as any),(null as any),1,'app-employees',
+  return i0.ɵvid(0,[(_l()(),i0.ɵeld(0,0,(null as any),(null as any),1,'app-employees',
       ([] as any[]),(null as any),(null as any),(null as any),View_EmployeesComponent_0,
-      RenderType_EmployeesComponent)),i0.ɵdid(49152,(null as any),0,i6.EmployeesComponent,
+      RenderType_EmployeesComponent)),i0.ɵdid(1,49152,(null as any),0,i5.EmployeesComponent,
       ([] as any[]),(null as any),(null as any))],(null as any),(null as any));
 }
-export const EmployeesComponentNgFactory:i0.ComponentFactory<i6.EmployeesComponent> = i0.ɵccf('app-employees',
-    i6.EmployeesComponent,View_EmployeesComponent_Host_0,{},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvZW1wbG95ZWVzL2VtcGxveWVlcy5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvZW1wbG95ZWVzL2VtcGxveWVlcy5jb21wb25lbnQudHMiLCJuZzovLy9DOi9Vc2Vycy9jcHN1bC9kZXNrdG9wL21lYW4tYXBwL21lYW4tYXBwL2Fzc2V0cy9hcHAvYXV0aC9lbXBsb3llZXMvZW1wbG95ZWVzLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvZW1wbG95ZWVzL2VtcGxveWVlcy5jb21wb25lbnQudHMuRW1wbG95ZWVzQ29tcG9uZW50X0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiPGRpdiBjbGFzcz1cImNvbnRhaW5lci1mbHVpZFwiPlxyXG4gICAgPGRpdiBjbGFzcz1cInJvdyBjb250ZW50XCIgc3R5bGU9XCJoZWlnaHQ6IDU1MHB4O1wiPlxyXG4gICAgICAgIDxkaXYgY2xhc3M9XCJjb2wtbWQtNFwiIHN0eWxlPVwiaGVpZ2h0OiAxMDAlO1wiPlxyXG4gICAgICAgICAgICA8aDEgc3R5bGU9XCJjb2xvcjogI2ZmZmZmZjtcIj5FbXBsb3llZXM8L2gxPlxyXG4gICAgICAgICAgICA8YXBwLWVtcGxveWVlLWxpc3Q+PC9hcHAtZW1wbG95ZWUtbGlzdD5cclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgICA8ZGl2IGNsYXNzPVwiY29sLW1kLThcIj5cclxuICAgICAgICAgICAgPGRpdiBjbGFzcz1cInJvd1wiIHN0eWxlPVwicGFkZGluZy1sZWZ0OiAzMHB4O1wiPlxyXG4gICAgICAgICAgICAgICAgPGFwcC1hZGQtZW1wbG95ZWVzPjwvYXBwLWFkZC1lbXBsb3llZXM+XHJcbiAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgPC9kaXY+XHJcbjwvZGl2PlxyXG4iLCI8YXBwLWVtcGxveWVlcz48L2FwcC1lbXBsb3llZXM+Il0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7OztvQkNBQTtNQUFBO01BQUEsZ0JBQTZCLDJDQUN6QjtNQUFBO01BQUEsd0VBQWdEO2FBQUEsZ0NBQzVDO01BQUE7TUFBQSw0Q0FBNEM7TUFDeEM7VUFBQTtNQUE0Qiw4Q0FBYztVQUFBLHFCQUMxQztVQUFBOzZDQUFBLFVBQUE7VUFBQSxrREFBdUM7VUFBQSxpQkFDckMsK0NBQ047aUJBQUE7Y0FBQSwwREFBc0I7VUFBQSxxQkFDbEI7VUFBQTtVQUFBLDRDQUE2QztVQUFBLHlCQUN6QztVQUFBOzJFQUFBLFVBQUE7VUFBQTtVQUFBLGVBQXVDLG1EQUNyQztpQkFBQSxnQ0FDSjtNQUNKLHVDQUNKOztRQVJNO1FBSUk7Ozs7b0JDUmhCO01BQUE7bUNBQUEsVUFBQTtNQUFBOzs7In0=
+export const EmployeesComponentNgFactory:i0.ComponentFactory<i5.EmployeesComponent> = i0.ɵccf('app-employees',
+    i5.EmployeesComponent,View_EmployeesComponent_Host_0,{},{},([] as any[]));
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvZW1wbG95ZWVzL2VtcGxveWVlcy5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvZW1wbG95ZWVzL2VtcGxveWVlcy5jb21wb25lbnQudHMiLCJuZzovLy9DOi9Vc2Vycy9jcHN1bC9kZXNrdG9wL21lYW4tYXBwL21lYW4tYXBwL2Fzc2V0cy9hcHAvYXV0aC9lbXBsb3llZXMvZW1wbG95ZWVzLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvZW1wbG95ZWVzL2VtcGxveWVlcy5jb21wb25lbnQudHMuRW1wbG95ZWVzQ29tcG9uZW50X0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiPGRpdiBjbGFzcz1cImNvbnRhaW5lci1mbHVpZFwiPlxyXG4gICAgPGRpdiBjbGFzcz1cInJvdyBjb250ZW50XCIgc3R5bGU9XCJoZWlnaHQ6IDU1MHB4O1wiPlxyXG4gICAgICAgIDxkaXYgY2xhc3M9XCJjb250YWluZXJcIj5cclxuICAgICAgICAgICAgPGRpdiBjbGFzcz1cInJvd1wiPlxyXG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzcz1cImNvbC1tZC00XCI+XHJcbiAgICAgICAgICAgICAgICAgICAgPGFwcC1zaWRlLXBhbmVsPjwvYXBwLXNpZGUtcGFuZWw+XHJcbiAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9XCJjb2wtbWQtOFwiPlxyXG4gICAgICAgICAgICAgICAgICAgIDxyb3V0ZXItb3V0bGV0Pjwvcm91dGVyLW91dGxldD5cclxuICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgICA8IS0tIDxkaXYgY2xhc3M9XCJjb2wtbWQtOFwiIHN0eWxlPVwiY29sb3I6IHdoaXRlO1wiPlxyXG4gICAgICAgICAgICA8ZGl2IGNsYXNzPVwiY29udGFpbmVyLWZsdWlkXCI+XHJcbiAgICAgICAgICAgICAgICA8aDMgY2xhc3M9XCJ0ZXh0XCI+VG8gYWRkIGFuIGVtcGxveWVlLCBmaWxsIG91dCB0aGUgZm9ybSBiZWxvdyBhbmQgaGl0IHN1Ym1pdDwvaDM+XHJcbiAgICAgICAgICAgICAgICA8aDMgY2xhc3M9XCJ0ZXh0XCI+VG8gZWRpdCBhbiBlbXBsb3llZSdzIGluZm9ybWF0aW9uIHByZXNzIHRoZSBlZGl0IGJ1dHRvbiBpbiB0aGUgZW1wbG95ZWUncyBib3ggdG8gdGhlIGxlZnQuIFRoZW4gZmlsbCBvdXQgdGhlIGZvcm0gYW5kIHByZXNzIHN1Ym1pdC48L2gzPlxyXG4gICAgICAgICAgICAgICAgPGgzIGNsYXNzPVwidGV4dFwiPlRvIGRlbGV0ZSBhbiBlbXBsb3llZSwgcHJlc3MgdGhlIGRlbGV0ZSBidXR0b24uPC9oMz5cclxuICAgICAgICAgICAgICAgIDxicj48YnI+XHJcblxyXG4gICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgPGRpdiBjbGFzcz1cInJvd1wiIHN0eWxlPVwicGFkZGluZy1sZWZ0OiAzMHB4O1wiPlxyXG4gICAgICAgICAgICAgICAgPGFwcC1hZGQtZW1wbG95ZWVzPjwvYXBwLWFkZC1lbXBsb3llZXM+XHJcbiAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgIDwvZGl2PiAtLT5cclxuICAgIDwvZGl2PlxyXG48L2Rpdj5cclxuPCEtLSA8ZGl2IGNsYXNzPVwiY29udGFpbmVyXCI+XHJcbiAgICA8ZGl2IGNsYXNzPVwicm93XCI+XHJcbiAgICAgICAgPGRpdiBjbGFzcz1cImNvbC1tZC0zXCI+XHJcbiAgICAgICAgICAgIDxhcHAtc2lkZS1wYW5lbD48L2FwcC1zaWRlLXBhbmVsPlxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgICAgIDxkaXYgY2xhc3M9XCJjb2wtbWQtOVwiPlxyXG4gICAgICAgICAgICA8aDEgc3R5bGU9XCJtYXJnaW4tdG9wOiAwO1wiPldlbGNvbWU8L2gxPlxyXG4gICAgICAgICAgICA8aDM+VG8gYWRkLCBkZWxldGUsIG9yIGVkaXQgZW1wbG95ZWUgaW5mb3JtYXRpb24sIGdvIHRvIHRoZSBNYW5hZ2UgRW1wbG95ZWVzIHRhYjwvaDM+XHJcbiAgICAgICAgICAgIDxoMz5UbyBhc3NpZ24sIGRlbGV0ZSwgb3IgZWRpdCB0YXNrcywgZ28gdG8gdGhlIE1hbmFnZSBUYXNrcyB0YWI8L2gzPlxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgPC9kaXY+XHJcbjwvZGl2PiAtLT5cclxuIiwiPGFwcC1lbXBsb3llZXM+PC9hcHAtZW1wbG95ZWVzPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7OztvQkNBQTtNQUFBO01BQUEsZ0JBQTZCLDhDQUN6QjtNQUFBO01BQUEsd0VBQWdEO2FBQUEsbUNBQzVDO01BQUE7TUFBQSw4QkFBdUI7TUFDbkI7VUFBQSwwREFBaUI7VUFBQSx1Q0FDYjtVQUFBO1VBQUEsNENBQXNCO1VBQUEsNkJBQ2xCO1VBQUE7dUVBQUEsVUFBQTtVQUFBO1VBQUEsZUFBaUM7TUFDL0IsMERBQ047VUFBQTtVQUFBLDBEQUFzQjtVQUFBLDJDQUNsQjtVQUFBO1VBQUEsbURBQUE7VUFBQTtjQUFBO01BQStCLDBEQUM3QjtVQUFBLG1DQUNKO01BQ0osa0RBWUk7VUFBQSxhQUNSLDBDQUNKO1VBQUEsdUJBWUk7SUFoQ1U7SUFHQTs7OztvQkNScEI7TUFBQTttQ0FBQSxVQUFBO01BQUE7OzsifQ==
