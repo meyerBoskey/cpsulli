@@ -27,7 +27,7 @@ var MessageService = /** @class */ (function () {
         var token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
-        return this.http.post('http://localhost:3000/message' + token, body, { headers: headers })
+        return this.http.post('https://cpsulli.herokuapp.com/message' + token, body, { headers: headers })
             .map(function (response) {
             var result = response.json();
             var message = new Message(result.obj.content, result.user.firstName, result.obj._id, result.user._id, true);
@@ -44,7 +44,7 @@ var MessageService = /** @class */ (function () {
         var token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
-        return this.http.get('http://localhost:3000/message' + token)
+        return this.http.get('https://cpsulli.herokuapp.com/message' + token)
             .map(function (response) {
             var messages = response.json().obj;
             var transformedMessages = [];
@@ -70,7 +70,7 @@ var MessageService = /** @class */ (function () {
         var token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
-        return this.http.patch('http://localhost:3000/message/' + message.messageId + token, body, { headers: headers })
+        return this.http.patch('https://cpsulli.herokuapp.com/message/' + message.messageId + token, body, { headers: headers })
             .map(function (response) { return response.json(); })
             .catch(function (error) {
             _this.errorService.handleError(error.json());
@@ -83,7 +83,7 @@ var MessageService = /** @class */ (function () {
         var token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
-        return this.http.delete('http://localhost:3000/message/' + message.messageId + token)
+        return this.http.delete('https://cpsulli.herokuapp.com/message/' + message.messageId + token)
             .map(function (response) { return response.json(); })
             .catch(function (error) {
             _this.errorService.handleError(error.json());
