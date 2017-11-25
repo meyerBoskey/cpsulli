@@ -11,7 +11,8 @@ import {Company} from "../company.model";
 })
 export class SigninCompanyComponent {
     myForm: FormGroup;
-    constructor(private employeeService: EmployeeService, private router: Router) {}
+    constructor(private employeeService: EmployeeService, private router: Router) {
+    }
 
     onSubmit() {
         const company = new Company(
@@ -26,7 +27,8 @@ export class SigninCompanyComponent {
                     localStorage.setItem('company', data.company);
                     localStorage.setItem('isAdmin', 'true');
                     localStorage.setItem('adminCode', data.adminCode);
-                    this.router.navigateByUrl('/homePage');
+                    this.router.navigateByUrl('/employees');
+                    // this.router.navigate(['/employees']);
                 },
                 error => console.error(error)
             )

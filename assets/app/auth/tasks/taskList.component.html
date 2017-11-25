@@ -8,12 +8,12 @@
     <div class="panel-body">
         <div class="row">
             <div class="col-md-12">
-                <input type="text" placeholder="Filter Pages..." class="form-control">
+                <input type="text" placeholder="Filter by name or due date." class="form-control" id="filterInput" [(ngModel)]="searchText">
             </div>
         </div>
         <br>
         <div>
-            <table class="table table-striped table-hover">
+            <table class="table table-striped table-hover" id="tasks">
                 <tr>
                     <th>First Name</th>
                     <th>Last Name</th>
@@ -21,7 +21,7 @@
                     <th>Task</th>
                     <th></th>
                 </tr>
-                <tr *ngFor="let task of tasks">
+                <tr *ngFor="let task of tasks | filterTasks: searchText" id="collection-item">
                     <td>{{task.employeeFirstName}}</td>
                     <td>{{task.employeeLastName}}</td>
                     <td>{{task.dueDate}}</td>

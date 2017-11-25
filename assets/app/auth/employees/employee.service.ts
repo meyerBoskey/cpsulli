@@ -1,7 +1,10 @@
 import {Http, Response, Headers} from '@angular/http';
-import {Injectable, EventEmitter} from '@angular/core';
+import {Injectable, EventEmitter, Output} from '@angular/core';
 import 'rxjs/Rx';
 import {Observable} from 'rxjs/Observable';
+import {Subject} from 'rxjs/Subject';
+import {BehaviorSubject} from 'rxjs/BehaviorSubject';
+import { Router } from '@angular/router';
 
 import {Employee} from './employee.model';
 import {Task} from '../tasks/task.model';
@@ -12,13 +15,28 @@ import {ErrorService} from '../../errors/error.service';
 export class EmployeeService {
     private employees: Employee[] = [];
     private tasks: Task[] = [];
+    tasksLength = 0;
+    redirectUrl: string;
     employeeIsEdit = new EventEmitter<Employee>();
-    constructor(private http: Http, private errorService: ErrorService) {}
+    private tasksLength = new BehaviorSubject<number>(0);
+    currentTaskLength = this.tasksLength.asObservable();
+    // taskWasAdded = new EventEmitter<Task>();
+
+    constructor(private http: Http, private errorService: ErrorService, private router: Router) {}
+
+    logout() {
+        this.router.navigateByUrl('/auth/signin');
+        localStorage.clear();
+    }
+    isLoggedIn() {
+        return localStorage.getItem('token') !== null;
+    }
+
 
     createCompany(company: Company) {
         const body = JSON.stringify(company);
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.post('https://cpsulli.herokuapp.com/company', body, {headers: headers})
+        return this.http.post('http://localhost:3000/company', body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) => {
                 this.errorService.handleError(error.json());
@@ -28,7 +46,7 @@ export class EmployeeService {
     signinCompany(company: Company) {
         const body = JSON.stringify(company);
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.post('https://cpsulli.herokuapp.com/company/signin', body, {headers: headers})
+        return this.http.post('http://localhost:3000/company/signin', body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) => {
                 this.errorService.handleError(error.json());
@@ -38,7 +56,7 @@ export class EmployeeService {
     signinEmployee(employee: Employee) {
         const body = JSON.stringify(employee);
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.post('https://cpsulli.herokuapp.com/employees/signin', body, {headers: headers})
+        return this.http.post('http://localhost:3000/employees/signin', body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) => {
                 this.errorService.handleError(error.json());
@@ -51,7 +69,7 @@ export class EmployeeService {
         const token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
-        return this.http.post('https://cpsulli.herokuapp.com/employees' + token, body, {headers: headers})
+        return this.http.post('http://localhost:3000/employees' + token, body, {headers: headers})
             .map((response: Response) => {
                 const result = response.json().obj;
                 const employee = new Employee(
@@ -77,7 +95,7 @@ export class EmployeeService {
             ? '?token=' + localStorage.getItem('token')
             : '';
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.get('https://cpsulli.herokuapp.com/company' + token, {headers: headers})
+        return this.http.get('http://localhost:3000/company' + token, {headers: headers})
             .map((response: Response) => {
                 const employees = response.json().obj;
                 let transformedEmployees: Employee[] = [];
@@ -109,7 +127,7 @@ export class EmployeeService {
         const token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
-        return this.http.delete('https://cpsulli.herokuapp.com/employees/' + employee.employeeId + token)
+        return this.http.delete('http://localhost:3000/employees/' + employee.employeeId + token)
             .map((response: Response) => response.json())
             .catch((error: Response) => {
                 this.errorService.handleError(error.json());
@@ -122,7 +140,7 @@ export class EmployeeService {
         const token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
-        return this.http.patch('https://cpsulli.herokuapp.com/employees/' + employee.employeeId + token, body, {headers: headers})
+        return this.http.patch('http://localhost:3000/employees/' + employee.employeeId + token, body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) => {
                 this.errorService.handleError(error.json());
@@ -135,7 +153,7 @@ export class EmployeeService {
         const token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
-        return this.http.post('https://cpsulli.herokuapp.com/task' + token, body, {headers})
+        return this.http.post('http://localhost:3000/task' + token, body, {headers})
             .map((response: Response) => {
                 const result = response.json();
                 const task = new Task(
@@ -149,19 +167,21 @@ export class EmployeeService {
                     true
                 );
                 this.tasks.push(task);
+                // var newLength = this.tasks.length;
+                // this.taskAdded(newLength);
                 return task;
             })
-            .catch((error: Response) => {
-                this.errorService.handleError(error.json());
-                return Observable.throw(error.json())
-            });
+            // .catch((error: Response) => {
+            //     this.errorService.handleError(error.json());
+            //     return Observable.throw(error.json())
+            // });
     }
     getTasks() {
         const token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.get('https://cpsulli.herokuapp.com/task' + token, {headers: headers})
+        return this.http.get('http://localhost:3000/task' + token, {headers: headers})
             .map((response: Response) => {
                 const tasks = response.json().obj;
                 let transformedTasks: Task[] = [];
@@ -177,6 +197,7 @@ export class EmployeeService {
                     ));
                 }
                 this.tasks = transformedTasks;
+                this.taskLength = transformedTasks.length;
                 return transformedTasks;
             })
             .catch((error: Response) => {
@@ -184,10 +205,18 @@ export class EmployeeService {
                 return Observable.throw(error.json())
             });
     }
-    // getTaskLength(){
-    //
-    //     console.log(this.tasks);
-    //     return this.tasks.length;
+    getTasksLength() {
+        return this.taskLength;
+    }
+    // public setTasksLength = (length: number) => {
+    //     this.tasksLength = length;
     // }
-
+    taskAdded = (length: number) => {
+        console.log(length);
+        this.tasksLength.next(length);
+    }
+    // taskAdded(task: Task){
+    //     console.log(task);
+    //     this.taskWasAdded.emit(task);
+    // }
 }

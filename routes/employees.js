@@ -5,6 +5,39 @@ var jwt = require('jsonwebtoken');
 var Employee = require('../models/employees');
 var Company = require('../models/company');
 
+router.post('/signin', function (req, res, next) {
+    Employee.findOne({email: req.body.email}, function(err, employee) {
+        console.log(employee);
+        if (err) {
+            return res.status(500).json({
+                title: 'An error occurred',
+                error: err
+            });
+        }
+        if(!employee) {
+            return res.status(401).json({
+                title: 'Login Failed',
+                error: {message: 'Invalid login credentials'}
+            });
+        }
+        if (!bcrypt.compareSync(req.body.password, employee.password)) {
+            return res.status(401).json({
+                title: 'Login Failed',
+                error: {message: 'Invalid login credentials'}
+            });
+        }
+        var token = jwt.sign({employee: employee}, 'secret', {expiresIn: 7200});
+        res.status(200).json({
+            message: 'Successfully logged in',
+            token: token,
+            employeeId: employee._id,
+            isAdmin: employee.isAdmin,
+            firstName: employee.firstName
+            // adminCode: company.adminCode
+        });
+    });
+});
+
 router.post('/', function (req, res, next) {
     var decoded = jwt.decode(req.query.token);
     Company.findById(decoded.company._id, function(err, company) {
@@ -39,39 +72,6 @@ router.post('/', function (req, res, next) {
                 message: 'Employee added',
                 obj: result
             });
-        });
-    });
-});
-
-router.post('/signin', function (req, res, next) {
-    Employee.findOne({email: req.body.email}, function(err, employee) {
-        console.log(employee);
-        if (err) {
-            return res.status(500).json({
-                title: 'An error occurred',
-                error: err
-            });
-        }
-        if(!employee) {
-            return res.status(401).json({
-                title: 'Login Failed',
-                error: {message: 'Invalid login credentials'}
-            });
-        }
-        if (!bcrypt.compareSync(req.body.password, employee.password)) {
-            return res.status(401).json({
-                title: 'Login Failed',
-                error: {message: 'Invalid login credentials'}
-            });
-        }
-        var token = jwt.sign({employee: employee}, 'secret', {expiresIn: 7200});
-        res.status(200).json({
-            message: 'Successfully logged in',
-            token: token,
-            employeeId: employee._id,
-            isAdmin: employee.isAdmin,
-            firstName: employee.firstName
-            // adminCode: company.adminCode
         });
     });
 });

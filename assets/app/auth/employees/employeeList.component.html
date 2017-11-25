@@ -5,7 +5,7 @@
     <div class="panel-body">
         <div class="row">
             <div class="col-md-12">
-                <input type="text" placeholder="Filter Pages..." class="form-control">
+                <input type="text" placeholder="Filter by name or job title." class="form-control" [(ngModel)]="searchText">
             </div>
         </div>
         <br>
@@ -18,7 +18,7 @@
                     <th>ID</th>
                     <th></th>
                 </tr>
-                <tr *ngFor="let employee of employees">
+                <tr *ngFor="let employee of employees | filterEmployees: searchText">
                     <td>{{employee.firstName}}</td>
                     <td>{{employee.lastName}}</td>
                     <td>{{employee.jobTitle}}</td>

@@ -7,15 +7,13 @@ import { Employee } from "../employee.model";
 @Component({
     selector: 'app-add-employees',
     templateUrl: './addEmployee.component.html',
-    styles: [`
-        .text {
-            color: #ffffff;
-        }
-    `]
+    styleUrls: ['./addEmployee.component.css']
 })
 export class AddEmployeeComponent implements OnInit {
     employee: Employee;
     form: FormGroup;
+    successMessage: string = '';
+    errorMessage: string = '';
 
     constructor(private employeeService: EmployeeService) {}
 
@@ -34,7 +32,21 @@ export class AddEmployeeComponent implements OnInit {
             }
             this.employeeService.updateEmployee(this.employee)
                 .subscribe(
-                    result => console.log(result)
+                    result => {
+                        this.successMessage = 'Task was added!';
+                        console.log(result);
+                        setTimeout(() => {
+                            this.successMessage = '';
+                            console.log(this.successMessage);
+                        }, 5000);
+                    },
+                    error => {
+                        this.errorMessage = error.errors.message;
+                        console.log(error)
+                        setTimeout(() => {
+                            this.errorMessage = '';
+                        }, 5000);
+                    }
                 );
             this.employee = null;
         } else if (this.form.value.adminCode == localStorage.getItem('adminCode')) {
@@ -48,8 +60,21 @@ export class AddEmployeeComponent implements OnInit {
             );
             this.employeeService.addEmployee(employee)
                 .subscribe(
-                    data => console.log(data),
-                    error => console.log(error)
+                    data => {
+                        this.successMessage = 'Task was added!';
+                        console.log(data);
+                        setTimeout(() => {
+                            this.successMessage = '';
+                            console.log(this.successMessage);
+                        }, 5000);
+                    },
+                    error => {
+                        this.errorMessage = error.errors.message;
+                        console.log(error)
+                        setTimeout(() => {
+                            this.errorMessage = '';
+                        }, 5000);
+                    }
                 );
         } else {
             const employee = new Employee(
@@ -60,10 +85,24 @@ export class AddEmployeeComponent implements OnInit {
                 this.form.value.jobTitle,
                 false
             );
+            this.successMessage = '';
             this.employeeService.addEmployee(employee)
                 .subscribe(
-                    data => console.log(data),
-                    // error => console.log(error)
+                    data => {
+                        this.successMessage = 'Task was added!';
+                        console.log(data);
+                        setTimeout(() => {
+                            this.successMessage = '';
+                            console.log(this.successMessage);
+                        }, 5000);
+                    },
+                    error => {
+                        this.errorMessage = error.error.errors.email.message;
+                        console.log(error)
+                        setTimeout(() => {
+                            this.errorMessage = '';
+                        }, 5000);
+                    }
                 );
         }
         this.form.reset();

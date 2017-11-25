@@ -10,8 +10,8 @@ import { AuthService } from "./auth/auth.service";
 
 export class HeaderComponent {
     constructor(private authService: AuthService, private router: Router) {}
-    companyName = localStorage.getItem('company');
-    employeeName = localStorage.getItem('firstName');
+    companyName;
+    employeeName;
     onLogout() {
         this.authService.logout();
         this.router.navigate(['/auth', 'signin']);
@@ -23,12 +23,14 @@ export class HeaderComponent {
 
     isCompany() {
         if (localStorage.getItem('company')) {
+            this.companyName = localStorage.getItem('company');
             return true
         }
         return false
     }
     isEmployee() {
         if (localStorage.getItem('employeeID')) {
+            this.employeeName = localStorage.getItem('firstName');
             return true
         }
         return false

@@ -2,34 +2,9 @@ var express = require('express');
 var router = express.Router();
 var bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
+var jwtTimer = 7200;
 var Company = require('../models/company');
 var Employee = require('../models/employees');
-
-router.get('/', (req, res, next) => {
-    var decoded = jwt.decode(req.query.token);
-    if(decoded) {
-        return Employee.find({company: decoded.company})
-            .exec(function(err, employees) {
-                if (err) {
-                    return res.status(500).json({
-                        title: 'An error occurred',
-                        error: err
-                    });
-                }
-                res.status(200).json({
-                    message: 'Success',
-                    obj: employees
-                });
-            });
-    } else {
-        return res.status(401).json({
-            title: 'Not authenticated',
-            error: {
-                message: 'Please create an account or sign in'
-            }
-        });
-    }
-});
 
 router.post('/', function (req, res, next) {
     var company = new Company({
@@ -73,7 +48,7 @@ router.post('/signin', function (req, res, next) {
                 error: {message: 'Invalid login credentials'}
             });
         }
-        var token = jwt.sign({company: company}, 'secret', {expiresIn: 7200});
+        var token = jwt.sign({company: company}, 'secret', {expiresIn: jwtTimer});
         res.status(200).json({
             message: 'Successfully logged in',
             token: token,
@@ -82,6 +57,44 @@ router.post('/signin', function (req, res, next) {
             adminCode: company.adminCode
         });
     });
+});
+
+// router.use('/', function(req, res, next) {
+//     jwt.verify(req.query.token, 'secret', function(err, decoded) {
+//         if (err) {
+//             return res.status(401).json({
+//                 title: 'Not authenticated',
+//                 error: err
+//             });
+//         }
+//         next();
+//     })
+// });
+
+router.get('/', (req, res, next) => {
+    var decoded = jwt.decode(req.query.token);
+    if(decoded) {
+        return Employee.find({company: decoded.company})
+            .exec(function(err, employees) {
+                if (err) {
+                    return res.status(500).json({
+                        title: 'An error occurred',
+                        error: err
+                    });
+                }
+                res.status(200).json({
+                    message: 'Success',
+                    obj: employees
+                });
+            });
+    } else {
+        return res.status(401).json({
+            title: 'Not authenticated',
+            error: {
+                message: 'Please create an account or sign in'
+            }
+        });
+    }
 });
 
 

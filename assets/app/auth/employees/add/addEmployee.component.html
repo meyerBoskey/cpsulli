@@ -24,6 +24,9 @@
             <label for="adminCode">Admin Code (optional)</label>
             <input type="text" id="adminCode" class="form-control" formControlName="adminCode">
         </div>
+        <div *ngIf="successMessage" data-dismiss="alert" class="alert alert-success" id="successMessage">{{successMessage}}</div>
+        <div *ngIf="errorMessage" data-dismiss="alert" class="alert alert-danger" id="errorMessage">{{errorMessage}}</div>
+        <!-- <div *ngIf="errorMessage" class="alert alert-error">{{errorMessage}}</div> -->
         <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
     </form>
 </div>

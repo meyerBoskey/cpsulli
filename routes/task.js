@@ -6,6 +6,18 @@ var Employee = require('../models/employees');
 var Company = require('../models/company');
 var Task = require('../models/tasks');
 
+// router.use('/', function(req, res, next) {
+//     jwt.verify(req.query.token, 'secret', function(err, decoded) {
+//         if (err) {
+//             return res.status(401).json({
+//                 title: 'Not authenticated',
+//                 error: err
+//             });
+//         }
+//         next();
+//     })
+// });
+
 router.get('/', (req, res, next) => {
     var decoded = jwt.decode(req.query.token);
     if(decoded.employee) {

@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { Pipe, PipeTransform } from '@angular/core';
 
 // import {CreateCompanyComponent} from "./company/create/createCompany.component";
 import {employeesRouting} from "./employees.routing";
@@ -17,7 +18,8 @@ import {TaskComponent} from "../tasks/task/task.component";
 import {TaskListComponent} from "../tasks/taskList.component";
 import {CompanyHomePageComponent} from "../company/homePage/CompanyHomePage.component";
 import {SidePanelComponent} from "../company/sidePanel/sidePanel.component";
-
+import { FilterTasksArrayPipe } from '../tasks/taskFilter.pipe';
+import { FilterEmployeesArrayPipe } from './employeesFilter.pipe';
 
 
 
@@ -27,6 +29,8 @@ import {SidePanelComponent} from "../company/sidePanel/sidePanel.component";
         EmployeeComponent,
         SidePanelComponent,
         TasksComponent,
+        FilterTasksArrayPipe,
+        FilterEmployeesArrayPipe,
         AddTasksComponent,
         TaskComponent,
         TaskListComponent,
@@ -35,7 +39,7 @@ import {SidePanelComponent} from "../company/sidePanel/sidePanel.component";
         CompanyHomePageComponent
     ],
     providers: [AuthService, ErrorService, EmployeeService],
-    imports: [ ReactiveFormsModule, CommonModule, employeesRouting]
+    imports: [ ReactiveFormsModule, CommonModule, employeesRouting, FormsModule]
 })
 export class EmployeesModule {
 
