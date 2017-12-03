@@ -106,7 +106,7 @@ router.delete('/:id', function(req, res, next) {
                 });
             }
             res.status(200).json({
-                message: 'deleted message',
+                message: 'deleted employee',
                 obj: result
             });
         });

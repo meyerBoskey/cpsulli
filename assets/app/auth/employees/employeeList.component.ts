@@ -11,9 +11,12 @@ import { AddTasksComponent } from '../tasks/add/addTask.component';
     templateUrl: './employeeList.component.html'
 })
 export class EmployeeListComponent implements OnInit {
+    modalIsOpen: boolean = false;
     employees: Employee[];
     @Input() employee: Employee;
-
+    firedEmployee: Employee;
+    display = 'none';
+    searchText;
 
     constructor(private employeeService: EmployeeService, private router: Router) {}
 
@@ -28,15 +31,31 @@ export class EmployeeListComponent implements OnInit {
         }
     }
 
+    trackByEmployeeId(employee: Employee){
+        return employee.employeeId;
+    }
+
     onEdit() {
         this.employeeService.editEmployee(this.employee);
     }
 
     onDelete() {
-        this.employeeService.deleteEmployee(this.employee)
+        this.display = 'none';
+        this.employeeService.deleteEmployee(this.firedEmployee)
             .subscribe(
                 result => console.log(result)
             );
     }
 
+    onCancel(){
+        this.firedEmployee = null;
+        this.display = 'none';
+    }
+
+    modalOpen(employee: Employee){
+        this.display = 'block';
+        this.firedEmployee = employee;
+        // this.modalIsOpen = true;
+        // console.log(this.modalIsOpen)
+    }
 }

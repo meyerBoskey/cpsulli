@@ -16,5 +16,4 @@ var schema = new Schema({
     // isAdmin: {type: Boolean, required: true},
 });
 
-
 module.exports = mongoose.model('Company', schema);

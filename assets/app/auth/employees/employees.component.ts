@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from './employee.service';
-import { Task } from '../tasks.task.model';
+import { Task } from '../tasks/task.model';
 import { Employee } from './employee.model';
 
 @Component({
@@ -27,9 +27,9 @@ export class EmployeesComponent implements OnInit{
                     this.tasksLength = tasks.length;
                 }
             );
-        this.employeeService.currentTaskLength.subscribe(length =>{
-            console.log(length);
-        });
+        // this.employeeService.currentTaskLength.subscribe(length =>{
+        //     console.log(length);
+        // });
 
             // this.employeeService.taskWasAdded.subscribe((task: Task) => {
             //     console.log('task was added');

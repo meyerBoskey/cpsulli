@@ -10,19 +10,17 @@ import {Employee} from './employee.model';
 import {Task} from '../tasks/task.model';
 import {Company} from '../company/company.model';
 import {ErrorService} from '../../errors/error.service';
+import { Error2Service } from "./error2/error2.service";
+import { Error2Component } from "./error2/error2.component";
 
 @Injectable()
 export class EmployeeService {
     private employees: Employee[] = [];
     private tasks: Task[] = [];
-    tasksLength = 0;
     redirectUrl: string;
     employeeIsEdit = new EventEmitter<Employee>();
-    private tasksLength = new BehaviorSubject<number>(0);
-    currentTaskLength = this.tasksLength.asObservable();
-    // taskWasAdded = new EventEmitter<Task>();
 
-    constructor(private http: Http, private errorService: ErrorService, private router: Router) {}
+    constructor(private http: Http, private errorService: ErrorService, private router: Router, private error2Service: Error2Service) {}
 
     logout() {
         this.router.navigateByUrl('/auth/signin');
@@ -159,6 +157,7 @@ export class EmployeeService {
                 const task = new Task(
                     result.obj.content,
                     result.obj.dueDate,
+                    result.obj.completed,
                     result.obj._id,
                     result.obj.employee,
                     result.obj.employeeFirstName,
@@ -171,10 +170,10 @@ export class EmployeeService {
                 // this.taskAdded(newLength);
                 return task;
             })
-            // .catch((error: Response) => {
-            //     this.errorService.handleError(error.json());
-            //     return Observable.throw(error.json())
-            // });
+            .catch((error: Response) => {
+                this.error2Service.handleError(error.json());
+                return Observable.throw(error.json())
+            });
     }
     getTasks() {
         const token = localStorage.getItem('token')
@@ -189,6 +188,7 @@ export class EmployeeService {
                     transformedTasks.push(new Task(
                         task.content,
                         task.dueDate,
+                        task.completed,
                         task._id,
                         task.employee,
                         task.employeeFirstName,
@@ -197,7 +197,6 @@ export class EmployeeService {
                     ));
                 }
                 this.tasks = transformedTasks;
-                this.taskLength = transformedTasks.length;
                 return transformedTasks;
             })
             .catch((error: Response) => {
@@ -205,18 +204,16 @@ export class EmployeeService {
                 return Observable.throw(error.json())
             });
     }
-    getTasksLength() {
-        return this.taskLength;
+    deleteTask(task: Task) {
+        this.tasks.splice(this.tasks.indexOf(task), 1);
+        const token = localStorage.getItem('token')
+            ? '?token=' + localStorage.getItem('token')
+            : '';
+        return this.http.delete('http://localhost:3000/task/' + task.taskId + token)
+            .map((response: Response) => response.json())
+            .catch((error: Response) => {
+                this.errorService.handleError(error.json());
+                return Observable.throw(error.json());
+            });
     }
-    // public setTasksLength = (length: number) => {
-    //     this.tasksLength = length;
-    // }
-    taskAdded = (length: number) => {
-        console.log(length);
-        this.tasksLength.next(length);
-    }
-    // taskAdded(task: Task){
-    //     console.log(task);
-    //     this.taskWasAdded.emit(task);
-    // }
 }

@@ -4,7 +4,7 @@ import { NgForm, FormGroup, FormControl, Validators, FormBuilder } from "@angula
 import { EmployeeService } from "../../employees/employee.service";
 import { Employee } from "../../employees/employee.model";
 import { Task } from "../task.model";
-import { Alert } from "../../../alert";
+// import { Alert } from "../../../alert";
 
 @Component({
     selector: 'app-add-tasks',
@@ -21,29 +21,23 @@ export class AddTasksComponent implements OnInit {
 
     onSubmit(form: NgForm) {
         if (form.value.employee) {
-            var taskLength = this.employeeService.getTasksLength();
-            const task = new Task(form.value.content, form.value.dueDate, null, form.value.employee.employeeId);
+            const task = new Task(form.value.content, form.value.dueDate, 'incomplete', null, form.value.employee.employeeId);
             this.employeeService.addTask(task)
                 .subscribe(
                     data => {
-                        taskLength++
-                        this.employeeService.taskAdded(taskLength);
-                        this.successMessage = 'Employee was added!';
+                        this.successMessage = 'Task was added!';
                         setTimeout(() => {
                             this.successMessage = '';
                         }, 5000);
-
                     },
                     error => console.error(error)
                 );
-
         } else {
-            const task = new Task(form.value.content, form.value.dueDate);
+            const task = new Task(form.value.content, form.value.dueDate, 'incomplete');
             this.employeeService.addTask(task)
                 .subscribe(
                     data => {
-                        this.employeeService.taskAdded(task);
-                        this.successMessage = 'Employee was added!';
+                        this.successMessage = 'Task was added!';
                         setTimeout(() => {
                             this.successMessage = '';
                             console.log(this.successMessage);
@@ -51,7 +45,6 @@ export class AddTasksComponent implements OnInit {
                     },
                     error => console.error(error)
                 );
-
         }
     }
     isCompany() {
@@ -64,6 +57,7 @@ export class AddTasksComponent implements OnInit {
         this.form = new FormGroup({
             content: new FormControl(null, Validators.required),
             dueDate: new FormControl(null),
+            // completed: new FormControl(false),
             employee: new FormControl(null),
         });
         this.employeeService.getEmployees()

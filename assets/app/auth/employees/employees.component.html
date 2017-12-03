@@ -3,13 +3,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <app-side-panel [tasksLength]="tasksLength" [employeesLength]="employees.length" (taskWasAdded)="updateTaskCount($event)"></app-side-panel>
+                    <app-side-panel [tasksLength]="tasksLength" [employeesLength]="employees.length"></app-side-panel>
                 </div>
                 <div class="col-md-8">
                     <router-outlet></router-outlet>
                 </div>
             </div>
         </div>
+
         <!-- <div class="col-md-8" style="color: white;">
             <div class="container-fluid">
                 <h3 class="text">To add an employee, fill out the form below and hit submit</h3>

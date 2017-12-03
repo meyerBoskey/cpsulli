@@ -71,6 +71,7 @@ router.post('/', function (req, res, next) {
             var task = new Task({
                 content: req.body.content,
                 dueDate: req.body.dueDate,
+                completed: req.body.completed,
                 employee: employee._id,
                 employeeFirstName: employee.firstName,
                 employeeLastName: employee.lastName,
@@ -102,9 +103,16 @@ router.post('/', function (req, res, next) {
             });
         });
     } else if (decoded.company) {
-        Employee.findById(req.body.employeeId, function(err, employee) {
+        return Employee.findById(req.body.employeeId, function(err, employee) {
             if (err) {
                 return res.status(500).json({
+                    title: 'An error occurred',
+                    error: err
+                });
+            }
+            if(!employee){
+                let err = {message: 'Please select an employee'}
+                return res.status(400).json({
                     title: 'An error occurred',
                     error: err
                 });
@@ -112,6 +120,7 @@ router.post('/', function (req, res, next) {
             var task = new Task({
                 content: req.body.content,
                 dueDate: req.body.dueDate,
+                completed: req.body.completed,
                 employee: employee._id,
                 employeeFirstName: employee.firstName,
                 employeeLastName: employee.lastName,
@@ -142,8 +151,59 @@ router.post('/', function (req, res, next) {
                 });
             });
         });
-
     }
 });
+
+router.delete('/:id', function(req, res, next) {
+    var decoded = jwt.decode(req.query.token);
+    console.log(decoded);
+    // console.log(req.params.id);
+    if(decoded){
+        Task.findById(req.params.id, function(err, task) {
+            if (err) {
+                return res.status(500).json({
+                    title: 'An error occurred',
+                    error: err
+                });
+            }
+            if (!task) {
+                return res.status(500).json({
+                    title: 'An error occurred',
+                    error: {message: 'Task not found'}
+                });
+            }
+            // let employee = task.employee;
+            // let company = task.company;
+            Company.findById(task.company, function(err, company) {
+                company.tasks.pull(task._id);
+                company.save();
+            });
+            Employee.findById(task.employee, function(err, employee) {
+                employee.tasks.pull(task._id);
+                employee.save();
+            });
+            task.remove(function(err, result) {
+                if (err) {
+                    return res.status(500).json({
+                        title: 'An error occurred',
+                        error: err
+                    });
+                }
+                res.status(200).json({
+                    message: 'deleted task',
+                    obj: result
+                });
+            });
+        });
+    } else {
+        return res.status(401).json({
+            title: 'Not authenticated',
+            error: {
+                message: 'Please create an account or sign in'
+            }
+        });
+    }
+});
+
 
 module.exports = router;

@@ -48,7 +48,7 @@ router.post('/signin', function (req, res, next) {
                 error: {message: 'Invalid login credentials'}
             });
         }
-        var token = jwt.sign({company: company}, 'secret', {expiresIn: jwtTimer});
+        var token = jwt.sign({company: company}, 'secret', {expiresIn: 7200});
         res.status(200).json({
             message: 'Successfully logged in',
             token: token,
@@ -59,17 +59,17 @@ router.post('/signin', function (req, res, next) {
     });
 });
 
-// router.use('/', function(req, res, next) {
-//     jwt.verify(req.query.token, 'secret', function(err, decoded) {
-//         if (err) {
-//             return res.status(401).json({
-//                 title: 'Not authenticated',
-//                 error: err
-//             });
-//         }
-//         next();
-//     })
-// });
+router.use('/', function(req, res, next) {
+    jwt.verify(req.query.token, 'secret', function(err, decoded) {
+        if (err) {
+            return res.status(401).json({
+                title: 'Not authenticated',
+                error: err
+            });
+        }
+        next();
+    })
+});
 
 router.get('/', (req, res, next) => {
     var decoded = jwt.decode(req.query.token);

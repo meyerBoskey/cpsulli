@@ -39,7 +39,7 @@ export class EmployeeSigninComponent {
                     localStorage.setItem('employeeID', data.employeeId);
                     localStorage.setItem('isAdmin', data.isAdmin);
                     localStorage.setItem('firstName', data.firstName);
-                    this.router.navigateByUrl('/tasks');
+                    this.router.navigateByUrl('employees/tasks');
                 },
                 error => console.error(error)
             )

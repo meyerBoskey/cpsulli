@@ -19,19 +19,42 @@
                     <th>Last Name</th>
                     <th>Date Due</th>
                     <th>Task</th>
-                    <th></th>
+                    <th>Completion</th>
                 </tr>
                 <tr *ngFor="let task of tasks | filterTasks: searchText" id="collection-item">
                     <td>{{task.employeeFirstName}}</td>
                     <td>{{task.employeeLastName}}</td>
                     <td>{{task.dueDate}}</td>
                     <td>{{task.content}}</td>
+                    <td>{{task.completed}}</td>
                     <td>
-                        <!-- <a class="btn btn-default" *ngIf="router.url === '/employees'" (click)="onEdit()"><strong>Edit</strong></a>
-                        <a class="btn btn-danger" *ngIf="router.url === '/employees'" (click)="onDelete()"><strong>Delete</strong></a> -->
+                        <!-- <a class="btn btn-default" *ngIf="router.url === '/employees'" (click)="onEdit()"><strong>Edit</strong></a> -->
+                        <a class="btn btn-danger" *ngIf="isCompany()" (click)="modalOpen(task)"><strong>Delete</strong></a>
                     </td>
                 </tr>
             </table>
         </div>
     </div>
 </div>
+
+<div class="backdrop" [ngStyle]="{'display': display}"></div>
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display': display}">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" aria-label="Close" (click)="onCancel()"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Remove Task</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to remove task?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" (click)="onDelete()">Remove Task</button>
+                <button type="button" class="btn btn-default" (click)="onCancel()">Cancel</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

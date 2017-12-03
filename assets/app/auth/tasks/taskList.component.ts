@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { EmployeeService } from "../employees/employee.service";
 import { Employee } from "../employees/employee.model";
 import { Company } from "../company/company.model";
 import { Task } from "./task.model";
-import { FilterArrayPipe} from '../../filter.pipe';
 
 @Component({
     selector: 'app-task-list',
@@ -12,10 +12,11 @@ import { FilterArrayPipe} from '../../filter.pipe';
 })
 export class TaskListComponent implements OnInit {
     tasks: Task[];
-    // filterInput = document.getElementById('filterInput');
-    // filterInput.addEventListener('keyup', filterNames);
-
-    constructor(private employeeService: EmployeeService) {}
+    deletedTask: Task;
+    display = 'none';
+    companyName: string;
+    searchText;
+    constructor(private employeeService: EmployeeService, private router: Router) {}
 
     ngOnInit() {
         this.employeeService.getTasks()
@@ -26,23 +27,30 @@ export class TaskListComponent implements OnInit {
             );
     }
 
-    function filterNames() {
-        // Get value of Input
-        let filterValue = document.getElementById('filterInput').value.toUpperCase();
-        // Get names uL
-        let table = document.getElementById('tasks');
-        // Get lis from uL
-        let row = table.querySelectorAll('tr.collection-item');
-
-        // Loop through collection-item Lis
-        for (let i = 0; i < li.length; i++) {
-            let tr = row[i].getElementsByTagName('tr')[0];
-            // If matched
-            if (tr.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
-                row[i].style.display = '';
-            } else {
-                row[i].style.display = 'none';
-            }
-        }
+    onDelete(){
+        this.display = 'none';
+        this.employeeService.deleteTask(this.deletedTask)
+            .subscribe(
+                result => console.log(result)
+            );
     }
+
+    onCancel(){
+        this.deletedTask = null;
+        this.display = 'none';
+    }
+
+    modalOpen(task: Task){
+        this.display = 'block';
+        this.deletedTask = task;
+    }
+
+    isCompany() {
+        if (localStorage.getItem('company')) {
+            this.companyName = localStorage.getItem('company');
+            return true
+        }
+        return false
+    }
+
 }

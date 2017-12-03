@@ -34,6 +34,7 @@ export class ErrorComponent implements OnInit {
     ngOnInit() {
         this.errorService.errorOccurred
             .subscribe((error: Error) => {
+                console.log('in error component')
                 this.error = error;
                 this.display = 'block';
             });

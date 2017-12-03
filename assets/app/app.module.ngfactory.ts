@@ -26,18 +26,19 @@ import * as i16 from './errors/error.service';
 import * as i17 from './messages/message.service';
 import * as i18 from './auth/auth.service';
 import * as i19 from '@angular/router';
-import * as i20 from './auth/employees/employee.service';
-import * as i21 from './authGuard.guard';
-import * as i22 from './auth/company/homePage/CompanyHomePage.component';
-import * as i23 from './auth/employees/add/addEmployee.component';
-import * as i24 from './auth/tasks/add/addTask.component';
-import * as i25 from './auth/employees/employeeList.component';
-import * as i26 from './auth/tasks/tasks.component';
-import * as i27 from './messages/messages.component';
-import * as i28 from './auth/employees/employees.component';
-import * as i29 from './auth/authentication.component';
-import * as i30 from './messages/message.module';
-import * as i31 from './auth/employees/employees.module';
+import * as i20 from './auth/employees/error2/error2.service';
+import * as i21 from './auth/employees/employee.service';
+import * as i22 from './authGuard.guard';
+import * as i23 from './auth/company/homePage/CompanyHomePage.component';
+import * as i24 from './auth/employees/add/addEmployee.component';
+import * as i25 from './auth/tasks/add/addTask.component';
+import * as i26 from './auth/employees/employeeList.component';
+import * as i27 from './auth/tasks/tasks.component';
+import * as i28 from './messages/messages.component';
+import * as i29 from './auth/employees/employees.component';
+import * as i30 from './auth/authentication.component';
+import * as i31 from './messages/message.module';
+import * as i32 from './auth/employees/employees.module';
 export const AppModuleNgFactory:i0.NgModuleFactory<i1.AppModule> = i0.ɵcmf(i1.AppModule,
     [i2.AppComponent],(_l:any) => {
       return i0.ɵmod([i0.ɵmpd(512,i0.ComponentFactoryResolver,i0.ɵCodegenComponentFactoryResolver,
@@ -72,19 +73,20 @@ export const AppModuleNgFactory:i0.NgModuleFactory<i1.AppModule> = i0.ɵcmf(i1.A
               ([] as any[])),i0.ɵmpd(4608,i17.MessageService,i17.MessageService,[i14.Http,
               i16.ErrorService]),i0.ɵmpd(4608,i15.FormBuilder,i15.FormBuilder,([] as any[])),
           i0.ɵmpd(4608,i18.AuthService,i18.AuthService,[i14.Http,i16.ErrorService,
-              i19.Router]),i0.ɵmpd(4608,i20.EmployeeService,i20.EmployeeService,[i14.Http,
-              i16.ErrorService]),i0.ɵmpd(5120,i19.ActivatedRoute,i19.ɵf,[i19.Router]),
-          i0.ɵmpd(4608,i19.NoPreloading,i19.NoPreloading,([] as any[])),i0.ɵmpd(6144,
-              i19.PreloadingStrategy,(null as any),[i19.NoPreloading]),i0.ɵmpd(135680,
+              i19.Router]),i0.ɵmpd(4608,i20.Error2Service,i20.Error2Service,([] as any[])),
+          i0.ɵmpd(4608,i21.EmployeeService,i21.EmployeeService,[i14.Http,i16.ErrorService,
+              i19.Router,i20.Error2Service]),i0.ɵmpd(5120,i19.ActivatedRoute,i19.ɵf,
+              [i19.Router]),i0.ɵmpd(4608,i19.NoPreloading,i19.NoPreloading,([] as any[])),
+          i0.ɵmpd(6144,i19.PreloadingStrategy,(null as any),[i19.NoPreloading]),i0.ɵmpd(135680,
               i19.RouterPreloader,i19.RouterPreloader,[i19.Router,i0.NgModuleFactoryLoader,
                   i0.Compiler,i0.Injector,i19.PreloadingStrategy]),i0.ɵmpd(4608,i19.PreloadAllModules,
               i19.PreloadAllModules,([] as any[])),i0.ɵmpd(5120,i19.ROUTER_INITIALIZER,
               i19.ɵi,[i19.ɵg]),i0.ɵmpd(5120,i0.APP_BOOTSTRAP_LISTENER,(p0_0:any) => {
             return [p0_0];
-          },[i19.ROUTER_INITIALIZER]),i0.ɵmpd(4608,i21.AuthGuard,i21.AuthGuard,[i19.Router,
-              i18.AuthService]),i0.ɵmpd(512,i12.CommonModule,i12.CommonModule,([] as any[])),
-          i0.ɵmpd(1024,i0.ErrorHandler,i13.ɵa,([] as any[])),i0.ɵmpd(1024,i0.NgProbeToken,
-              () => {
+          },[i19.ROUTER_INITIALIZER]),i0.ɵmpd(4608,i22.AuthGuard,i22.AuthGuard,[i19.Router,
+              i21.EmployeeService]),i0.ɵmpd(512,i12.CommonModule,i12.CommonModule,
+              ([] as any[])),i0.ɵmpd(1024,i0.ErrorHandler,i13.ɵa,([] as any[])),i0.ɵmpd(1024,
+              i0.NgProbeToken,() => {
                 return [i19.ɵb()];
               },([] as any[])),i0.ɵmpd(512,i19.ɵg,i19.ɵg,[i0.Injector]),i0.ɵmpd(1024,
               i0.APP_INITIALIZER,(p0_0:any,p0_1:any,p1_0:any) => {
@@ -104,27 +106,27 @@ export const AppModuleNgFactory:i0.NgModuleFactory<i1.AppModule> = i0.ɵcmf(i1.A
               ([] as any[])),i0.ɵmpd(512,i0.NgModuleFactoryLoader,i0.SystemJsNgModuleLoader,
               [i0.Compiler,[2,i0.SystemJsNgModuleLoaderConfig]]),i0.ɵmpd(1024,i19.ROUTES,
               () => {
-                return [[{path:'',redirectTo:'home',pathMatch:'full'},{path:'homePage',
-                    component:i22.CompanyHomePageComponent,canActivate:[i21.AuthGuard]},
-                    {path:'add',component:i23.AddEmployeeComponent,canActivate:[i21.AuthGuard]},
-                    {path:'addtasks',component:i24.AddTasksComponent,canActivate:[i21.AuthGuard]},
-                    {path:'home',component:i25.EmployeeListComponent,canActivate:[i21.AuthGuard]},
-                    {path:'tasks',component:i26.TasksComponent,canActivate:[i21.AuthGuard]}],
+                return [[{path:'',redirectTo:'home',pathMatch:'full'},{path:'dashboard',
+                    component:i23.CompanyHomePageComponent,canActivate:[i22.AuthGuard]},
+                    {path:'add',component:i24.AddEmployeeComponent,canActivate:[i22.AuthGuard]},
+                    {path:'addtasks',component:i25.AddTasksComponent,canActivate:[i22.AuthGuard]},
+                    {path:'home',component:i26.EmployeeListComponent,canActivate:[i22.AuthGuard]},
+                    {path:'tasks',component:i27.TasksComponent,canActivate:[i22.AuthGuard]}],
                     [{path:'',redirectTo:'/auth/signup',pathMatch:'full'},{path:'messages',
-                        component:i27.MessagesComponent,canActivate:[i21.AuthGuard]},
-                        {path:'employees',component:i28.EmployeesComponent,canActivate:[i21.AuthGuard],
+                        component:i28.MessagesComponent,canActivate:[i22.AuthGuard]},
+                        {path:'employees',component:i29.EmployeesComponent,canActivate:[i22.AuthGuard],
                             loadChildren:'./auth/employees/employees.module#EmployeesModule'},
-                        {path:'auth',component:i29.AuthenticationComponent,loadChildren:'./auth/auth.module#AuthModule'}]];
+                        {path:'auth',component:i30.AuthenticationComponent,loadChildren:'./auth/auth.module#AuthModule'}]];
               },([] as any[])),i0.ɵmpd(1024,i19.Router,i19.ɵe,[i0.ApplicationRef,i19.UrlSerializer,
               i19.ChildrenOutletContexts,i12.Location,i0.Injector,i0.NgModuleFactoryLoader,
               i0.Compiler,i19.ROUTES,i19.ROUTER_CONFIGURATION,[2,i19.UrlHandlingStrategy],
               [2,i19.RouteReuseStrategy]]),i0.ɵmpd(512,i19.RouterModule,i19.RouterModule,
               [[2,i19.ɵa],[2,i19.Router]]),i0.ɵmpd(512,i14.HttpModule,i14.HttpModule,
               ([] as any[])),i0.ɵmpd(512,i15.ɵba,i15.ɵba,([] as any[])),i0.ɵmpd(512,
-              i15.FormsModule,i15.FormsModule,([] as any[])),i0.ɵmpd(512,i30.MessageModule,
-              i30.MessageModule,([] as any[])),i0.ɵmpd(512,i15.ReactiveFormsModule,
-              i15.ReactiveFormsModule,([] as any[])),i0.ɵmpd(512,i31.EmployeesModule,
-              i31.EmployeesModule,([] as any[])),i0.ɵmpd(512,i1.AppModule,i1.AppModule,
+              i15.FormsModule,i15.FormsModule,([] as any[])),i0.ɵmpd(512,i31.MessageModule,
+              i31.MessageModule,([] as any[])),i0.ɵmpd(512,i15.ReactiveFormsModule,
+              i15.ReactiveFormsModule,([] as any[])),i0.ɵmpd(512,i32.EmployeesModule,
+              i32.EmployeesModule,([] as any[])),i0.ɵmpd(512,i1.AppModule,i1.AppModule,
               ([] as any[]))]);
     });
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2FwcC5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2FwcC5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyJ9
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2FwcC5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2FwcC5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7In0=

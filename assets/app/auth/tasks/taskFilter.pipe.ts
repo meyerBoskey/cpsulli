@@ -21,6 +21,14 @@ export class FilterTasksArrayPipe implements PipeTransform{
                 console.log(it);
                 return it;
             }
+            else if(it.content.toLowerCase().includes(searchText)){
+                console.log(it);
+                return it;
+            }
+            else if(it.completed.toLowerCase().includes(searchText)){
+                console.log(it);
+                return it;
+            }
         })
     }
 }

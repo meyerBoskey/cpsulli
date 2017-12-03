@@ -19,13 +19,14 @@ import * as i9 from '../../errors/error.service';
 import * as i10 from '../auth.service';
 import * as i11 from '@angular/http';
 import * as i12 from '@angular/router';
-import * as i13 from './employee.service';
-import * as i14 from '../company/homePage/CompanyHomePage.component';
-import * as i15 from '../../authGuard.guard';
-import * as i16 from './add/addEmployee.component';
-import * as i17 from '../tasks/add/addTask.component';
-import * as i18 from './employeeList.component';
-import * as i19 from '../tasks/tasks.component';
+import * as i13 from './error2/error2.service';
+import * as i14 from './employee.service';
+import * as i15 from '../company/homePage/CompanyHomePage.component';
+import * as i16 from '../../authGuard.guard';
+import * as i17 from './add/addEmployee.component';
+import * as i18 from '../tasks/add/addTask.component';
+import * as i19 from './employeeList.component';
+import * as i20 from '../tasks/tasks.component';
 export const EmployeesModuleNgFactory:i0.NgModuleFactory<i1.EmployeesModule> = i0.ɵcmf(i1.EmployeesModule,
     ([] as any[]),(_l:any) => {
       return i0.ɵmod([i0.ɵmpd(512,i0.ComponentFactoryResolver,i0.ɵCodegenComponentFactoryResolver,
@@ -35,19 +36,20 @@ export const EmployeesModuleNgFactory:i0.NgModuleFactory<i1.EmployeesModule> = i
           i7.FormBuilder,([] as any[])),i0.ɵmpd(4608,i7.ɵi,i7.ɵi,([] as any[])),i0.ɵmpd(4608,
           i8.NgLocalization,i8.NgLocaleLocalization,[i0.LOCALE_ID]),i0.ɵmpd(4608,i9.ErrorService,
           i9.ErrorService,([] as any[])),i0.ɵmpd(4608,i10.AuthService,i10.AuthService,
-          [i11.Http,i9.ErrorService,i12.Router]),i0.ɵmpd(4608,i13.EmployeeService,
-          i13.EmployeeService,[i11.Http,i9.ErrorService]),i0.ɵmpd(512,i7.ɵba,i7.ɵba,
+          [i11.Http,i9.ErrorService,i12.Router]),i0.ɵmpd(4608,i13.Error2Service,i13.Error2Service,
+          ([] as any[])),i0.ɵmpd(4608,i14.EmployeeService,i14.EmployeeService,[i11.Http,
+          i9.ErrorService,i12.Router,i13.Error2Service]),i0.ɵmpd(512,i7.ɵba,i7.ɵba,
           ([] as any[])),i0.ɵmpd(512,i7.ReactiveFormsModule,i7.ReactiveFormsModule,
           ([] as any[])),i0.ɵmpd(512,i8.CommonModule,i8.CommonModule,([] as any[])),
           i0.ɵmpd(512,i12.RouterModule,i12.RouterModule,[[2,i12.ɵa],[2,i12.Router]]),
-          i0.ɵmpd(512,i1.EmployeesModule,i1.EmployeesModule,([] as any[])),i0.ɵmpd(1024,
-              i12.ROUTES,() => {
-                return [[{path:'',redirectTo:'home',pathMatch:'full'},{path:'homePage',
-                    component:i14.CompanyHomePageComponent,canActivate:[i15.AuthGuard]},
-                    {path:'add',component:i16.AddEmployeeComponent,canActivate:[i15.AuthGuard]},
-                    {path:'addtasks',component:i17.AddTasksComponent,canActivate:[i15.AuthGuard]},
-                    {path:'home',component:i18.EmployeeListComponent,canActivate:[i15.AuthGuard]},
-                    {path:'tasks',component:i19.TasksComponent,canActivate:[i15.AuthGuard]}]];
-              },([] as any[]))]);
+          i0.ɵmpd(512,i7.FormsModule,i7.FormsModule,([] as any[])),i0.ɵmpd(512,i1.EmployeesModule,
+              i1.EmployeesModule,([] as any[])),i0.ɵmpd(1024,i12.ROUTES,() => {
+            return [[{path:'',redirectTo:'home',pathMatch:'full'},{path:'dashboard',
+                component:i15.CompanyHomePageComponent,canActivate:[i16.AuthGuard]},
+                {path:'add',component:i17.AddEmployeeComponent,canActivate:[i16.AuthGuard]},
+                {path:'addtasks',component:i18.AddTasksComponent,canActivate:[i16.AuthGuard]},
+                {path:'home',component:i19.EmployeeListComponent,canActivate:[i16.AuthGuard]},
+                {path:'tasks',component:i20.TasksComponent,canActivate:[i16.AuthGuard]}]];
+          },([] as any[]))]);
     });
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvZW1wbG95ZWVzL2VtcGxveWVlcy5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvZW1wbG95ZWVzL2VtcGxveWVlcy5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsifQ==
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvZW1wbG95ZWVzL2VtcGxveWVlcy5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvY3BzdWwvZGVza3RvcC9tZWFuLWFwcC9tZWFuLWFwcC9hc3NldHMvYXBwL2F1dGgvZW1wbG95ZWVzL2VtcGxveWVlcy5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyJ9

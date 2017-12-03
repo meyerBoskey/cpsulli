@@ -33,8 +33,7 @@ export class AddEmployeeComponent implements OnInit {
             this.employeeService.updateEmployee(this.employee)
                 .subscribe(
                     result => {
-                        this.successMessage = 'Task was added!';
-                        console.log(result);
+                        this.successMessage = 'Employee was added!';
                         setTimeout(() => {
                             this.successMessage = '';
                             console.log(this.successMessage);
@@ -42,7 +41,6 @@ export class AddEmployeeComponent implements OnInit {
                     },
                     error => {
                         this.errorMessage = error.errors.message;
-                        console.log(error)
                         setTimeout(() => {
                             this.errorMessage = '';
                         }, 5000);
@@ -61,8 +59,7 @@ export class AddEmployeeComponent implements OnInit {
             this.employeeService.addEmployee(employee)
                 .subscribe(
                     data => {
-                        this.successMessage = 'Task was added!';
-                        console.log(data);
+                        this.successMessage = 'Employee was added!';
                         setTimeout(() => {
                             this.successMessage = '';
                             console.log(this.successMessage);
@@ -70,7 +67,6 @@ export class AddEmployeeComponent implements OnInit {
                     },
                     error => {
                         this.errorMessage = error.errors.message;
-                        console.log(error)
                         setTimeout(() => {
                             this.errorMessage = '';
                         }, 5000);
@@ -89,16 +85,13 @@ export class AddEmployeeComponent implements OnInit {
             this.employeeService.addEmployee(employee)
                 .subscribe(
                     data => {
-                        this.successMessage = 'Task was added!';
-                        console.log(data);
+                        this.successMessage = 'Employee was added!';
                         setTimeout(() => {
                             this.successMessage = '';
-                            console.log(this.successMessage);
                         }, 5000);
                     },
                     error => {
                         this.errorMessage = error.error.errors.email.message;
-                        console.log(error)
                         setTimeout(() => {
                             this.errorMessage = '';
                         }, 5000);

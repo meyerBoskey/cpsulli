@@ -12,6 +12,8 @@ import {EmployeeListComponent} from "./employeeList.component";
 import { AuthService } from "../auth.service";
 import { EmployeeService } from "./employee.service";
 import { ErrorService } from "../../errors/error.service";
+import { Error2Service } from "./error2/error2.service";
+import { Error2Component } from "./error2/error2.component";
 import {TasksComponent} from "../tasks/tasks.component";
 import {AddTasksComponent} from "../tasks/add/addTask.component";
 import {TaskComponent} from "../tasks/task/task.component";
@@ -32,13 +34,14 @@ import { FilterEmployeesArrayPipe } from './employeesFilter.pipe';
         FilterTasksArrayPipe,
         FilterEmployeesArrayPipe,
         AddTasksComponent,
+        Error2Component,
         TaskComponent,
         TaskListComponent,
         EmployeeListComponent,
         AddEmployeeComponent,
         CompanyHomePageComponent
     ],
-    providers: [AuthService, ErrorService, EmployeeService],
+    providers: [AuthService, ErrorService, EmployeeService, Error2Service],
     imports: [ ReactiveFormsModule, CommonModule, employeesRouting, FormsModule]
 })
 export class EmployeesModule {
