@@ -37,7 +37,7 @@ var EmployeeService = /** @class */ (function () {
         var _this = this;
         var body = JSON.stringify(company);
         var headers = new Headers({ 'Content-Type': 'application/json' });
-        return this.http.post('http://localhost:3000/company', body, { headers: headers })
+        return this.http.post('https://cpsulli.herokuapp.com/company', body, { headers: headers })
             .map(function (response) { return response.json(); })
             .catch(function (error) {
             _this.errorService.handleError(error.json());
@@ -48,7 +48,7 @@ var EmployeeService = /** @class */ (function () {
         var _this = this;
         var body = JSON.stringify(company);
         var headers = new Headers({ 'Content-Type': 'application/json' });
-        return this.http.post('http://localhost:3000/company/signin', body, { headers: headers })
+        return this.http.post('https://cpsulli.herokuapp.com/company/signin', body, { headers: headers })
             .map(function (response) { return response.json(); })
             .catch(function (error) {
             _this.errorService.handleError(error.json());
@@ -59,7 +59,7 @@ var EmployeeService = /** @class */ (function () {
         var _this = this;
         var body = JSON.stringify(employee);
         var headers = new Headers({ 'Content-Type': 'application/json' });
-        return this.http.post('http://localhost:3000/employees/signin', body, { headers: headers })
+        return this.http.post('https://cpsulli.herokuapp.com/employees/signin', body, { headers: headers })
             .map(function (response) { return response.json(); })
             .catch(function (error) {
             _this.errorService.handleError(error.json());
@@ -73,7 +73,7 @@ var EmployeeService = /** @class */ (function () {
         var token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
-        return this.http.post('http://localhost:3000/employees' + token, body, { headers: headers })
+        return this.http.post('https://cpsulli.herokuapp.com/employees' + token, body, { headers: headers })
             .map(function (response) {
             var result = response.json().obj;
             var employee = new Employee(result.email, result.password, result.firstName, result.lastName, result.jobTitle, result.isAdmin, result._id, result.tasks);
@@ -91,7 +91,7 @@ var EmployeeService = /** @class */ (function () {
             ? '?token=' + localStorage.getItem('token')
             : '';
         var headers = new Headers({ 'Content-Type': 'application/json' });
-        return this.http.get('http://localhost:3000/company' + token, { headers: headers })
+        return this.http.get('https://cpsulli.herokuapp.com/company' + token, { headers: headers })
             .map(function (response) {
             var employees = response.json().obj;
             var transformedEmployees = [];
@@ -116,7 +116,7 @@ var EmployeeService = /** @class */ (function () {
         var token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
-        return this.http.delete('http://localhost:3000/employees/' + employee.employeeId + token)
+        return this.http.delete('https://cpsulli.herokuapp.com/employees/' + employee.employeeId + token)
             .map(function (response) { return response.json(); })
             .catch(function (error) {
             _this.errorService.handleError(error.json());
@@ -130,7 +130,7 @@ var EmployeeService = /** @class */ (function () {
         var token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
-        return this.http.patch('http://localhost:3000/employees/' + employee.employeeId + token, body, { headers: headers })
+        return this.http.patch('https://cpsulli.herokuapp.com/employees/' + employee.employeeId + token, body, { headers: headers })
             .map(function (response) { return response.json(); })
             .catch(function (error) {
             _this.errorService.handleError(error.json());
@@ -144,7 +144,7 @@ var EmployeeService = /** @class */ (function () {
         var token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
-        return this.http.post('http://localhost:3000/task' + token, body, { headers: headers })
+        return this.http.post('https://cpsulli.herokuapp.com/task' + token, body, { headers: headers })
             .map(function (response) {
             var result = response.json();
             var task = new Task(result.obj.content, result.obj.dueDate, result.obj.completed, result.obj._id, result.obj.employee, result.obj.employeeFirstName, result.obj.employeeLastName, result.obj.company, true);
@@ -164,7 +164,7 @@ var EmployeeService = /** @class */ (function () {
             ? '?token=' + localStorage.getItem('token')
             : '';
         var headers = new Headers({ 'Content-Type': 'application/json' });
-        return this.http.get('http://localhost:3000/task' + token, { headers: headers })
+        return this.http.get('https://cpsulli.herokuapp.com/task' + token, { headers: headers })
             .map(function (response) {
             var tasks = response.json().obj;
             var transformedTasks = [];
@@ -186,7 +186,7 @@ var EmployeeService = /** @class */ (function () {
         var token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
-        return this.http.delete('http://localhost:3000/task/' + task.taskId + token)
+        return this.http.delete('https://cpsulli.herokuapp.com/task/' + task.taskId + token)
             .map(function (response) { return response.json(); })
             .catch(function (error) {
             _this.errorService.handleError(error.json());
