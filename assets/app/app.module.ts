@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpModule} from '@angular/http';
 import { NgModule } from '@angular/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./header.component";
@@ -20,7 +21,7 @@ import { AuthGuard } from './authGuard.guard';
         HeaderComponent,
         AuthenticationComponent
     ],
-    imports: [BrowserModule, routing, HttpModule, MessageModule, EmployeesModule],
+    imports: [BrowserModule, BrowserAnimationsModule, routing, HttpModule, MessageModule, EmployeesModule],
     providers: [AuthService, ErrorService, AuthGuard],
     bootstrap: [AppComponent]
 })

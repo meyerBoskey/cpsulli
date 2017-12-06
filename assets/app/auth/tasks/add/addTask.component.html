@@ -6,10 +6,20 @@
                     <label for="content">Task</label>
                     <input type="text" id="content" class="form-control" formControlName="content" [ngModel]="task?.content" required placeholder="Add Task">
                 </div>
-                <div class="form-group">
+                <div class="form-group container">
                     <label for="dueDate">Due Date</label>
-                    <input type="text" id="dueDate" class="form-control" formControlName="dueDate" [ngModel]="task?.dueDate">
+                    <input type="text" id="datetimepicker">
+                    <!-- <div class="datepicker mat-app-background basic-container">
+                        <mat-form-field>
+                            <input matInput [matDatepicker]="picker">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker touchUi="true" #picker startView="year" [startAt]="startDate"></mat-datepicker>
+                        </mat-form-field>
+
+                    </div> -->
+                    <!-- <input type="text" id="dueDate" class="form-control" formControlName="dueDate" [ngModel]="task?.dueDate"> -->
                 </div>
+
                 <div class="form-group" *ngIf="isCompany()">
                     <label for="employee">Employee</label><br>
                     <select formControlName="employee">
@@ -29,7 +39,7 @@
         </div>
     </div>
     <br>
-    <div class="row">
+    <div class="row" style="z-index: -1; position: relative">
         <div>
             <app-task-list></app-task-list>
 

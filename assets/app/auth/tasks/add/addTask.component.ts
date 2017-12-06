@@ -1,14 +1,15 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ElementRef, Renderer } from "@angular/core";
 import { NgForm, FormGroup, FormControl, Validators, FormBuilder } from "@angular/forms";
 
 import { EmployeeService } from "../../employees/employee.service";
 import { Employee } from "../../employees/employee.model";
 import { Task } from "../task.model";
-// import { Alert } from "../../../alert";
+
+declare var jQuery: any;
 
 @Component({
     selector: 'app-add-tasks',
-    styleUrls: ['./addTask.component.css'],
+    styleUrls: ['./addTask.component.scss'],
     templateUrl: './addTask.component.html'
 })
 export class AddTasksComponent implements OnInit {
@@ -16,8 +17,8 @@ export class AddTasksComponent implements OnInit {
     employees: Employee[] = [];
     form: FormGroup;
     successMessage: string = '';
-    // date: FormGroup;
-    constructor(private employeeService: EmployeeService) {}
+    startDate = new Date(1990, 0, 1);
+    constructor(private employeeService: EmployeeService, public el: ElementRef, public renderer: Renderer) {}
 
     onSubmit(form: NgForm) {
         if (form.value.employee) {
@@ -66,6 +67,7 @@ export class AddTasksComponent implements OnInit {
                     this.employees = employees;
                 }
             );
+        jQuery('#datetimepicker').datetimepicker();
 
     }
 

@@ -22,8 +22,44 @@ import {CompanyHomePageComponent} from "../company/homePage/CompanyHomePage.comp
 import {SidePanelComponent} from "../company/sidePanel/sidePanel.component";
 import { FilterTasksArrayPipe } from '../tasks/taskFilter.pipe';
 import { FilterEmployeesArrayPipe } from './employeesFilter.pipe';
+import { DatepickerComponent } from '../tasks/add/datepicker/datepicker.component'
 
-
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatStepperModule,
+} from '@angular/material';
+import {DatepickerStartViewExample} from './app/datepicker-start-view-example';
+import {CdkTableModule} from '@angular/cdk/table';
 
 @NgModule({
     declarations: [
@@ -39,11 +75,46 @@ import { FilterEmployeesArrayPipe } from './employeesFilter.pipe';
         TaskListComponent,
         EmployeeListComponent,
         AddEmployeeComponent,
-        CompanyHomePageComponent
+        CompanyHomePageComponent,
+        DatepickerComponent
     ],
     providers: [AuthService, ErrorService, EmployeeService, Error2Service],
-    imports: [ ReactiveFormsModule, CommonModule, employeesRouting, FormsModule]
-})
-export class EmployeesModule {
+    imports: [ ReactiveFormsModule, CommonModule, employeesRouting, FormsModule,
+             CdkTableModule,
+            MatAutocompleteModule,
+            MatButtonModule,
+            MatButtonToggleModule,
+            MatCardModule,
+            MatCheckboxModule,
+            MatChipsModule,
+            MatStepperModule,
+            MatDatepickerModule,
+            MatDialogModule,
+            MatExpansionModule,
+            MatGridListModule,
+            MatIconModule,
+            MatInputModule,
+            MatListModule,
+            MatMenuModule,
+            MatNativeDateModule,
+            MatPaginatorModule,
+            MatProgressBarModule,
+            MatProgressSpinnerModule,
+            MatRadioModule,
+            MatRippleModule,
+            MatSelectModule,
+            MatSidenavModule,
+            MatSliderModule,
+            MatSlideToggleModule,
+            MatSnackBarModule,
+            MatSortModule,
+            MatTableModule,
+            MatTabsModule,
+            MatToolbarModule,
+            MatTooltipModule,
 
-}
+    MatNativeDateModule]
+})
+export class EmployeesModule {}
+
+// platformBrowserDynamic().bootstrapModule(EmployeesModule);
