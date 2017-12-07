@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row content" style="height: 550px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <app-side-panel [tasksLength]="tasksLength" [employeesLength]="employees.length"></app-side-panel>
+                </div>
+                <div class="col-md-8">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="col-md-8" style="color: white;">
+            <div class="container-fluid">
+                <h3 class="text">To add an employee, fill out the form below and hit submit</h3>
+                <h3 class="text">To edit an employee's information press the edit button in the employee's box to the left. Then fill out the form and press submit.</h3>
+                <h3 class="text">To delete an employee, press the delete button.</h3>
+                <br><br>
+
+            </div>
+            <div class="row" style="padding-left: 30px;">
+                <app-add-employees></app-add-employees>
+            </div>
+        </div> -->
+    </div>
+</div>
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <app-side-panel></app-side-panel>
+        </div>
+        <div class="col-md-9">
+            <h1 style="margin-top: 0;">Welcome</h1>
+            <h3>To add, delete, or edit employee information, go to the Manage Employees tab</h3>
+            <h3>To assign, delete, or edit tasks, go to the Manage Tasks tab</h3>
+        </div>
+    </div>
+</div> -->

@@ -1,0 +1,22 @@
+<h1 class="text-center">Welcome to the task app. </h1>
+<h3 class="text-center">
+    If you are a new user, start by creating a user account.
+</h3>
+<h3 class="text-center">
+    For corporate use, start by creating a company account.
+</h3>
+<header class="row spacing">
+    <nav class="col-md-8 col-md-offset-2">
+        <ul class="nav nav-tabs">
+            <li routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['signup']">User Signup</a></li>
+            <li routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['signin']">User Signin</a></li>
+            <li routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['createCompany']">Create Company</a></li>
+            <li routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['signinCompany']">Company Signin</a></li>
+            <li routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['employeeSignin']">Employee Signin</a></li>
+            <li routerLinkActive="active" *ngIf="isLoggedIn()"><a [routerLink]="['logout']">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="row spacing">
+    <router-outlet></router-outlet>
+</div>

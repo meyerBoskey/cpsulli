@@ -1,17 +1,17 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "mean-app"
+    "name": "new-mean-app"
   },
   "apps": [
     {
-      "root": "assets",
-      "outDir": "public",
+      "root": "src",
+      "outDir": "dist",
       "assets": [
         "assets",
         "favicon.ico"
       ],
-      "index": "index.hbs",
+      "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
       "test": "test.ts",
@@ -19,22 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "style.css",
-        "jquery-ui-1.12.1.custom/jquery-ui.css",
-        "jquery-ui-1.12.1.custom/jquery-ui.theme.css",
-        "jquery-ui-1.12.1.custom/jquery-ui.theme.min.css",
-        "jquery-ui-1.12.1.custom/jquery-ui.min.css",
-        "jquery-ui-1.12.1.custom/jquery-ui.structure.css",
-        "jquery-ui-1.12.1.custom/jquery-ui.structure.min.css",
-        "../node_modules/jquery-datetimepicker/build/jquery.datetimepicker.min.css"
+        "public/stylesheets/style.css",
       ],
       "scripts": [
-          "jquery-ui-1.12.1.custom/jquery-ui.js",
-          "jquery-ui-1.12.1.custom/external/jquery/jquery.js",
-          "jquery-ui-1.12.1.custom/jquery-ui.min.js",
-           "../node_modules/jquery/dist/jquery.min.js",
-           "../node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.min.js",
-           "../node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
@@ -50,10 +37,13 @@
   },
   "lint": [
     {
-      "project": "tsconfig.json"
+      "project": "src/tsconfig.app.json"
     },
     {
-      "project": "tsconfig.aot.json"
+      "project": "src/tsconfig.spec.json"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json"
     }
   ],
   "test": {
