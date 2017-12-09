@@ -28,9 +28,9 @@ export class TaskComponent {
 
     constructor(private employeeService: EmployeeService) {}
 
-    // onEdit() {
-    //     this.employeeService.editMessage(this.message);
-    // }
+    onEdit() {
+        this.employeeService.editTask(this.task);
+    }
 
 
 }

@@ -8,10 +8,8 @@
         </div>
         <div class="form-group">
           <label for="dueDate">Due Date</label>
-          <!-- <input type="text" id="datetimepicker"> -->
           <input type="date" id="dueDate" class="form-control" formControlName="dueDate" [ngModel]="task?.dueDate">
         </div>
-
         <div class="form-group" *ngIf="isCompany()">
           <label for="employee">Employee</label><br>
           <select formControlName="employee">
@@ -25,25 +23,13 @@
         <!-- <button class=" btn btn-danger " type="button " (click)="onClear(f) ">Clear</button> -->
         <button class="btn btn-primary" type="submit">Save</button>
       </form>
-      <!-- <form [formGroup]="date">
-                <date-picker formControlName="date"></date-picker>
-            </form> -->
     </div>
   </div>
   <br>
-  <div class="row" style="z-index: -1; position: relative">
+  <div class="row">
     <div>
       <app-task-list></app-task-list>
-
     </div>
   </div>
 </div>
-<!-- <script>
-    window.setTimeout(function() {
-        document.getElementById("successMessage").fadeTo(500, 0).slideUp(500, function() {
-            document.getElementById(this).remove();
-        });
-    }, 5000);
-</script>
-<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script> -->
 <app-error2></app-error2>

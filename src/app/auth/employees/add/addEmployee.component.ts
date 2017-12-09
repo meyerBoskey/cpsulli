@@ -33,7 +33,7 @@ export class AddEmployeeComponent implements OnInit {
             this.employeeService.updateEmployee(this.employee)
                 .subscribe(
                     result => {
-                        this.successMessage = 'Employee was added!';
+                        this.successMessage = 'Employee was updated!';
                         setTimeout(() => {
                             this.successMessage = '';
                             console.log(this.successMessage);

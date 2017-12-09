@@ -19,7 +19,8 @@ export class EmployeeService {
     private tasks: Task[] = [];
     redirectUrl: string;
     employeeIsEdit = new EventEmitter<Employee>();
-
+    taskCompletionEM = new EventEmitter<Task>();
+    taskIsEdit = new EventEmitter<Task>();
     constructor(private http: Http, private errorService: ErrorService, private router: Router, private error2Service: Error2Service) {}
 
     logout() {
@@ -166,6 +167,7 @@ export class EmployeeService {
                     true
                 );
                 this.tasks.push(task);
+                console.log(this.tasks)
                 // var newLength = this.tasks.length;
                 // this.taskAdded(newLength);
                 return task;
@@ -215,5 +217,24 @@ export class EmployeeService {
                 this.errorService.handleError(error.json());
                 return Observable.throw(error.json());
             });
+    }
+    updateTask(task: Task) {
+        const body = JSON.stringify(task);
+        const headers = new Headers({'Content-Type': 'application/json'});
+        const token = localStorage.getItem('token')
+            ? '?token=' + localStorage.getItem('token')
+            : '';
+        return this.http.patch('http://localhost:3000/task/' + task.taskId + token, body, {headers})
+            .map((response: Response) => response.json())
+            .catch((error: Response) => {
+                this.errorService.handleError(error.json());
+                return Observable.throw(error.json())
+            });
+    }
+    editTask(task: Task){
+        this.taskIsEdit.emit(task);
+    }
+    completeTask(task: Task){
+        this.taskCompletionEM.emit(task);
     }
 }

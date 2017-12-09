@@ -10,23 +10,18 @@ export class FilterTasksArrayPipe implements PipeTransform{
 
         return items.filter(it => {
             if(it.employeeFirstName.toLowerCase().includes(searchText)){
-                console.log(it);
                 return it;
             }
             else if(it.employeeLastName.toLowerCase().includes(searchText)){
-                console.log(it);
                 return it;
             }
             else if(it.dueDate.toLowerCase().includes(searchText)){
-                console.log(it);
                 return it;
             }
             else if(it.content.toLowerCase().includes(searchText)){
-                console.log(it);
                 return it;
             }
             else if(it.completed.toLowerCase().includes(searchText)){
-                console.log(it);
                 return it;
             }
         })

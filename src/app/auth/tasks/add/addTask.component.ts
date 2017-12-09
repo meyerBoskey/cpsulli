@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { NgForm, FormGroup, FormControl, Validators, FormBuilder } from "@angular/forms";
 
 import { EmployeeService } from "../../employees/employee.service";
@@ -11,7 +11,7 @@ import { Task } from "../task.model";
     templateUrl: './addTask.component.html'
 })
 export class AddTasksComponent implements OnInit {
-    task: Task;
+    @Input() task: Task;
     employees: Employee[] = [];
     form: FormGroup;
     successMessage: string = '';
@@ -19,7 +19,14 @@ export class AddTasksComponent implements OnInit {
     constructor(private employeeService: EmployeeService) {}
 
     onSubmit(form: NgForm) {
-        if (form.value.employee) {
+        if (this.task) { //edit
+            this.task.content = form.value.content;
+            this.task.dueDate = form.value.dueDate;
+            this.task.employee = form.value.employee;
+            this.employeeService.updateTask(this.task)
+                .subscribe(result => console.log(result));
+            this.task = null;
+        } else if (form.value.employee) {
             const task = new Task(form.value.content, form.value.dueDate, 'incomplete', null, form.value.employee.employeeId);
             this.employeeService.addTask(task)
                 .subscribe(
@@ -64,6 +71,7 @@ export class AddTasksComponent implements OnInit {
                     this.employees = employees;
                 }
             );
+        this.employeeService.taskIsEdit.subscribe((task: Task) => this.task = task);
     }
 
 }

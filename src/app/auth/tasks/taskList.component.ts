@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { EmployeeService } from "../employees/employee.service";
@@ -8,23 +8,43 @@ import { Task } from "./task.model";
 
 @Component({
     selector: 'app-task-list',
-    templateUrl: './taskList.component.html'
+    templateUrl: './taskList.component.html',
+    styles: [`
+        #filterInput {
+            z-index: 5;
+        }
+    `]
 })
 export class TaskListComponent implements OnInit {
-    tasks: Task[];
+    @Input() tasks: Task[];
     deletedTask: Task;
     display = 'none';
     companyName: string;
     searchText;
+    @Input() completeTasks: Task[] = [];
+    @Input() incompleteTasks: Task[] = [];
     constructor(private employeeService: EmployeeService, private router: Router) {}
 
     ngOnInit() {
         this.employeeService.getTasks()
             .subscribe(
                 (tasks: Task[]) => {
+                    console.log(tasks)
                     this.tasks = tasks;
+                    for (let i = 0; i < tasks.length; i++) {
+                        if(tasks[i].completed == 'incomplete'){
+                            this.incompleteTasks.push(tasks[i])
+                        } else {
+                            this.completeTasks.push(tasks[i])
+                        }
+                    }
                 }
             );
+    }
+    onComplete(task: Task) {
+        task.completed = 'complete';
+        this.employeeService.updateTask(task)
+            .subscribe(result => console.log(result));
     }
 
     onDelete(){
@@ -38,6 +58,10 @@ export class TaskListComponent implements OnInit {
     onCancel(){
         this.deletedTask = null;
         this.display = 'none';
+    }
+
+    onEdit(task: Task) {
+        this.employeeService.editTask(task);
     }
 
     modalOpen(task: Task){

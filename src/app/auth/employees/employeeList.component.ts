@@ -35,8 +35,8 @@ export class EmployeeListComponent implements OnInit {
         return employee.employeeId;
     }
 
-    onEdit() {
-        this.employeeService.editEmployee(this.employee);
+    onEdit(employee: Employee) {
+        this.employeeService.editEmployee(employee);
     }
 
     onDelete() {

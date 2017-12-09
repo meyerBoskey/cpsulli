@@ -5,6 +5,7 @@ var jwt = require('jsonwebtoken');
 var Employee = require('../models/employees');
 var Company = require('../models/company');
 var Task = require('../models/tasks');
+var mongoose = require('mongoose');
 
 // router.use('/', function(req, res, next) {
 //     jwt.verify(req.query.token, 'secret', function(err, decoded) {
@@ -205,5 +206,67 @@ router.delete('/:id', function(req, res, next) {
     }
 });
 
+router.patch('/:id', function(req, res, next) {
+    console.log('update');
+
+    var decoded = jwt.decode(req.query.token);
+    Task.findById(req.params.id, function(err, task) {
+        if (err) {
+            return res.status(500).json({
+                title: 'An error occurred',
+                error: err
+            });
+        }
+        if (!task) {
+            return res.status(500).json({
+                title: 'An error occurred',
+                error: {message: 'Message not found'}
+            });
+        }
+        if (task.company != decoded.company._id) {
+            return res.status(401).json({
+                title: 'Not authenticated',
+                error: {message: 'Users do not match'}
+            });
+        }
+
+        let originalEmployee = new mongoose.Types.ObjectId(task.employee);
+        task.content = req.body.content;
+        task.dueDate = req.body.dueDate;
+        task.completed = req.body.completed;
+        if(req.body.employee){
+            task.employee = new mongoose.Types.ObjectId(req.body.employee.employeeId);
+            task.employeeFirstName = req.body.employee.firstName;
+            task.employeeLastName = req.body.employee.lastName;
+        }else {
+            task.employee = new mongoose.Types.ObjectId(req.body.employeeId);
+            task.employeeFirstName = req.body.employeeFirstName;
+            task.employeeLastName = req.body.employeeLastName;
+        }
+        // console.log(task);
+        if (originalEmployee != task.employee){
+            Employee.findById(originalEmployee, function(err, employee) {
+                employee.tasks.pull(task._id);
+                employee.save();
+            });
+            Employee.findById(task.employee, function(err, employee) {
+                employee.tasks.push(task);
+                employee.save();
+            });
+        }
+        task.save(function(err, result) {
+            if (err) {
+                return res.status(500).json({
+                    title: 'An error occurred',
+                    error: err
+                });
+            }
+            res.status(200).json({
+                message: 'Updated message',
+                obj: result
+            });
+        });
+    });
+});
 
 module.exports = router;
